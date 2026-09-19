@@ -1,0 +1,125 @@
+import { z } from "zod";
+
+// Special key tokens. Any other non-empty string is a regular key ("E", "F9", "Tab"…).
+export const MODIFIERS = ["Ctrl", "Shift", "Alt", "Cmd", "Option"] as const;
+export const MOUSE_BUTTONS = [
+  "MouseLeft",
+  "MouseMiddle",
+  "MouseRight",
+  "MouseWheel",
+] as const;
+
+// Modifiers that only exist on one platform: a Windows shortcut never uses
+// Cmd/Option, a Mac shortcut uses Option instead of Alt.
+const MAC_ONLY = new Set<string>(["Cmd", "Option"]);
+const WINDOWS_ONLY = new Set<string>(["Alt"]);
+
+// Kebab-case identifier: "frame-selection", "3d-sculpt".
+const slug = z
+  .string()
+  .regex(
+    /^[a-z0-9]+(-[a-z0-9]+)*$/,
+    "must be kebab-case (e.g. frame-selection)",
+  );
+
+// A text written in every language of the site. A missing translation fails the build.
+export const LocalizedText = z.object({
+  en: z.string().trim().min(1),
+  fr: z.string().trim().min(1),
+});
+
+// One combination, keys pressed together: ["Ctrl", "Shift", "B"].
+const Combo = z.array(z.string().trim().min(1)).min(1);
+
+// Every way to trigger the action on one platform. Several combos mean "or":
+// [["X"], ["Delete"]] reads "X or Delete".
+const Combos = z.array(Combo).min(1);
+
+export const Keys = z
+  .object({ win: Combos, mac: Combos })
+  .superRefine((keys, ctx) => {
+    const check = (platform: "win" | "mac", forbidden: Set<string>) => {
+      for (const combo of keys[platform]) {
+        for (const key of combo) {
+          if (forbidden.has(key)) {
+            ctx.addIssue({
+              code: "custom",
+              path: [platform],
+              message: `"${key}" cannot be used in a ${platform} shortcut`,
+            });
+          }
+        }
+      }
+    };
+    check("win", MAC_ONLY);
+    check("mac", WINDOWS_ONLY);
+  });
+
+export const CATEGORIES = [
+  "general",
+  "navigation",
+  "selection",
+  "tools",
+  "edit",
+  "file",
+  "view",
+] as const;
+
+export const Shortcut = z.object({
+  // Shared across software: the same action has the same id everywhere
+  // (used by the v2 translator to line up Maya and Blender).
+  id: slug,
+  category: z.enum(CATEGORIES),
+  action: LocalizedText,
+  // Optional precision: "Edit mode", "While sculpting".
+  context: LocalizedText.optional(),
+  keys: Keys,
+});
+
+export const FAMILIES = [
+  "3d-sculpt",
+  "texture",
+  "render-sim-terrain",
+  "cloth",
+  "compositing-video",
+  "2d-realtime",
+] as const;
+
+export const Software = z
+  .object({
+    id: slug,
+    name: z.string().trim().min(1),
+    initials: z
+      .string()
+      .regex(/^[A-Z0-9]{2}$/, "must be 2 capital letters (e.g. BL)"),
+    family: z.enum(FAMILIES),
+    // Version the shortcuts were checked against, and where.
+    version: z.string().trim().min(1),
+    docUrl: z.url({ protocol: /^https$/ }),
+    verifiedAt: z.iso.date(),
+    shortcuts: z.array(Shortcut).min(1),
+  })
+  .superRefine((software, ctx) => {
+    // An id must be unique inside one software, otherwise the translator
+    // could not tell which shortcut to show.
+    const seen = new Set<string>();
+    software.shortcuts.forEach((shortcut, index) => {
+      if (seen.has(shortcut.id)) {
+        ctx.addIssue({
+          code: "custom",
+          path: ["shortcuts", index, "id"],
+          message: `duplicate shortcut id "${shortcut.id}"`,
+        });
+      }
+      seen.add(shortcut.id);
+    });
+  });
+
+// TypeScript types derived from the rules above: one definition, no drift.
+export type LocalizedText = z.infer<typeof LocalizedText>;
+export type Keys = z.infer<typeof Keys>;
+export type Category = (typeof CATEGORIES)[number];
+export type Family = (typeof FAMILIES)[number];
+export type Shortcut = z.infer<typeof Shortcut>;
+export type Software = z.infer<typeof Software>;
+export type Platform = "win" | "mac";
