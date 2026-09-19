@@ -1,0 +1,10 @@
+/* Global reset only. Design tokens and components arrive on day 3 (Wed 23/09). */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
