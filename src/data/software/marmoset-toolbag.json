@@ -1,0 +1,307 @@
+{
+  "id": "marmoset-toolbag",
+  "name": "Marmoset Toolbag",
+  "initials": "MT",
+  "family": "render-sim-terrain",
+  "version": "5",
+  "docUrl": "https://docs.marmoset.co/docs/keyboard-shortcuts/",
+  "verifiedAt": "2026-09-20",
+  "shortcuts": [
+    {
+      "id": "orbit-view",
+      "category": "navigation",
+      "action": {
+        "en": "Orbit the camera",
+        "fr": "Orbiter la caméra"
+      },
+      "context": {
+        "en": "Viewport",
+        "fr": "Vue 3D"
+      },
+      "keys": {
+        "win": [["Alt", "MouseLeft"]],
+        "mac": [["Option", "MouseLeft"]]
+      }
+    },
+    {
+      "id": "pan-view",
+      "category": "navigation",
+      "action": {
+        "en": "Pan the camera",
+        "fr": "Déplacer la caméra"
+      },
+      "context": {
+        "en": "Viewport",
+        "fr": "Vue 3D"
+      },
+      "keys": {
+        "win": [["Alt", "MouseMiddle"]],
+        "mac": [["Option", "MouseMiddle"]]
+      }
+    },
+    {
+      "id": "zoom-view",
+      "category": "navigation",
+      "action": {
+        "en": "Zoom the camera",
+        "fr": "Zoomer la caméra"
+      },
+      "context": {
+        "en": "Viewport",
+        "fr": "Vue 3D"
+      },
+      "keys": {
+        "win": [["Alt", "MouseRight"], ["MouseWheel"]],
+        "mac": [["Option", "MouseRight"], ["MouseWheel"]]
+      }
+    },
+    {
+      "id": "fly-navigation",
+      "category": "navigation",
+      "action": {
+        "en": "Fly through the scene",
+        "fr": "Se déplacer dans la scène"
+      },
+      "context": {
+        "en": "Viewport",
+        "fr": "Vue 3D"
+      },
+      "keys": {
+        "win": [["W"], ["A"], ["S"], ["D"], ["Q"], ["E"]],
+        "mac": [["W"], ["A"], ["S"], ["D"], ["Q"], ["E"]]
+      }
+    },
+    {
+      "id": "pan-up",
+      "category": "navigation",
+      "action": {
+        "en": "Pan up",
+        "fr": "Déplacer vers le haut"
+      },
+      "context": {
+        "en": "Viewport",
+        "fr": "Vue 3D"
+      },
+      "keys": {
+        "win": [["Alt", "Q"]],
+        "mac": [["Option", "Q"]]
+      }
+    },
+    {
+      "id": "pan-down",
+      "category": "navigation",
+      "action": {
+        "en": "Pan down",
+        "fr": "Déplacer vers le bas"
+      },
+      "context": {
+        "en": "Viewport",
+        "fr": "Vue 3D"
+      },
+      "keys": {
+        "win": [["Alt", "E"]],
+        "mac": [["Option", "E"]]
+      }
+    },
+    {
+      "id": "pan-left",
+      "category": "navigation",
+      "action": {
+        "en": "Pan left",
+        "fr": "Déplacer vers la gauche"
+      },
+      "context": {
+        "en": "Viewport",
+        "fr": "Vue 3D"
+      },
+      "keys": {
+        "win": [["Alt", "A"]],
+        "mac": [["Option", "A"]]
+      }
+    },
+    {
+      "id": "pan-right",
+      "category": "navigation",
+      "action": {
+        "en": "Pan right",
+        "fr": "Déplacer vers la droite"
+      },
+      "context": {
+        "en": "Viewport",
+        "fr": "Vue 3D"
+      },
+      "keys": {
+        "win": [["Alt", "D"]],
+        "mac": [["Option", "D"]]
+      }
+    },
+    {
+      "id": "dolly-in",
+      "category": "navigation",
+      "action": {
+        "en": "Move the camera forward",
+        "fr": "Avancer la caméra"
+      },
+      "context": {
+        "en": "Viewport",
+        "fr": "Vue 3D"
+      },
+      "keys": {
+        "win": [["Alt", "W"]],
+        "mac": [["Option", "W"]]
+      }
+    },
+    {
+      "id": "dolly-out",
+      "category": "navigation",
+      "action": {
+        "en": "Move the camera back",
+        "fr": "Reculer la caméra"
+      },
+      "context": {
+        "en": "Viewport",
+        "fr": "Vue 3D"
+      },
+      "keys": {
+        "win": [["Alt", "S"]],
+        "mac": [["Option", "S"]]
+      }
+    },
+    {
+      "id": "rotate-environment",
+      "category": "view",
+      "action": {
+        "en": "Rotate the sky",
+        "fr": "Tourner le ciel"
+      },
+      "context": {
+        "en": "Viewport",
+        "fr": "Vue 3D"
+      },
+      "keys": {
+        "win": [["Shift", "MouseRight"]],
+        "mac": [["Shift", "MouseRight"]]
+      }
+    },
+    {
+      "id": "select-tool",
+      "category": "tools",
+      "action": {
+        "en": "Select tool",
+        "fr": "Outil de sélection"
+      },
+      "keys": {
+        "win": [["Q"]],
+        "mac": [["Q"]]
+      }
+    },
+    {
+      "id": "move",
+      "category": "tools",
+      "action": {
+        "en": "Move",
+        "fr": "Déplacer"
+      },
+      "keys": {
+        "win": [["W"]],
+        "mac": [["W"]]
+      }
+    },
+    {
+      "id": "rotate",
+      "category": "tools",
+      "action": {
+        "en": "Rotate",
+        "fr": "Tourner"
+      },
+      "keys": {
+        "win": [["E"]],
+        "mac": [["E"]]
+      }
+    },
+    {
+      "id": "scale",
+      "category": "tools",
+      "action": {
+        "en": "Scale",
+        "fr": "Redimensionner"
+      },
+      "keys": {
+        "win": [["R"]],
+        "mac": [["R"]]
+      }
+    },
+    {
+      "id": "transform-tool",
+      "category": "tools",
+      "action": {
+        "en": "Transform tool, all axes",
+        "fr": "Outil de transformation, tous les axes"
+      },
+      "keys": {
+        "win": [["T"]],
+        "mac": [["T"]]
+      }
+    },
+    {
+      "id": "edit-pivot",
+      "category": "tools",
+      "action": {
+        "en": "Edit the pivot",
+        "fr": "Modifier le pivot"
+      },
+      "keys": {
+        "win": [["D"]],
+        "mac": [["D"]]
+      }
+    },
+    {
+      "id": "lock-selection",
+      "category": "edit",
+      "action": {
+        "en": "Lock or unlock the selection",
+        "fr": "Verrouiller ou déverrouiller la sélection"
+      },
+      "keys": {
+        "win": [["Shift", "L"]],
+        "mac": [["Shift", "L"]]
+      }
+    },
+    {
+      "id": "next-viewport-mode",
+      "category": "view",
+      "action": {
+        "en": "Next viewport mode",
+        "fr": "Mode de vue suivant"
+      },
+      "keys": {
+        "win": [["."]],
+        "mac": [["."]]
+      }
+    },
+    {
+      "id": "previous-viewport-mode",
+      "category": "view",
+      "action": {
+        "en": "Previous viewport mode",
+        "fr": "Mode de vue précédent"
+      },
+      "keys": {
+        "win": [[","]],
+        "mac": [[","]]
+      }
+    },
+    {
+      "id": "maximize-viewport",
+      "category": "view",
+      "action": {
+        "en": "Maximise the viewport",
+        "fr": "Agrandir la vue"
+      },
+      "keys": {
+        "win": [["Shift", "Space"]],
+        "mac": [["Shift", "Space"]]
+      }
+    }
+  ]
+}

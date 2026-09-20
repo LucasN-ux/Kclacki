@@ -1,0 +1,443 @@
+{
+  "id": "mari",
+  "name": "Mari",
+  "initials": "MR",
+  "family": "texture",
+  "version": "7.5v2",
+  "docUrl": "https://learn.foundry.com/mari/content/user_guide/appendix_a/shortcuts.html",
+  "verifiedAt": "2026-09-20",
+  "shortcuts": [
+    {
+      "id": "bake",
+      "category": "tools",
+      "action": {
+        "en": "Bake the paint buffer",
+        "fr": "Fixer le tampon de peinture"
+      },
+      "keys": {
+        "win": [["B"]],
+        "mac": [["B"]]
+      }
+    },
+    {
+      "id": "toggle-painting",
+      "category": "tools",
+      "action": {
+        "en": "Turn painting on or off",
+        "fr": "Activer ou désactiver la peinture"
+      },
+      "keys": {
+        "win": [["."]],
+        "mac": [["."]]
+      }
+    },
+    {
+      "id": "paint-tool",
+      "category": "tools",
+      "action": {
+        "en": "Paint tool",
+        "fr": "Outil peinture"
+      },
+      "keys": {
+        "win": [["P"]],
+        "mac": [["P"]]
+      }
+    },
+    {
+      "id": "paint-through",
+      "category": "tools",
+      "action": {
+        "en": "Paint through tool",
+        "fr": "Outil peinture au travers"
+      },
+      "keys": {
+        "win": [["U"]],
+        "mac": [["U"]]
+      }
+    },
+    {
+      "id": "eraser-tool",
+      "category": "tools",
+      "action": {
+        "en": "Paint buffer eraser",
+        "fr": "Gomme du tampon de peinture"
+      },
+      "keys": {
+        "win": [["E"]],
+        "mac": [["E"]]
+      }
+    },
+    {
+      "id": "toggle-mask-preview",
+      "category": "view",
+      "action": {
+        "en": "Show or hide the mask preview",
+        "fr": "Afficher ou masquer l'aperçu du masque"
+      },
+      "keys": {
+        "win": [[","]],
+        "mac": [[","]]
+      }
+    },
+    {
+      "id": "toggle-edge-mask",
+      "category": "view",
+      "action": {
+        "en": "Turn the edge mask on or off",
+        "fr": "Activer ou désactiver le masque de bord"
+      },
+      "keys": {
+        "win": [["G"]],
+        "mac": [["G"]]
+      }
+    },
+    {
+      "id": "zoom-paint-buffer",
+      "category": "view",
+      "action": {
+        "en": "Zoom the paint buffer",
+        "fr": "Zoomer le tampon de peinture"
+      },
+      "keys": {
+        "win": [["Z"]],
+        "mac": [["Z"]]
+      }
+    },
+    {
+      "id": "paint-target-palette",
+      "category": "general",
+      "action": {
+        "en": "Paint target quick palette",
+        "fr": "Palette rapide de la cible de peinture"
+      },
+      "keys": {
+        "win": [["I"]],
+        "mac": [["I"]]
+      }
+    },
+    {
+      "id": "colors-palette",
+      "category": "general",
+      "action": {
+        "en": "Colours quick palette",
+        "fr": "Palette rapide des couleurs"
+      },
+      "keys": {
+        "win": [["J"]],
+        "mac": [["J"]]
+      }
+    },
+    {
+      "id": "shelf-palette",
+      "category": "general",
+      "action": {
+        "en": "Shelf quick palette",
+        "fr": "Palette rapide de l'étagère"
+      },
+      "keys": {
+        "win": [["K"]],
+        "mac": [["K"]]
+      }
+    },
+    {
+      "id": "image-manager-palette",
+      "category": "general",
+      "action": {
+        "en": "Image manager quick palette",
+        "fr": "Palette rapide du gestionnaire d'images"
+      },
+      "keys": {
+        "win": [["L"]],
+        "mac": [["L"]]
+      }
+    },
+    {
+      "id": "pie-menu",
+      "category": "general",
+      "action": {
+        "en": "Open the pie menu",
+        "fr": "Ouvrir le menu circulaire"
+      },
+      "keys": {
+        "win": [["F9"]],
+        "mac": [["F9"]]
+      }
+    },
+    {
+      "id": "select-tool",
+      "category": "selection",
+      "action": {
+        "en": "Select tool",
+        "fr": "Outil de sélection"
+      },
+      "keys": {
+        "win": [["S"]],
+        "mac": [["S"]]
+      }
+    },
+    {
+      "id": "hide-selection",
+      "category": "view",
+      "action": {
+        "en": "Hide the selection",
+        "fr": "Masquer la sélection"
+      },
+      "keys": {
+        "win": [["H"]],
+        "mac": [["H"]]
+      }
+    },
+    {
+      "id": "hide-unselected",
+      "category": "view",
+      "action": {
+        "en": "Hide everything else",
+        "fr": "Masquer tout le reste"
+      },
+      "keys": {
+        "win": [["Shift", "H"]],
+        "mac": [["Shift", "H"]]
+      }
+    },
+    {
+      "id": "brush-radius",
+      "category": "tools",
+      "action": {
+        "en": "Adjust the brush radius",
+        "fr": "Régler le rayon de la brosse"
+      },
+      "keys": {
+        "win": [["R"]],
+        "mac": [["R"]]
+      }
+    },
+    {
+      "id": "brush-rotation",
+      "category": "tools",
+      "action": {
+        "en": "Adjust the brush rotation",
+        "fr": "Régler la rotation de la brosse"
+      },
+      "keys": {
+        "win": [["W"]],
+        "mac": [["W"]]
+      }
+    },
+    {
+      "id": "brush-squish",
+      "category": "tools",
+      "action": {
+        "en": "Squish the brush",
+        "fr": "Aplatir la brosse"
+      },
+      "keys": {
+        "win": [["Q"]],
+        "mac": [["Q"]]
+      }
+    },
+    {
+      "id": "toggle-brushes",
+      "category": "tools",
+      "action": {
+        "en": "Switch between brushes",
+        "fr": "Changer de brosse"
+      },
+      "keys": {
+        "win": [["N"]],
+        "mac": [["N"]]
+      }
+    },
+    {
+      "id": "brush-opacity",
+      "category": "tools",
+      "action": {
+        "en": "Adjust the brush opacity",
+        "fr": "Régler l'opacité de la brosse"
+      },
+      "keys": {
+        "win": [["O"]],
+        "mac": [["O"]]
+      }
+    },
+    {
+      "id": "increase-brush-size",
+      "category": "tools",
+      "action": {
+        "en": "Increase the brush radius",
+        "fr": "Agrandir le rayon de la brosse"
+      },
+      "keys": {
+        "win": [["]"]],
+        "mac": [["]"]]
+      }
+    },
+    {
+      "id": "decrease-brush-size",
+      "category": "tools",
+      "action": {
+        "en": "Decrease the brush radius",
+        "fr": "Réduire le rayon de la brosse"
+      },
+      "keys": {
+        "win": [["["]],
+        "mac": [["["]]
+      }
+    },
+    {
+      "id": "transform-tool",
+      "category": "tools",
+      "action": {
+        "en": "Transform tool",
+        "fr": "Outil de transformation"
+      },
+      "keys": {
+        "win": [["M"]],
+        "mac": [["M"]]
+      }
+    },
+    {
+      "id": "color-picker",
+      "category": "tools",
+      "action": {
+        "en": "Colour picker and pixel analyzer",
+        "fr": "Pipette et analyseur de pixels"
+      },
+      "keys": {
+        "win": [["C"]],
+        "mac": [["C"]]
+      }
+    },
+    {
+      "id": "hide-widgets",
+      "category": "view",
+      "action": {
+        "en": "Show or hide the widgets",
+        "fr": "Afficher ou masquer les widgets"
+      },
+      "keys": {
+        "win": [["/"]],
+        "mac": [["/"]]
+      }
+    },
+    {
+      "id": "frame-selection",
+      "category": "navigation",
+      "action": {
+        "en": "Focus on the selection",
+        "fr": "Cadrer la sélection"
+      },
+      "keys": {
+        "win": [["A"]],
+        "mac": [["A"]]
+      }
+    },
+    {
+      "id": "frame-all",
+      "category": "navigation",
+      "action": {
+        "en": "View everything",
+        "fr": "Voir tout"
+      },
+      "keys": {
+        "win": [["Shift", "A"]],
+        "mac": [["Shift", "A"]]
+      }
+    },
+    {
+      "id": "focus-cursor",
+      "category": "navigation",
+      "action": {
+        "en": "Focus on the cursor position",
+        "fr": "Cadrer sur la position du curseur"
+      },
+      "keys": {
+        "win": [["F"]],
+        "mac": [["F"]]
+      }
+    },
+    {
+      "id": "orbit-view",
+      "category": "navigation",
+      "action": {
+        "en": "Orbit the camera",
+        "fr": "Orbiter la caméra"
+      },
+      "keys": {
+        "win": [["Alt", "MouseLeft"]],
+        "mac": [["Option", "MouseLeft"]]
+      }
+    },
+    {
+      "id": "camera-orthographic",
+      "category": "view",
+      "action": {
+        "en": "Orthographic camera",
+        "fr": "Caméra orthographique"
+      },
+      "keys": {
+        "win": [["F10"]],
+        "mac": [["F10"]]
+      }
+    },
+    {
+      "id": "camera-perspective",
+      "category": "view",
+      "action": {
+        "en": "Perspective camera",
+        "fr": "Caméra en perspective"
+      },
+      "keys": {
+        "win": [["F11"]],
+        "mac": [["F11"]]
+      }
+    },
+    {
+      "id": "camera-uv",
+      "category": "view",
+      "action": {
+        "en": "UV camera",
+        "fr": "Caméra UV"
+      },
+      "keys": {
+        "win": [["F12"]],
+        "mac": [["F12"]]
+      }
+    },
+    {
+      "id": "toggle-wireframe",
+      "category": "view",
+      "action": {
+        "en": "Show or hide the wireframe",
+        "fr": "Afficher ou masquer le fil de fer"
+      },
+      "keys": {
+        "win": [["Shift", "W"]],
+        "mac": [["Shift", "W"]]
+      }
+    },
+    {
+      "id": "toggle-palettes",
+      "category": "view",
+      "action": {
+        "en": "Show or hide the palettes",
+        "fr": "Afficher ou masquer les palettes"
+      },
+      "keys": {
+        "win": [["Home"]],
+        "mac": [["Home"]]
+      }
+    },
+    {
+      "id": "tool-properties",
+      "category": "view",
+      "action": {
+        "en": "Show the tool properties palette",
+        "fr": "Afficher la palette des propriétés d'outil"
+      },
+      "keys": {
+        "win": [["F7"]],
+        "mac": [["F7"]]
+      }
+    }
+  ]
+}

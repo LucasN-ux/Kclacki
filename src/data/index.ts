@@ -1,6 +1,8 @@
 import { Software, type Family } from "@/domain/schema";
 import blender from "./software/blender.json";
 import houdini from "./software/houdini.json";
+import mari from "./software/mari.json";
+import marmosetToolbag from "./software/marmoset-toolbag.json";
 import maya from "./software/maya.json";
 import nuke from "./software/nuke.json";
 import premierePro from "./software/premiere-pro.json";
@@ -14,6 +16,8 @@ import zbrush from "./software/zbrush.json";
 const RAW_SOFTWARE: unknown[] = [
   blender,
   houdini,
+  mari,
+  marmosetToolbag,
   maya,
   nuke,
   premierePro,
