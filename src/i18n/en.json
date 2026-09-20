@@ -37,7 +37,13 @@
   },
   "footer": {
     "trademarks": "Software names belong to their publishers.",
-    "suggest": "Suggest a correction"
+    "suggest": "Suggest a correction",
+    "links": {
+      "legal": "Legal notice",
+      "privacy": "Privacy",
+      "sources": "Sources",
+      "about": "About"
+    }
   },
   "search": {
     "title": "Search",
@@ -65,5 +71,49 @@
     "empty": "No favorite yet.",
     "hint": "Tap the star next to a shortcut to keep it here.",
     "kept": "kept in this browser only"
+  },
+  "legal": {
+    "title": "Legal notice",
+    "publisherTitle": "Publisher",
+    "publisher": "Lucas Nevano, an individual, publishes this site as a personal, non-commercial project.",
+    "contactTitle": "Contact",
+    "contact": "Through the issues page of the public repository of the site.",
+    "hostTitle": "Host",
+    "host": "Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, United States.",
+    "trademarksTitle": "Trademarks",
+    "trademarks": "The software names quoted on this site (Blender, Maya, Nuke and the others) belong to their publishers. Cmdx is not linked to them, and is not endorsed by them.",
+    "contentTitle": "Content",
+    "content": "Key combinations are facts and belong to nobody. Every description is written for this site; nothing is copied from a documentation or from another shortcut site. Each software page links to the official documentation it was checked against."
+  },
+  "privacy": {
+    "title": "Privacy",
+    "shortTitle": "In short",
+    "short": "This site has no account, no database and no tracking. It asks for nothing about you.",
+    "storageTitle": "What stays in your browser",
+    "storage": "Your favourites and your Windows / Mac choice are kept in your own browser, on your own device. They never reach a server, they are not shared between your devices, and clearing your browser data erases them.",
+    "cookiesTitle": "Cookies",
+    "cookies": "None. What the site keeps is needed to make it work as you asked, so no consent banner is required.",
+    "logsTitle": "Host logs",
+    "logs": "Vercel, the host, writes technical logs of every visit, which include IP addresses. They serve to run and protect the service. Cmdx neither reads nor uses them.",
+    "rightsTitle": "Your rights",
+    "rights": "Since nothing about you is stored on a server, there is nothing to access, correct or delete. To erase what your browser keeps, clear the site data."
+  },
+  "sources": {
+    "title": "Sources",
+    "intro": "Every shortcut is checked against the publisher's own documentation. Here is the page used for each software, with the version and the date it was checked.",
+    "version": "Version",
+    "checkedOn": "Checked on",
+    "shortcuts": "shortcuts"
+  },
+  "about": {
+    "title": "About",
+    "whatTitle": "What Cmdx is",
+    "what": "One place for the keyboard shortcuts of creative software: 3D, texturing, VFX, video and 2D. The promise is simple: find a shortcut in under five seconds.",
+    "howTitle": "How it is made",
+    "how": "Shortcuts live in one file per software, checked when the site is built: a wrong or incomplete file stops the build instead of reaching you. Pages are generated ahead of time, so the site stays fast.",
+    "whoTitle": "Who made it",
+    "who": "Lucas Nevano, a junior full-stack developer in France. Cmdx is a portfolio project.",
+    "correctionTitle": "Found a mistake?",
+    "correction": "Shortcuts change from one version to the next. If one is wrong, tell me and it gets fixed."
   }
 }

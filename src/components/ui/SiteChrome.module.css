@@ -92,6 +92,12 @@
   color: var(--ink-soft);
 }
 
+.footerLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
 .footer a {
   font-weight: 700;
   text-decoration: underline;

@@ -3,11 +3,9 @@ import { FavoritesLink } from "@/components/features/FavoritesLink";
 import { HeaderSearch } from "@/components/features/HeaderSearch";
 import { PlatformToggle } from "@/components/features/PlatformToggle";
 import { LOCALES, localeHref, type Locale } from "@/domain/locale";
+import { SUGGEST_URL } from "@/domain/site";
 import { getDictionary } from "@/i18n";
 import styles from "./SiteChrome.module.css";
-
-// The shortcuts repository: the free way to let visitors report a wrong key.
-const SUGGEST_URL = "https://github.com/LucasN-ux/CMDX/issues/new";
 
 export function SiteHeader({
   locale,
@@ -62,9 +60,23 @@ export function SiteFooter({ locale }: { locale: Locale }) {
   return (
     <footer className={styles.footer}>
       <p>{dictionary.footer.trademarks}</p>
-      <a href={SUGGEST_URL} target="_blank" rel="noreferrer">
-        {dictionary.footer.suggest}
-      </a>
+      <nav className={styles.footerLinks}>
+        <Link href={localeHref(locale, "/about")}>
+          {dictionary.footer.links.about}
+        </Link>
+        <Link href={localeHref(locale, "/sources")}>
+          {dictionary.footer.links.sources}
+        </Link>
+        <Link href={localeHref(locale, "/legal")}>
+          {dictionary.footer.links.legal}
+        </Link>
+        <Link href={localeHref(locale, "/privacy")}>
+          {dictionary.footer.links.privacy}
+        </Link>
+        <a href={SUGGEST_URL} target="_blank" rel="noreferrer">
+          {dictionary.footer.suggest}
+        </a>
+      </nav>
     </footer>
   );
 }

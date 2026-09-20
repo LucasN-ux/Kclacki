@@ -37,7 +37,13 @@
   },
   "footer": {
     "trademarks": "Les noms des logiciels appartiennent à leurs éditeurs.",
-    "suggest": "Proposer une correction"
+    "suggest": "Proposer une correction",
+    "links": {
+      "legal": "Mentions légales",
+      "privacy": "Confidentialité",
+      "sources": "Sources",
+      "about": "À propos"
+    }
   },
   "search": {
     "title": "Recherche",
@@ -65,5 +71,49 @@
     "empty": "Aucun favori pour l'instant.",
     "hint": "Touche l'étoile à côté d'un raccourci pour le garder ici.",
     "kept": "gardés dans ce navigateur uniquement"
+  },
+  "legal": {
+    "title": "Mentions légales",
+    "publisherTitle": "Éditeur",
+    "publisher": "Lucas Nevano, personne physique, édite ce site comme projet personnel, sans but commercial.",
+    "contactTitle": "Contact",
+    "contact": "Par la page des tickets du dépôt public du site.",
+    "hostTitle": "Hébergeur",
+    "host": "Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis.",
+    "trademarksTitle": "Marques",
+    "trademarks": "Les noms des logiciels cités sur ce site (Blender, Maya, Nuke et les autres) appartiennent à leurs éditeurs. Cmdx n'a aucun lien avec eux et n'est pas approuvé par eux.",
+    "contentTitle": "Contenu",
+    "content": "Les combinaisons de touches sont des faits et n'appartiennent à personne. Chaque description est écrite pour ce site ; rien n'est copié d'une documentation ni d'un autre site de raccourcis. Chaque page de logiciel donne le lien vers la documentation officielle qui a servi de référence."
+  },
+  "privacy": {
+    "title": "Confidentialité",
+    "shortTitle": "En résumé",
+    "short": "Ce site n'a ni compte, ni base de données, ni traceur. Il ne vous demande rien.",
+    "storageTitle": "Ce qui reste dans votre navigateur",
+    "storage": "Vos favoris et votre choix Windows / Mac sont gardés dans votre navigateur, sur votre appareil. Ils ne partent jamais vers un serveur, ne passent pas d'un appareil à l'autre, et disparaissent si vous videz les données du navigateur.",
+    "cookiesTitle": "Cookies",
+    "cookies": "Aucun. Ce que le site garde sert uniquement à le faire fonctionner comme vous l'avez demandé : aucun bandeau de consentement n'est donc nécessaire.",
+    "logsTitle": "Journaux de l'hébergeur",
+    "logs": "Vercel, l'hébergeur, enregistre des journaux techniques de chaque visite, qui contiennent des adresses IP. Ils servent à faire tourner et à protéger le service. Cmdx ne les lit pas et ne s'en sert pas.",
+    "rightsTitle": "Vos droits",
+    "rights": "Comme rien vous concernant n'est conservé sur un serveur, il n'y a rien à consulter, corriger ou supprimer. Pour effacer ce que garde votre navigateur, videz les données du site."
+  },
+  "sources": {
+    "title": "Sources",
+    "intro": "Chaque raccourci est vérifié dans la documentation de l'éditeur. Voici la page utilisée pour chaque logiciel, avec la version et la date de vérification.",
+    "version": "Version",
+    "checkedOn": "Vérifié le",
+    "shortcuts": "raccourcis"
+  },
+  "about": {
+    "title": "À propos",
+    "whatTitle": "Ce qu'est Cmdx",
+    "what": "Un seul endroit pour les raccourcis clavier des logiciels de création : 3D, texture, VFX, vidéo et 2D. La promesse est simple : trouver un raccourci en moins de cinq secondes.",
+    "howTitle": "Comment c'est fait",
+    "how": "Les raccourcis tiennent dans un fichier par logiciel, vérifié à la construction du site : un fichier faux ou incomplet arrête la construction au lieu d'arriver jusqu'à vous. Les pages sont générées à l'avance, donc le site reste rapide.",
+    "whoTitle": "Qui l'a fait",
+    "who": "Lucas Nevano, développeur full-stack junior en France. Cmdx est un projet de portfolio.",
+    "correctionTitle": "Une erreur ?",
+    "correction": "Les raccourcis changent d'une version à l'autre. Si l'un d'eux est faux, signalez-le et il sera corrigé."
   }
 }
