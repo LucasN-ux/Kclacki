@@ -5,6 +5,7 @@ import gaea from "./software/gaea.json";
 import houdini from "./software/houdini.json";
 import mari from "./software/mari.json";
 import marmosetToolbag from "./software/marmoset-toolbag.json";
+import marvelousDesigner from "./software/marvelous-designer.json";
 import maya from "./software/maya.json";
 import nuke from "./software/nuke.json";
 import premierePro from "./software/premiere-pro.json";
@@ -22,6 +23,7 @@ const RAW_SOFTWARE: unknown[] = [
   houdini,
   mari,
   marmosetToolbag,
+  marvelousDesigner,
   maya,
   nuke,
   premierePro,

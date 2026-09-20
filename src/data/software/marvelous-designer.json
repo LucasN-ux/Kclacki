@@ -1,0 +1,671 @@
+{
+  "id": "marvelous-designer",
+  "name": "Marvelous Designer",
+  "initials": "MD",
+  "family": "cloth",
+  "version": "2026",
+  "docUrl": "https://www.marvelousdesigner.com/support/news/view/d9fffb13e83a401baa91b639c7795f15",
+  "verifiedAt": "2026-09-20",
+  "shortcuts": [
+    {
+      "id": "select-move-tool",
+      "category": "tools",
+      "action": {
+        "en": "3D select and move tool",
+        "fr": "Outil sélection et déplacement 3D"
+      },
+      "keys": {
+        "win": [["Q"]],
+        "mac": [["Q"]]
+      }
+    },
+    {
+      "id": "pin-individual",
+      "category": "tools",
+      "action": {
+        "en": "Pin a point",
+        "fr": "Épingler un point"
+      },
+      "keys": {
+        "win": [["W"]],
+        "mac": [["W"]]
+      }
+    },
+    {
+      "id": "shape-ellipse",
+      "category": "tools",
+      "action": {
+        "en": "Ellipse shape",
+        "fr": "Forme ellipse"
+      },
+      "keys": {
+        "win": [["E"]],
+        "mac": [["E"]]
+      }
+    },
+    {
+      "id": "inner-ellipse",
+      "category": "tools",
+      "action": {
+        "en": "Inner ellipse",
+        "fr": "Ellipse intérieure"
+      },
+      "keys": {
+        "win": [["R"]],
+        "mac": [["R"]]
+      }
+    },
+    {
+      "id": "edit-texture",
+      "category": "tools",
+      "action": {
+        "en": "Edit the texture",
+        "fr": "Modifier la texture"
+      },
+      "keys": {
+        "win": [["T"]],
+        "mac": [["T"]]
+      }
+    },
+    {
+      "id": "library",
+      "category": "general",
+      "action": {
+        "en": "Open the library",
+        "fr": "Ouvrir la bibliothèque"
+      },
+      "keys": {
+        "win": [["Y"]],
+        "mac": [["Y"]]
+      }
+    },
+    {
+      "id": "create-topology",
+      "category": "tools",
+      "action": {
+        "en": "Create topology",
+        "fr": "Créer la topologie"
+      },
+      "keys": {
+        "win": [["U"]],
+        "mac": [["U"]]
+      }
+    },
+    {
+      "id": "trace",
+      "category": "tools",
+      "action": {
+        "en": "Trace",
+        "fr": "Décalquer"
+      },
+      "keys": {
+        "win": [["I"]],
+        "mac": [["I"]]
+      }
+    },
+    {
+      "id": "transform-pattern",
+      "category": "tools",
+      "action": {
+        "en": "Transform a pattern",
+        "fr": "Transformer un patron"
+      },
+      "context": {
+        "en": "2D window",
+        "fr": "Fenêtre 2D"
+      },
+      "keys": {
+        "win": [["A"]],
+        "mac": [["A"]]
+      }
+    },
+    {
+      "id": "shape-rectangle",
+      "category": "tools",
+      "action": {
+        "en": "Rectangle shape",
+        "fr": "Forme rectangle"
+      },
+      "keys": {
+        "win": [["S"]],
+        "mac": [["S"]]
+      }
+    },
+    {
+      "id": "frame-selection",
+      "category": "navigation",
+      "action": {
+        "en": "Focus zoom on the selection",
+        "fr": "Zoomer sur la sélection"
+      },
+      "keys": {
+        "win": [["F"]],
+        "mac": [["F"]]
+      }
+    },
+    {
+      "id": "internal-line",
+      "category": "tools",
+      "action": {
+        "en": "Internal polygon or line",
+        "fr": "Polygone ou ligne interne"
+      },
+      "context": {
+        "en": "2D window",
+        "fr": "Fenêtre 2D"
+      },
+      "keys": {
+        "win": [["G"]],
+        "mac": [["G"]]
+      }
+    },
+    {
+      "id": "polygon",
+      "category": "tools",
+      "action": {
+        "en": "Polygon",
+        "fr": "Polygone"
+      },
+      "context": {
+        "en": "2D window",
+        "fr": "Fenêtre 2D"
+      },
+      "keys": {
+        "win": [["H"]],
+        "mac": [["H"]]
+      }
+    },
+    {
+      "id": "edit-topstitch",
+      "category": "tools",
+      "action": {
+        "en": "Edit a topstitch",
+        "fr": "Modifier une surpiqûre"
+      },
+      "context": {
+        "en": "2D window",
+        "fr": "Fenêtre 2D"
+      },
+      "keys": {
+        "win": [["J"]],
+        "mac": [["J"]]
+      }
+    },
+    {
+      "id": "segment-topstitch",
+      "category": "tools",
+      "action": {
+        "en": "Segment topstitch",
+        "fr": "Surpiqûre de segment"
+      },
+      "keys": {
+        "win": [["K"]],
+        "mac": [["K"]]
+      }
+    },
+    {
+      "id": "free-topstitch",
+      "category": "tools",
+      "action": {
+        "en": "Free topstitch",
+        "fr": "Surpiqûre libre"
+      },
+      "keys": {
+        "win": [["L"]],
+        "mac": [["L"]]
+      }
+    },
+    {
+      "id": "seamline-topstitch",
+      "category": "tools",
+      "action": {
+        "en": "Seamline topstitch",
+        "fr": "Surpiqûre de couture"
+      },
+      "keys": {
+        "win": [[";"]],
+        "mac": [[";"]]
+      }
+    },
+    {
+      "id": "edit-pattern",
+      "category": "tools",
+      "action": {
+        "en": "Edit a pattern",
+        "fr": "Modifier un patron"
+      },
+      "context": {
+        "en": "2D window",
+        "fr": "Fenêtre 2D"
+      },
+      "keys": {
+        "win": [["Z"]],
+        "mac": [["Z"]]
+      }
+    },
+    {
+      "id": "add-points",
+      "category": "tools",
+      "action": {
+        "en": "Add points",
+        "fr": "Ajouter des points"
+      },
+      "keys": {
+        "win": [["X"]],
+        "mac": [["X"]]
+      }
+    },
+    {
+      "id": "edit-curvature",
+      "category": "tools",
+      "action": {
+        "en": "Edit the curvature",
+        "fr": "Modifier la courbure"
+      },
+      "keys": {
+        "win": [["C"]],
+        "mac": [["C"]]
+      }
+    },
+    {
+      "id": "edit-curve-point",
+      "category": "tools",
+      "action": {
+        "en": "Edit a curve point",
+        "fr": "Modifier un point de courbe"
+      },
+      "context": {
+        "en": "2D window",
+        "fr": "Fenêtre 2D"
+      },
+      "keys": {
+        "win": [["V"]],
+        "mac": [["V"]]
+      }
+    },
+    {
+      "id": "edit-sewing",
+      "category": "tools",
+      "action": {
+        "en": "Edit the sewing",
+        "fr": "Modifier la couture"
+      },
+      "context": {
+        "en": "2D window",
+        "fr": "Fenêtre 2D"
+      },
+      "keys": {
+        "win": [["B"]],
+        "mac": [["B"]]
+      }
+    },
+    {
+      "id": "segment-sewing",
+      "category": "tools",
+      "action": {
+        "en": "Segment sewing",
+        "fr": "Couture de segment"
+      },
+      "context": {
+        "en": "2D window",
+        "fr": "Fenêtre 2D"
+      },
+      "keys": {
+        "win": [["N"]],
+        "mac": [["N"]]
+      }
+    },
+    {
+      "id": "free-sewing",
+      "category": "tools",
+      "action": {
+        "en": "Free sewing",
+        "fr": "Couture libre"
+      },
+      "keys": {
+        "win": [["M"]],
+        "mac": [["M"]]
+      }
+    },
+    {
+      "id": "zoom-extents",
+      "category": "navigation",
+      "action": {
+        "en": "Zoom to fit everything",
+        "fr": "Cadrer tout"
+      },
+      "context": {
+        "en": "2D window",
+        "fr": "Fenêtre 2D"
+      },
+      "keys": {
+        "win": [[")"]],
+        "mac": [[")"]]
+      }
+    },
+    {
+      "id": "pin-with-click",
+      "category": "tools",
+      "action": {
+        "en": "Pin an individual point",
+        "fr": "Épingler un point précis"
+      },
+      "keys": {
+        "win": [["U", "MouseLeft"]],
+        "mac": [["U", "MouseLeft"]]
+      }
+    },
+    {
+      "id": "arrangement-points",
+      "category": "view",
+      "action": {
+        "en": "Show the arrangement points",
+        "fr": "Afficher les points d'arrangement"
+      },
+      "keys": {
+        "win": [["Shift", "F"]],
+        "mac": [["Shift", "F"]]
+      }
+    },
+    {
+      "id": "symmetric-pattern",
+      "category": "tools",
+      "action": {
+        "en": "Symmetric pattern with sewing",
+        "fr": "Patron symétrique avec couture"
+      },
+      "keys": {
+        "win": [["Ctrl", "D"]],
+        "mac": [["Cmd", "D"]]
+      }
+    },
+    {
+      "id": "solidify",
+      "category": "tools",
+      "action": {
+        "en": "Solidify",
+        "fr": "Solidifier"
+      },
+      "keys": {
+        "win": [["Ctrl", "E"]],
+        "mac": [["Cmd", "E"]]
+      }
+    },
+    {
+      "id": "strengthen",
+      "category": "tools",
+      "action": {
+        "en": "Strengthen",
+        "fr": "Renforcer"
+      },
+      "keys": {
+        "win": [["Ctrl", "H"]],
+        "mac": [["Cmd", "H"]]
+      }
+    },
+    {
+      "id": "deactivate-pattern",
+      "category": "edit",
+      "action": {
+        "en": "Deactivate the pattern",
+        "fr": "Désactiver le patron"
+      },
+      "keys": {
+        "win": [["Ctrl", "J"]],
+        "mac": [["Cmd", "J"]]
+      }
+    },
+    {
+      "id": "freeze",
+      "category": "edit",
+      "action": {
+        "en": "Freeze",
+        "fr": "Figer"
+      },
+      "keys": {
+        "win": [["Ctrl", "K"]],
+        "mac": [["Cmd", "K"]]
+      }
+    },
+    {
+      "id": "hide-pattern",
+      "category": "view",
+      "action": {
+        "en": "Show or hide the pattern",
+        "fr": "Afficher ou masquer le patron"
+      },
+      "keys": {
+        "win": [["Shift", "Q"]],
+        "mac": [["Shift", "Q"]]
+      }
+    },
+    {
+      "id": "isolate-selection",
+      "category": "view",
+      "action": {
+        "en": "Isolate the selection",
+        "fr": "Isoler la sélection"
+      },
+      "keys": {
+        "win": [["Shift", "I"]],
+        "mac": [["Shift", "I"]]
+      }
+    },
+    {
+      "id": "reset-arrangement",
+      "category": "edit",
+      "action": {
+        "en": "Reset the 3D arrangement of the selection",
+        "fr": "Réinitialiser l'arrangement 3D de la sélection"
+      },
+      "context": {
+        "en": "3D window",
+        "fr": "Fenêtre 3D"
+      },
+      "keys": {
+        "win": [["Ctrl", "F"]],
+        "mac": [["Cmd", "F"]]
+      }
+    },
+    {
+      "id": "flip-horizontally",
+      "category": "edit",
+      "action": {
+        "en": "Flip horizontally",
+        "fr": "Retourner horizontalement"
+      },
+      "context": {
+        "en": "3D window",
+        "fr": "Fenêtre 3D"
+      },
+      "keys": {
+        "win": [["Ctrl", "H"]],
+        "mac": [["Shift", "H"]]
+      }
+    },
+    {
+      "id": "superimpose-under",
+      "category": "edit",
+      "action": {
+        "en": "Superimpose under",
+        "fr": "Superposer dessous"
+      },
+      "context": {
+        "en": "3D window",
+        "fr": "Fenêtre 3D"
+      },
+      "keys": {
+        "win": [["Ctrl", "["]],
+        "mac": [["Cmd", "["]]
+      }
+    },
+    {
+      "id": "superimpose-over",
+      "category": "edit",
+      "action": {
+        "en": "Superimpose over",
+        "fr": "Superposer dessus"
+      },
+      "context": {
+        "en": "3D window",
+        "fr": "Fenêtre 3D"
+      },
+      "keys": {
+        "win": [["Ctrl", "]"]],
+        "mac": [["Cmd", "]"]]
+      }
+    },
+    {
+      "id": "show-avatar",
+      "category": "view",
+      "action": {
+        "en": "Show or hide the avatar",
+        "fr": "Afficher ou masquer l'avatar"
+      },
+      "context": {
+        "en": "3D window",
+        "fr": "Fenêtre 3D"
+      },
+      "keys": {
+        "win": [["Shift", "A"]],
+        "mac": [["Shift", "A"]]
+      }
+    },
+    {
+      "id": "show-avatar-joints",
+      "category": "view",
+      "action": {
+        "en": "Show or hide the avatar joints",
+        "fr": "Afficher ou masquer les articulations"
+      },
+      "context": {
+        "en": "3D window",
+        "fr": "Fenêtre 3D"
+      },
+      "keys": {
+        "win": [["Shift", "X"]],
+        "mac": [["Shift", "X"]]
+      }
+    },
+    {
+      "id": "show-strain-map",
+      "category": "view",
+      "action": {
+        "en": "Show or hide the strain map",
+        "fr": "Afficher ou masquer la carte de tension"
+      },
+      "context": {
+        "en": "3D window",
+        "fr": "Fenêtre 3D"
+      },
+      "keys": {
+        "win": [["Alt", "7"]],
+        "mac": [["Option", "7"]]
+      }
+    },
+    {
+      "id": "show-wireframe",
+      "category": "view",
+      "action": {
+        "en": "Show or hide the wireframe",
+        "fr": "Afficher ou masquer le fil de fer"
+      },
+      "context": {
+        "en": "3D window",
+        "fr": "Fenêtre 3D"
+      },
+      "keys": {
+        "win": [["Alt", "W"]],
+        "mac": [["Option", "W"]]
+      }
+    },
+    {
+      "id": "thick-textured-surface",
+      "category": "view",
+      "action": {
+        "en": "Thick textured surface",
+        "fr": "Surface texturée épaisse"
+      },
+      "context": {
+        "en": "3D window",
+        "fr": "Fenêtre 3D"
+      },
+      "keys": {
+        "win": [["Alt", "1"]],
+        "mac": [["Option", "1"]]
+      }
+    },
+    {
+      "id": "undo",
+      "category": "general",
+      "action": {
+        "en": "Undo",
+        "fr": "Annuler"
+      },
+      "keys": {
+        "win": [["Ctrl", "Z"]],
+        "mac": [["Cmd", "Z"]]
+      }
+    },
+    {
+      "id": "redo",
+      "category": "general",
+      "action": {
+        "en": "Redo",
+        "fr": "Rétablir"
+      },
+      "keys": {
+        "win": [["Ctrl", "Y"]],
+        "mac": [["Cmd", "Y"]]
+      }
+    },
+    {
+      "id": "invert-selection",
+      "category": "selection",
+      "action": {
+        "en": "Invert the selection",
+        "fr": "Inverser la sélection"
+      },
+      "context": {
+        "en": "2D window",
+        "fr": "Fenêtre 2D"
+      },
+      "keys": {
+        "win": [["Ctrl", "Shift", "I"]],
+        "mac": [["Cmd", "Shift", "I"]]
+      }
+    },
+    {
+      "id": "layer-clone-over",
+      "category": "edit",
+      "action": {
+        "en": "Clone the layer over",
+        "fr": "Cloner le calque au-dessus"
+      },
+      "context": {
+        "en": "2D window",
+        "fr": "Fenêtre 2D"
+      },
+      "keys": {
+        "win": [["Ctrl", "Shift", "V"]],
+        "mac": [["Cmd", "Shift", "V"]]
+      }
+    },
+    {
+      "id": "clone-as-pattern",
+      "category": "edit",
+      "action": {
+        "en": "Clone as a pattern",
+        "fr": "Cloner comme patron"
+      },
+      "context": {
+        "en": "2D window",
+        "fr": "Fenêtre 2D"
+      },
+      "keys": {
+        "win": [["Ctrl", "Shift", "C"]],
+        "mac": [["Cmd", "Shift", "C"]]
+      }
+    }
+  ]
+}
