@@ -1,0 +1,47 @@
+/* Design tokens, taken from the Cmdx design system (Claude Design).
+   One theme only: the flash sheet paper. */
+:root {
+  /* Paper and surfaces */
+  --paper: #f3e7cf;
+  --paper-deep: #e8d9ba;
+  --card: #fbf4e3;
+  --key-face: #fffbf0;
+
+  /* Ink: the tattoo line, and every text */
+  --ink: #12100d;
+  --ink-soft: #4a4038;
+  --ink-muted: #6f6154;
+
+  /* Flat colors from the ghost logo. Never used to write text. */
+  --green: #34b189;
+  --green-deep: #103023;
+  --yellow: #f4c619;
+  --orange: #f8511d;
+  --orange-ink: #c0350a;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 36px;
+  --space-7: 56px;
+  --space-8: 64px;
+
+  /* Corners */
+  --radius-sm: 3px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+  --radius-pill: 999px;
+
+  /* Line weights */
+  --stroke-1: 2px;
+  --stroke-2: 3px;
+  --stroke-3: 4px;
+
+  /* Hard shadows, always offset to the bottom right, never blurred */
+  --shadow-hard-sm: 2px 2px 0 var(--ink);
+  --shadow-hard: 4px 4px 0 var(--ink);
+  --shadow-hard-lg: 6px 6px 0 var(--ink);
+}

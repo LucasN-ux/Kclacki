@@ -1,0 +1,43 @@
+.card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  background: var(--card);
+  border: var(--stroke-2) solid var(--ink);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-hard);
+}
+
+.card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-hard-lg);
+  background: var(--yellow);
+}
+
+/* No publisher logo is ever used: a software is two capital letters. */
+.badge {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  background: var(--green);
+  border: var(--stroke-2) solid var(--ink);
+  border-radius: var(--radius-md);
+  font-family: var(--font-mono);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.name {
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+.count {
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--ink-soft);
+}
