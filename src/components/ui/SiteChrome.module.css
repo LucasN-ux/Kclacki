@@ -9,6 +9,23 @@
   border-bottom: var(--stroke-3) solid var(--ink);
 }
 
+/* Hidden until the keyboard reaches it, then shown on top of everything. */
+.skip {
+  position: absolute;
+  left: var(--space-4);
+  top: -100px;
+  z-index: 10;
+  padding: var(--space-2) var(--space-3);
+  background: var(--yellow);
+  border: var(--stroke-2) solid var(--ink);
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+}
+
+.skip:focus {
+  top: var(--space-2);
+}
+
 .brand {
   display: inline-flex;
   align-items: baseline;
@@ -84,4 +101,41 @@
 
 .footer a:hover {
   color: var(--orange-ink);
+}
+
+/* Phone: the search field takes a whole line of its own, so it stays readable
+   next to the brand and the controls. */
+@media (max-width: 700px) {
+  .header {
+    padding: var(--space-3) var(--space-4);
+    gap: var(--space-3);
+  }
+
+  .search {
+    order: 3;
+    flex: 1 0 100%;
+    max-width: none;
+  }
+
+  /* Hidden until the keyboard reaches it, then shown on top of everything. */
+  .skip {
+    position: absolute;
+    left: var(--space-4);
+    top: -100px;
+    z-index: 10;
+    padding: var(--space-2) var(--space-3);
+    background: var(--yellow);
+    border: var(--stroke-2) solid var(--ink);
+    border-radius: var(--radius-sm);
+    font-weight: 700;
+  }
+
+  .skip:focus {
+    top: var(--space-2);
+  }
+
+  .brand {
+    font-size: 23px;
+    line-height: 26px;
+  }
 }

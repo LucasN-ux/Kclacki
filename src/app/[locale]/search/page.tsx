@@ -33,7 +33,7 @@ export default async function SearchPage({
   return (
     <>
       <SiteHeader locale={locale} path="/search" />
-      <main className={shell.page}>
+      <main id="content" className={shell.page}>
         <h1 className={styles.title}>{getDictionary(locale).search.title}</h1>
         {/* The query is read from the address, which only exists in the browser. */}
         <Suspense>

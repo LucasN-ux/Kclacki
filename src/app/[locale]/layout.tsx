@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { DEFAULT_LOCALE, LOCALES, isLocale, localeHref } from "@/domain/locale";
+import { SITE_URL } from "@/domain/site";
 import { getDictionary } from "@/i18n";
 import { PlatformProvider } from "@/hooks/usePlatform";
 import { fontVariables } from "../fonts";
@@ -19,6 +20,7 @@ export async function generateMetadata({
   const dictionary = getDictionary(locale);
 
   return {
+    metadataBase: new URL(SITE_URL),
     title: "Cmdx",
     description: dictionary.site.description,
     // Tells search engines the two pages are translations of each other.

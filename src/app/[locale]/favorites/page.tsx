@@ -32,7 +32,7 @@ export default async function FavoritesPage({
   return (
     <>
       <SiteHeader locale={locale} path="/favorites" />
-      <main className={shell.page}>
+      <main id="content" className={shell.page}>
         <h1 className={styles.title}>
           {getDictionary(locale).favorites.title}
         </h1>

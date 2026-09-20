@@ -25,7 +25,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
   return (
     <>
       <SiteHeader locale={locale} showSearch={false} />
-      <main className={shell.page}>
+      <main id="content" className={shell.page}>
         <section className={styles.hero}>
           <h1 className={styles.title}>Cmdx</h1>
           <p className={styles.tagline}>{dictionary.site.tagline}</p>

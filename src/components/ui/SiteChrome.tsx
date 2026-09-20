@@ -23,6 +23,9 @@ export function SiteHeader({
 
   return (
     <header className={styles.header}>
+      <a className={styles.skip} href="#content">
+        {dictionary.nav.skipToContent}
+      </a>
       <Link href={localeHref(locale)} className={styles.brand}>
         Cmdx
       </Link>
