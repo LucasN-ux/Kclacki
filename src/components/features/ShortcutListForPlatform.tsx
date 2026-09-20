@@ -2,6 +2,7 @@
 
 import { ShortcutList } from "@/components/ui/ShortcutRow";
 import type { Locale } from "@/domain/locale";
+import type { FlaggedRows } from "@/domain/platformDifference";
 import type { Shortcut } from "@/domain/schema";
 import { usePlatform } from "@/hooks/usePlatform";
 
@@ -9,12 +10,19 @@ import { usePlatform } from "@/hooks/usePlatform";
 export function ShortcutListForPlatform({
   shortcuts,
   locale,
+  flag,
 }: {
   shortcuts: Shortcut[];
   locale: Locale;
+  flag: FlaggedRows;
 }) {
   const { platform } = usePlatform();
   return (
-    <ShortcutList shortcuts={shortcuts} platform={platform} locale={locale} />
+    <ShortcutList
+      shortcuts={shortcuts}
+      platform={platform}
+      locale={locale}
+      flag={flag}
+    />
   );
 }

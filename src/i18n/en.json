@@ -1,0 +1,40 @@
+{
+  "site": {
+    "tagline": "The keyboard shortcuts of your creative software, on one sheet.",
+    "description": "Keyboard shortcuts for creative software: 3D, texturing, VFX, video and 2D. Windows and Mac, checked against the official documentation.",
+    "softwareCount": "software",
+    "shortcutCount": "shortcuts"
+  },
+  "nav": {
+    "home": "Home",
+    "language": "Language",
+    "skipToContent": "Skip to content"
+  },
+  "families": {
+    "3d-sculpt": "3D & sculpting",
+    "texture": "Texturing",
+    "render-sim-terrain": "Rendering, simulation & terrain",
+    "cloth": "3D clothing",
+    "compositing-video": "Compositing & video",
+    "2d-realtime": "2D & real time"
+  },
+  "categories": {
+    "general": "General",
+    "navigation": "Navigation",
+    "selection": "Selection",
+    "tools": "Tools",
+    "edit": "Editing",
+    "file": "File",
+    "view": "View"
+  },
+  "software": {
+    "version": "Version",
+    "checkedOn": "Checked on",
+    "officialDoc": "Official documentation",
+    "backHome": "All software"
+  },
+  "footer": {
+    "trademarks": "Software names belong to their publishers.",
+    "suggest": "Suggest a correction"
+  }
+}

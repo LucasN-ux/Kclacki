@@ -16,7 +16,7 @@ const FLAG_LABEL: Record<"differing" | "same", Record<Locale, string>> = {
   same: { en: "Same on", fr: "Identique sur" },
 };
 
-// One sentence above the list, so the rare flags below stay meaningful.
+// Said once per software, above the lists, so the rare flags stay meaningful.
 const SUMMARY: Record<
   "all-same" | "all-different" | "mixed",
   Record<Locale, string>
@@ -31,6 +31,24 @@ const SUMMARY: Record<
   },
   mixed: { en: "shortcuts change on Mac", fr: "raccourcis changent sur Mac" },
 };
+
+export function PlatformSummary({
+  shortcuts,
+  locale,
+}: {
+  shortcuts: Shortcut[];
+  locale: Locale;
+}) {
+  const { total, differing } = summarizePlatformDifference(shortcuts);
+  const text =
+    differing === 0
+      ? SUMMARY["all-same"][locale]
+      : differing === total
+        ? SUMMARY["all-different"][locale]
+        : `${differing} / ${total} ${SUMMARY.mixed[locale]}.`;
+
+  return <p className={styles.summary}>{text}</p>;
+}
 
 export function ShortcutRow({
   shortcut,
@@ -78,33 +96,25 @@ export function ShortcutList({
   shortcuts,
   platform,
   locale,
+  flag,
 }: {
   shortcuts: Shortcut[];
   platform: Platform;
   locale: Locale;
+  /** Which rows carry a flag, decided once for the whole software. */
+  flag: FlaggedRows;
 }) {
-  const { total, differing, flag } = summarizePlatformDifference(shortcuts);
-  const summary =
-    differing === 0
-      ? SUMMARY["all-same"][locale]
-      : differing === total
-        ? SUMMARY["all-different"][locale]
-        : `${differing} / ${total} ${SUMMARY.mixed[locale]}.`;
-
   return (
-    <>
-      <p className={styles.summary}>{summary}</p>
-      <ul className={styles.list}>
-        {shortcuts.map((shortcut) => (
-          <ShortcutRow
-            key={shortcut.id}
-            shortcut={shortcut}
-            platform={platform}
-            locale={locale}
-            flag={flag}
-          />
-        ))}
-      </ul>
-    </>
+    <ul className={styles.list}>
+      {shortcuts.map((shortcut) => (
+        <ShortcutRow
+          key={shortcut.id}
+          shortcut={shortcut}
+          platform={platform}
+          locale={locale}
+          flag={flag}
+        />
+      ))}
+    </ul>
   );
 }
