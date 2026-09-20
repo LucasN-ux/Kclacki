@@ -1,0 +1,543 @@
+{
+  "id": "touchdesigner",
+  "name": "TouchDesigner",
+  "initials": "TD",
+  "family": "2d-realtime",
+  "version": "2025.33230",
+  "docUrl": "https://docs.derivative.ca/Application_Shortcuts",
+  "verifiedAt": "2026-09-20",
+  "shortcuts": [
+    {
+      "id": "play-pause",
+      "category": "general",
+      "action": {
+        "en": "Start or stop the timeline",
+        "fr": "Lancer ou arrêter la timeline"
+      },
+      "keys": {
+        "win": [["Space"]],
+        "mac": [["Space"]]
+      }
+    },
+    {
+      "id": "next-frame",
+      "category": "navigation",
+      "action": {
+        "en": "Step one frame forward",
+        "fr": "Avancer d'une image"
+      },
+      "keys": {
+        "win": [["Left"]],
+        "mac": [["Left"]]
+      }
+    },
+    {
+      "id": "previous-frame",
+      "category": "navigation",
+      "action": {
+        "en": "Step one frame back",
+        "fr": "Reculer d'une image"
+      },
+      "keys": {
+        "win": [["Right"]],
+        "mac": [["Right"]]
+      }
+    },
+    {
+      "id": "toggle-render",
+      "category": "view",
+      "action": {
+        "en": "Turn the render flag on or off",
+        "fr": "Activer ou désactiver le rendu"
+      },
+      "context": {
+        "en": "Network editor",
+        "fr": "Éditeur de réseau"
+      },
+      "keys": {
+        "win": [["R"]],
+        "mac": [["R"]]
+      }
+    },
+    {
+      "id": "toggle-bypass",
+      "category": "view",
+      "action": {
+        "en": "Turn the bypass flag on or off",
+        "fr": "Activer ou désactiver le contournement"
+      },
+      "context": {
+        "en": "Network editor",
+        "fr": "Éditeur de réseau"
+      },
+      "keys": {
+        "win": [["B"]],
+        "mac": [["B"]]
+      }
+    },
+    {
+      "id": "toggle-display",
+      "category": "view",
+      "action": {
+        "en": "Turn the display flag on or off",
+        "fr": "Activer ou désactiver l'affichage"
+      },
+      "context": {
+        "en": "Network editor",
+        "fr": "Éditeur de réseau"
+      },
+      "keys": {
+        "win": [["D"]],
+        "mac": [["D"]]
+      }
+    },
+    {
+      "id": "hide-operator",
+      "category": "view",
+      "action": {
+        "en": "Hide the operator",
+        "fr": "Masquer l'opérateur"
+      },
+      "context": {
+        "en": "Network editor",
+        "fr": "Éditeur de réseau"
+      },
+      "keys": {
+        "win": [["Shift", "D"]],
+        "mac": [["Shift", "D"]]
+      }
+    },
+    {
+      "id": "new-network",
+      "category": "file",
+      "action": {
+        "en": "New network",
+        "fr": "Nouveau réseau"
+      },
+      "context": {
+        "en": "Network editor",
+        "fr": "Éditeur de réseau"
+      },
+      "keys": {
+        "win": [["Alt", "N"]],
+        "mac": [["Option", "N"]]
+      }
+    },
+    {
+      "id": "enter-operator",
+      "category": "navigation",
+      "action": {
+        "en": "Enter the operator",
+        "fr": "Entrer dans l'opérateur"
+      },
+      "context": {
+        "en": "Network editor",
+        "fr": "Éditeur de réseau"
+      },
+      "keys": {
+        "win": [["I"]],
+        "mac": [["I"]]
+      }
+    },
+    {
+      "id": "leave-operator",
+      "category": "navigation",
+      "action": {
+        "en": "Go back up one level",
+        "fr": "Remonter d'un niveau"
+      },
+      "context": {
+        "en": "Network editor",
+        "fr": "Éditeur de réseau"
+      },
+      "keys": {
+        "win": [["U"]],
+        "mac": [["U"]]
+      }
+    },
+    {
+      "id": "cancel",
+      "category": "general",
+      "action": {
+        "en": "Cancel the current action",
+        "fr": "Annuler l'action en cours"
+      },
+      "context": {
+        "en": "Network editor",
+        "fr": "Éditeur de réseau"
+      },
+      "keys": {
+        "win": [["Esc"]],
+        "mac": [["Esc"]]
+      }
+    },
+    {
+      "id": "color-palette",
+      "category": "tools",
+      "action": {
+        "en": "Open the colour palette",
+        "fr": "Ouvrir la palette de couleurs"
+      },
+      "context": {
+        "en": "Network editor",
+        "fr": "Éditeur de réseau"
+      },
+      "keys": {
+        "win": [["C"]],
+        "mac": [["C"]]
+      }
+    },
+    {
+      "id": "frame-all",
+      "category": "navigation",
+      "action": {
+        "en": "Fit the whole network",
+        "fr": "Cadrer tout le réseau"
+      },
+      "context": {
+        "en": "Network editor",
+        "fr": "Éditeur de réseau"
+      },
+      "keys": {
+        "win": [["F"]],
+        "mac": [["F"]]
+      }
+    },
+    {
+      "id": "frame-selection",
+      "category": "navigation",
+      "action": {
+        "en": "Fit the selection",
+        "fr": "Cadrer la sélection"
+      },
+      "context": {
+        "en": "Network editor",
+        "fr": "Éditeur de réseau"
+      },
+      "keys": {
+        "win": [["Shift", "F"]],
+        "mac": [["Shift", "F"]]
+      }
+    },
+    {
+      "id": "home-view",
+      "category": "navigation",
+      "action": {
+        "en": "Go back to the home view",
+        "fr": "Revenir à la vue d'origine"
+      },
+      "context": {
+        "en": "Network editor",
+        "fr": "Éditeur de réseau"
+      },
+      "keys": {
+        "win": [["H"]],
+        "mac": [["H"]]
+      }
+    },
+    {
+      "id": "home-selection",
+      "category": "navigation",
+      "action": {
+        "en": "Centre the view on the selection",
+        "fr": "Centrer la vue sur la sélection"
+      },
+      "context": {
+        "en": "Network editor",
+        "fr": "Éditeur de réseau"
+      },
+      "keys": {
+        "win": [["Shift", "H"]],
+        "mac": [["Shift", "H"]]
+      }
+    },
+    {
+      "id": "layout-all",
+      "category": "tools",
+      "action": {
+        "en": "Lay out every operator",
+        "fr": "Ranger tous les opérateurs"
+      },
+      "context": {
+        "en": "Network editor",
+        "fr": "Éditeur de réseau"
+      },
+      "keys": {
+        "win": [["L"]],
+        "mac": [["L"]]
+      }
+    },
+    {
+      "id": "layout-selection",
+      "category": "tools",
+      "action": {
+        "en": "Lay out the selected operators",
+        "fr": "Ranger les opérateurs sélectionnés"
+      },
+      "context": {
+        "en": "Network editor",
+        "fr": "Éditeur de réseau"
+      },
+      "keys": {
+        "win": [["Shift", "L"]],
+        "mac": [["Shift", "L"]]
+      }
+    },
+    {
+      "id": "open-groups",
+      "category": "tools",
+      "action": {
+        "en": "Open the groups",
+        "fr": "Ouvrir les groupes"
+      },
+      "context": {
+        "en": "Network editor",
+        "fr": "Éditeur de réseau"
+      },
+      "keys": {
+        "win": [["G"]],
+        "mac": [["G"]]
+      }
+    },
+    {
+      "id": "add-group",
+      "category": "tools",
+      "action": {
+        "en": "Add a group",
+        "fr": "Ajouter un groupe"
+      },
+      "context": {
+        "en": "Network editor",
+        "fr": "Éditeur de réseau"
+      },
+      "keys": {
+        "win": [["Shift", "G"]],
+        "mac": [["Shift", "G"]]
+      }
+    },
+    {
+      "id": "rename-node",
+      "category": "edit",
+      "action": {
+        "en": "Rename the operator",
+        "fr": "Renommer l'opérateur"
+      },
+      "context": {
+        "en": "Network editor",
+        "fr": "Éditeur de réseau"
+      },
+      "keys": {
+        "win": [["N"]],
+        "mac": [["N"]]
+      }
+    },
+    {
+      "id": "node-parameters",
+      "category": "general",
+      "action": {
+        "en": "Show the parameters",
+        "fr": "Afficher les paramètres"
+      },
+      "context": {
+        "en": "Network editor",
+        "fr": "Éditeur de réseau"
+      },
+      "keys": {
+        "win": [["P"]],
+        "mac": [["P"]]
+      }
+    },
+    {
+      "id": "network-overview",
+      "category": "view",
+      "action": {
+        "en": "Show the network overview",
+        "fr": "Afficher la vue d'ensemble du réseau"
+      },
+      "context": {
+        "en": "Network editor",
+        "fr": "Éditeur de réseau"
+      },
+      "keys": {
+        "win": [["O"]],
+        "mac": [["O"]]
+      }
+    },
+    {
+      "id": "connect-style",
+      "category": "view",
+      "action": {
+        "en": "Change the wire style",
+        "fr": "Changer le style des liens"
+      },
+      "context": {
+        "en": "Network editor",
+        "fr": "Éditeur de réseau"
+      },
+      "keys": {
+        "win": [["S"]],
+        "mac": [["S"]]
+      }
+    },
+    {
+      "id": "show-datalinks",
+      "category": "view",
+      "action": {
+        "en": "Show the data links",
+        "fr": "Afficher les liens de données"
+      },
+      "context": {
+        "en": "Network editor",
+        "fr": "Éditeur de réseau"
+      },
+      "keys": {
+        "win": [["X"]],
+        "mac": [["X"]]
+      }
+    },
+    {
+      "id": "load-component",
+      "category": "file",
+      "action": {
+        "en": "Load a component",
+        "fr": "Charger un composant"
+      },
+      "context": {
+        "en": "Network editor",
+        "fr": "Éditeur de réseau"
+      },
+      "keys": {
+        "win": [["Shift", "X"]],
+        "mac": [["Shift", "X"]]
+      }
+    },
+    {
+      "id": "expose-parameter",
+      "category": "edit",
+      "action": {
+        "en": "Expose a parameter",
+        "fr": "Exposer un paramètre"
+      },
+      "context": {
+        "en": "Network editor",
+        "fr": "Éditeur de réseau"
+      },
+      "keys": {
+        "win": [["E"]],
+        "mac": [["E"]]
+      }
+    },
+    {
+      "id": "expose-all",
+      "category": "edit",
+      "action": {
+        "en": "Expose every parameter",
+        "fr": "Exposer tous les paramètres"
+      },
+      "context": {
+        "en": "Network editor",
+        "fr": "Éditeur de réseau"
+      },
+      "keys": {
+        "win": [["Shift", "E"]],
+        "mac": [["Shift", "E"]]
+      }
+    },
+    {
+      "id": "delete",
+      "category": "edit",
+      "action": {
+        "en": "Delete the selection",
+        "fr": "Supprimer la sélection"
+      },
+      "context": {
+        "en": "Network editor",
+        "fr": "Éditeur de réseau"
+      },
+      "keys": {
+        "win": [["Delete"]],
+        "mac": [["Delete"]]
+      }
+    },
+    {
+      "id": "search-operator",
+      "category": "navigation",
+      "action": {
+        "en": "Search an operator",
+        "fr": "Rechercher un opérateur"
+      },
+      "context": {
+        "en": "Network editor",
+        "fr": "Éditeur de réseau"
+      },
+      "keys": {
+        "win": [["Alt", "S"]],
+        "mac": [["Option", "S"]]
+      }
+    },
+    {
+      "id": "go-to-network",
+      "category": "view",
+      "action": {
+        "en": "Go to the network pane",
+        "fr": "Aller au panneau réseau"
+      },
+      "context": {
+        "en": "Network editor",
+        "fr": "Éditeur de réseau"
+      },
+      "keys": {
+        "win": [["Alt", "1"]],
+        "mac": [["Option", "1"]]
+      }
+    },
+    {
+      "id": "go-to-panel",
+      "category": "view",
+      "action": {
+        "en": "Go to the panel pane",
+        "fr": "Aller au panneau d'interface"
+      },
+      "context": {
+        "en": "Network editor",
+        "fr": "Éditeur de réseau"
+      },
+      "keys": {
+        "win": [["Alt", "2"]],
+        "mac": [["Option", "2"]]
+      }
+    },
+    {
+      "id": "go-to-geometry",
+      "category": "view",
+      "action": {
+        "en": "Go to the geometry view",
+        "fr": "Aller à la vue géométrie"
+      },
+      "context": {
+        "en": "Network editor",
+        "fr": "Éditeur de réseau"
+      },
+      "keys": {
+        "win": [["Alt", "3"]],
+        "mac": [["Option", "3"]]
+      }
+    },
+    {
+      "id": "go-to-textport",
+      "category": "view",
+      "action": {
+        "en": "Go to the textport",
+        "fr": "Aller au textport"
+      },
+      "context": {
+        "en": "Network editor",
+        "fr": "Éditeur de réseau"
+      },
+      "keys": {
+        "win": [["Alt", "9"]],
+        "mac": [["Option", "9"]]
+      }
+    }
+  ]
+}

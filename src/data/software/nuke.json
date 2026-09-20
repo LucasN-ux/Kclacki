@@ -1,0 +1,571 @@
+{
+  "id": "nuke",
+  "name": "Nuke",
+  "initials": "NK",
+  "family": "compositing-video",
+  "version": "17.1v1",
+  "docUrl": "https://learn.foundry.com/nuke/content/misc/hotkeys_studio.html",
+  "verifiedAt": "2026-09-20",
+  "shortcuts": [
+    {
+      "id": "select-all",
+      "category": "selection",
+      "action": {
+        "en": "Select everything",
+        "fr": "Tout sélectionner"
+      },
+      "keys": {
+        "win": [["Ctrl", "A"]],
+        "mac": [["Cmd", "A"]]
+      }
+    },
+    {
+      "id": "deselect-all",
+      "category": "selection",
+      "action": {
+        "en": "Deselect everything",
+        "fr": "Tout désélectionner"
+      },
+      "keys": {
+        "win": [["Ctrl", "Shift", "A"]],
+        "mac": [["Cmd", "Shift", "A"]]
+      }
+    },
+    {
+      "id": "copy",
+      "category": "edit",
+      "action": {
+        "en": "Copy",
+        "fr": "Copier"
+      },
+      "keys": {
+        "win": [["Ctrl", "C"]],
+        "mac": [["Cmd", "C"]]
+      }
+    },
+    {
+      "id": "cut",
+      "category": "edit",
+      "action": {
+        "en": "Cut",
+        "fr": "Couper"
+      },
+      "keys": {
+        "win": [["Ctrl", "X"]],
+        "mac": [["Cmd", "X"]]
+      }
+    },
+    {
+      "id": "paste",
+      "category": "edit",
+      "action": {
+        "en": "Paste",
+        "fr": "Coller"
+      },
+      "keys": {
+        "win": [["Ctrl", "V"]],
+        "mac": [["Cmd", "V"]]
+      }
+    },
+    {
+      "id": "duplicate",
+      "category": "edit",
+      "action": {
+        "en": "Duplicate",
+        "fr": "Dupliquer"
+      },
+      "keys": {
+        "win": [["Ctrl", "D"]],
+        "mac": [["Cmd", "D"]]
+      }
+    },
+    {
+      "id": "undo",
+      "category": "general",
+      "action": {
+        "en": "Undo",
+        "fr": "Annuler"
+      },
+      "keys": {
+        "win": [["Ctrl", "Z"]],
+        "mac": [["Cmd", "Z"]]
+      }
+    },
+    {
+      "id": "redo",
+      "category": "general",
+      "action": {
+        "en": "Redo",
+        "fr": "Rétablir"
+      },
+      "keys": {
+        "win": [["Ctrl", "Shift", "Z"]],
+        "mac": [["Cmd", "Shift", "Z"]]
+      }
+    },
+    {
+      "id": "new-project",
+      "category": "file",
+      "action": {
+        "en": "New script",
+        "fr": "Nouveau script"
+      },
+      "keys": {
+        "win": [["Ctrl", "N"]],
+        "mac": [["Cmd", "N"]]
+      }
+    },
+    {
+      "id": "open-file",
+      "category": "file",
+      "action": {
+        "en": "Open a script",
+        "fr": "Ouvrir un script"
+      },
+      "keys": {
+        "win": [["Ctrl", "O"]],
+        "mac": [["Cmd", "O"]]
+      }
+    },
+    {
+      "id": "save-file",
+      "category": "file",
+      "action": {
+        "en": "Save",
+        "fr": "Enregistrer"
+      },
+      "keys": {
+        "win": [["Ctrl", "S"]],
+        "mac": [["Cmd", "S"]]
+      }
+    },
+    {
+      "id": "save-as",
+      "category": "file",
+      "action": {
+        "en": "Save as",
+        "fr": "Enregistrer sous"
+      },
+      "keys": {
+        "win": [["Ctrl", "Shift", "S"]],
+        "mac": [["Cmd", "Shift", "S"]]
+      }
+    },
+    {
+      "id": "close-project",
+      "category": "file",
+      "action": {
+        "en": "Close the script",
+        "fr": "Fermer le script"
+      },
+      "keys": {
+        "win": [["Ctrl", "W"]],
+        "mac": [["Cmd", "W"]]
+      }
+    },
+    {
+      "id": "quit",
+      "category": "file",
+      "action": {
+        "en": "Quit the application",
+        "fr": "Quitter l'application"
+      },
+      "keys": {
+        "win": [["Ctrl", "Q"]],
+        "mac": [["Cmd", "Q"]]
+      }
+    },
+    {
+      "id": "preferences",
+      "category": "general",
+      "action": {
+        "en": "Open the preferences",
+        "fr": "Ouvrir les préférences"
+      },
+      "keys": {
+        "win": [["Shift", "S"]],
+        "mac": [["Shift", "S"]]
+      }
+    },
+    {
+      "id": "fullscreen",
+      "category": "view",
+      "action": {
+        "en": "Full screen window",
+        "fr": "Fenêtre en plein écran"
+      },
+      "keys": {
+        "win": [["Alt", "S"]],
+        "mac": [["Option", "S"]]
+      }
+    },
+    {
+      "id": "curve-editor",
+      "category": "view",
+      "action": {
+        "en": "Show the curve editor",
+        "fr": "Afficher l'éditeur de courbes"
+      },
+      "keys": {
+        "win": [["Alt", "`"]],
+        "mac": [["Option", "`"]]
+      }
+    },
+    {
+      "id": "expand-panel",
+      "category": "view",
+      "action": {
+        "en": "Expand the focused panel",
+        "fr": "Agrandir le panneau actif"
+      },
+      "keys": {
+        "win": [["Space"]],
+        "mac": [["Space"]]
+      }
+    },
+    {
+      "id": "node-menu",
+      "category": "tools",
+      "action": {
+        "en": "Open the node search menu",
+        "fr": "Ouvrir le menu de recherche de nœuds"
+      },
+      "context": {
+        "en": "Node Graph",
+        "fr": "Graphe de nœuds"
+      },
+      "keys": {
+        "win": [["Tab"]],
+        "mac": [["Tab"]]
+      }
+    },
+    {
+      "id": "insert-blur",
+      "category": "tools",
+      "action": {
+        "en": "Insert a Blur node",
+        "fr": "Insérer un nœud Blur"
+      },
+      "context": {
+        "en": "Node Graph",
+        "fr": "Graphe de nœuds"
+      },
+      "keys": {
+        "win": [["B"]],
+        "mac": [["B"]]
+      }
+    },
+    {
+      "id": "insert-colorcorrect",
+      "category": "tools",
+      "action": {
+        "en": "Insert a ColorCorrect node",
+        "fr": "Insérer un nœud ColorCorrect"
+      },
+      "context": {
+        "en": "Node Graph",
+        "fr": "Graphe de nœuds"
+      },
+      "keys": {
+        "win": [["C"]],
+        "mac": [["C"]]
+      }
+    },
+    {
+      "id": "insert-grade",
+      "category": "tools",
+      "action": {
+        "en": "Insert a Grade node",
+        "fr": "Insérer un nœud Grade"
+      },
+      "context": {
+        "en": "Node Graph",
+        "fr": "Graphe de nœuds"
+      },
+      "keys": {
+        "win": [["G"]],
+        "mac": [["G"]]
+      }
+    },
+    {
+      "id": "insert-merge",
+      "category": "tools",
+      "action": {
+        "en": "Insert a Merge node",
+        "fr": "Insérer un nœud Merge"
+      },
+      "context": {
+        "en": "Node Graph",
+        "fr": "Graphe de nœuds"
+      },
+      "keys": {
+        "win": [["M"]],
+        "mac": [["M"]]
+      }
+    },
+    {
+      "id": "insert-transform",
+      "category": "tools",
+      "action": {
+        "en": "Insert a Transform node",
+        "fr": "Insérer un nœud Transform"
+      },
+      "context": {
+        "en": "Node Graph",
+        "fr": "Graphe de nœuds"
+      },
+      "keys": {
+        "win": [["T"]],
+        "mac": [["T"]]
+      }
+    },
+    {
+      "id": "insert-read",
+      "category": "tools",
+      "action": {
+        "en": "Insert a Read node",
+        "fr": "Insérer un nœud Read"
+      },
+      "context": {
+        "en": "Node Graph",
+        "fr": "Graphe de nœuds"
+      },
+      "keys": {
+        "win": [["R"]],
+        "mac": [["R"]]
+      }
+    },
+    {
+      "id": "insert-roto",
+      "category": "tools",
+      "action": {
+        "en": "Insert a Roto node",
+        "fr": "Insérer un nœud Roto"
+      },
+      "context": {
+        "en": "Node Graph",
+        "fr": "Graphe de nœuds"
+      },
+      "keys": {
+        "win": [["O"]],
+        "mac": [["O"]]
+      }
+    },
+    {
+      "id": "insert-rotopaint",
+      "category": "tools",
+      "action": {
+        "en": "Insert a RotoPaint node",
+        "fr": "Insérer un nœud RotoPaint"
+      },
+      "context": {
+        "en": "Node Graph",
+        "fr": "Graphe de nœuds"
+      },
+      "keys": {
+        "win": [["P"]],
+        "mac": [["P"]]
+      }
+    },
+    {
+      "id": "insert-copy",
+      "category": "tools",
+      "action": {
+        "en": "Insert a Copy node",
+        "fr": "Insérer un nœud Copy"
+      },
+      "context": {
+        "en": "Node Graph",
+        "fr": "Graphe de nœuds"
+      },
+      "keys": {
+        "win": [["K"]],
+        "mac": [["K"]]
+      }
+    },
+    {
+      "id": "insert-dot",
+      "category": "tools",
+      "action": {
+        "en": "Insert a Dot node",
+        "fr": "Insérer un nœud Dot"
+      },
+      "context": {
+        "en": "Node Graph",
+        "fr": "Graphe de nœuds"
+      },
+      "keys": {
+        "win": [["."]],
+        "mac": [["."]]
+      }
+    },
+    {
+      "id": "disable-node",
+      "category": "edit",
+      "action": {
+        "en": "Turn the node off or on",
+        "fr": "Désactiver ou réactiver le nœud"
+      },
+      "context": {
+        "en": "Node Graph",
+        "fr": "Graphe de nœuds"
+      },
+      "keys": {
+        "win": [["D"]],
+        "mac": [["D"]]
+      }
+    },
+    {
+      "id": "rename-node",
+      "category": "edit",
+      "action": {
+        "en": "Rename the selected node",
+        "fr": "Renommer le nœud sélectionné"
+      },
+      "context": {
+        "en": "Node Graph",
+        "fr": "Graphe de nœuds"
+      },
+      "keys": {
+        "win": [["N"]],
+        "mac": [["N"]]
+      }
+    },
+    {
+      "id": "delete",
+      "category": "edit",
+      "action": {
+        "en": "Delete the selected nodes",
+        "fr": "Supprimer les nœuds sélectionnés"
+      },
+      "context": {
+        "en": "Node Graph",
+        "fr": "Graphe de nœuds"
+      },
+      "keys": {
+        "win": [["Backspace"], ["Delete"]],
+        "mac": [["Backspace"], ["Delete"]]
+      }
+    },
+    {
+      "id": "frame-selection",
+      "category": "navigation",
+      "action": {
+        "en": "Fit the selected nodes to the panel",
+        "fr": "Cadrer les nœuds sélectionnés"
+      },
+      "context": {
+        "en": "Node Graph",
+        "fr": "Graphe de nœuds"
+      },
+      "keys": {
+        "win": [["F"]],
+        "mac": [["F"]]
+      }
+    },
+    {
+      "id": "frame-all",
+      "category": "navigation",
+      "action": {
+        "en": "Fit every node to the panel",
+        "fr": "Cadrer tous les nœuds"
+      },
+      "context": {
+        "en": "Node Graph",
+        "fr": "Graphe de nœuds"
+      },
+      "keys": {
+        "win": [["MouseMiddle"]],
+        "mac": [["MouseMiddle"]]
+      }
+    },
+    {
+      "id": "search-node",
+      "category": "navigation",
+      "action": {
+        "en": "Search a node by name",
+        "fr": "Rechercher un nœud par son nom"
+      },
+      "context": {
+        "en": "Node Graph",
+        "fr": "Graphe de nœuds"
+      },
+      "keys": {
+        "win": [["/"]],
+        "mac": [["/"]]
+      }
+    },
+    {
+      "id": "snap-to-grid",
+      "category": "tools",
+      "action": {
+        "en": "Snap every node to the grid",
+        "fr": "Aligner tous les nœuds sur la grille"
+      },
+      "context": {
+        "en": "Node Graph",
+        "fr": "Graphe de nœuds"
+      },
+      "keys": {
+        "win": [["\\"]],
+        "mac": [["\\"]]
+      }
+    },
+    {
+      "id": "node-properties",
+      "category": "general",
+      "action": {
+        "en": "Open the node properties",
+        "fr": "Ouvrir les propriétés du nœud"
+      },
+      "context": {
+        "en": "Node Graph",
+        "fr": "Graphe de nœuds"
+      },
+      "keys": {
+        "win": [["Return"]],
+        "mac": [["Return"]]
+      }
+    },
+    {
+      "id": "node-info",
+      "category": "general",
+      "action": {
+        "en": "Show the node information",
+        "fr": "Afficher les informations du nœud"
+      },
+      "context": {
+        "en": "Node Graph",
+        "fr": "Graphe de nœuds"
+      },
+      "keys": {
+        "win": [["I"]],
+        "mac": [["I"]]
+      }
+    },
+    {
+      "id": "render-all",
+      "category": "file",
+      "action": {
+        "en": "Render every Write node",
+        "fr": "Rendre tous les nœuds Write"
+      },
+      "keys": {
+        "win": [["F5"]],
+        "mac": [["F5"]]
+      }
+    },
+    {
+      "id": "render-selected",
+      "category": "file",
+      "action": {
+        "en": "Render the selected Write nodes",
+        "fr": "Rendre les nœuds Write sélectionnés"
+      },
+      "keys": {
+        "win": [["F7"]],
+        "mac": [["F7"]]
+      }
+    }
+  ]
+}

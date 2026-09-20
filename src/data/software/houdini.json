@@ -1,0 +1,479 @@
+{
+  "id": "houdini",
+  "name": "Houdini",
+  "initials": "HO",
+  "family": "3d-sculpt",
+  "version": "22.0",
+  "docUrl": "https://www.sidefx.com/docs/houdini/start/hotkeys.html",
+  "verifiedAt": "2026-09-20",
+  "shortcuts": [
+    {
+      "id": "node-menu",
+      "category": "tools",
+      "action": {
+        "en": "Open the menu of available nodes",
+        "fr": "Ouvrir le menu des nœuds disponibles"
+      },
+      "keys": {
+        "win": [["Tab"]],
+        "mac": [["Tab"]]
+      }
+    },
+    {
+      "id": "orbit-view",
+      "category": "navigation",
+      "action": {
+        "en": "Orbit around the scene",
+        "fr": "Orbiter autour de la scène"
+      },
+      "context": {
+        "en": "Viewport",
+        "fr": "Vue 3D"
+      },
+      "keys": {
+        "win": [["Space", "MouseLeft"]],
+        "mac": [["Space", "MouseLeft"]]
+      }
+    },
+    {
+      "id": "pan-view",
+      "category": "navigation",
+      "action": {
+        "en": "Pan the view",
+        "fr": "Déplacer la vue"
+      },
+      "context": {
+        "en": "Viewport",
+        "fr": "Vue 3D"
+      },
+      "keys": {
+        "win": [["Space", "MouseMiddle"]],
+        "mac": [["Space", "MouseMiddle"]]
+      }
+    },
+    {
+      "id": "zoom-view",
+      "category": "navigation",
+      "action": {
+        "en": "Zoom in and out",
+        "fr": "Zoomer et dézoomer"
+      },
+      "context": {
+        "en": "Viewport",
+        "fr": "Vue 3D"
+      },
+      "keys": {
+        "win": [["Space", "MouseRight"]],
+        "mac": [["Space", "MouseRight"]]
+      }
+    },
+    {
+      "id": "center-view",
+      "category": "navigation",
+      "action": {
+        "en": "Centre the view on the point under the pointer",
+        "fr": "Centrer la vue sur le point sous le curseur"
+      },
+      "context": {
+        "en": "Viewport",
+        "fr": "Vue 3D"
+      },
+      "keys": {
+        "win": [["Space", "Z"]],
+        "mac": [["Space", "Z"]]
+      }
+    },
+    {
+      "id": "default-view",
+      "category": "navigation",
+      "action": {
+        "en": "Show the default view",
+        "fr": "Afficher la vue par défaut"
+      },
+      "context": {
+        "en": "Viewport",
+        "fr": "Vue 3D"
+      },
+      "keys": {
+        "win": [["Space", "H"]],
+        "mac": [["Space", "H"]]
+      }
+    },
+    {
+      "id": "frame-all",
+      "category": "navigation",
+      "action": {
+        "en": "Zoom to show every object",
+        "fr": "Cadrer tous les objets"
+      },
+      "context": {
+        "en": "Viewport",
+        "fr": "Vue 3D"
+      },
+      "keys": {
+        "win": [["Space", "A"]],
+        "mac": [["Space", "A"]]
+      }
+    },
+    {
+      "id": "frame-selection",
+      "category": "navigation",
+      "action": {
+        "en": "Zoom to show the selection",
+        "fr": "Cadrer la sélection"
+      },
+      "context": {
+        "en": "Viewport",
+        "fr": "Vue 3D"
+      },
+      "keys": {
+        "win": [["Space", "G"]],
+        "mac": [["Space", "G"]]
+      }
+    },
+    {
+      "id": "toggle-wireframe",
+      "category": "view",
+      "action": {
+        "en": "Switch between shaded and wireframe",
+        "fr": "Basculer entre ombré et fil de fer"
+      },
+      "context": {
+        "en": "Viewport",
+        "fr": "Vue 3D"
+      },
+      "keys": {
+        "win": [["W"]],
+        "mac": [["W"]]
+      }
+    },
+    {
+      "id": "display-options",
+      "category": "view",
+      "action": {
+        "en": "Show the display options",
+        "fr": "Afficher les options d'affichage"
+      },
+      "context": {
+        "en": "Viewport",
+        "fr": "Vue 3D"
+      },
+      "keys": {
+        "win": [["D"]],
+        "mac": [["D"]]
+      }
+    },
+    {
+      "id": "toggle-quad-view",
+      "category": "view",
+      "action": {
+        "en": "Switch between one and four viewports",
+        "fr": "Basculer entre une et quatre vues"
+      },
+      "context": {
+        "en": "Viewport",
+        "fr": "Vue 3D"
+      },
+      "keys": {
+        "win": [["Space", "B"]],
+        "mac": [["Space", "B"]]
+      }
+    },
+    {
+      "id": "toggle-orthographic",
+      "category": "view",
+      "action": {
+        "en": "Switch between orthographic and perspective",
+        "fr": "Basculer entre orthographique et perspective"
+      },
+      "context": {
+        "en": "Viewport",
+        "fr": "Vue 3D"
+      },
+      "keys": {
+        "win": [["Space", "O"]],
+        "mac": [["Space", "O"]]
+      }
+    },
+    {
+      "id": "view-perspective",
+      "category": "view",
+      "action": {
+        "en": "Switch to the perspective view",
+        "fr": "Passer en vue perspective"
+      },
+      "context": {
+        "en": "Viewport",
+        "fr": "Vue 3D"
+      },
+      "keys": {
+        "win": [["Space", "1"]],
+        "mac": [["Space", "1"]]
+      }
+    },
+    {
+      "id": "view-top",
+      "category": "view",
+      "action": {
+        "en": "Switch to the top view",
+        "fr": "Passer en vue de dessus"
+      },
+      "context": {
+        "en": "Viewport",
+        "fr": "Vue 3D"
+      },
+      "keys": {
+        "win": [["Space", "2"]],
+        "mac": [["Space", "2"]]
+      }
+    },
+    {
+      "id": "view-front",
+      "category": "view",
+      "action": {
+        "en": "Switch to the front view",
+        "fr": "Passer en vue de face"
+      },
+      "context": {
+        "en": "Viewport",
+        "fr": "Vue 3D"
+      },
+      "keys": {
+        "win": [["Space", "3"]],
+        "mac": [["Space", "3"]]
+      }
+    },
+    {
+      "id": "view-side",
+      "category": "view",
+      "action": {
+        "en": "Switch to the side view",
+        "fr": "Passer en vue de côté"
+      },
+      "context": {
+        "en": "Viewport",
+        "fr": "Vue 3D"
+      },
+      "keys": {
+        "win": [["Space", "4"]],
+        "mac": [["Space", "4"]]
+      }
+    },
+    {
+      "id": "select-tool",
+      "category": "tools",
+      "action": {
+        "en": "Select tool",
+        "fr": "Outil de sélection"
+      },
+      "keys": {
+        "win": [["S"]],
+        "mac": [["S"]]
+      }
+    },
+    {
+      "id": "move",
+      "category": "tools",
+      "action": {
+        "en": "Move",
+        "fr": "Déplacer"
+      },
+      "keys": {
+        "win": [["T"]],
+        "mac": [["T"]]
+      }
+    },
+    {
+      "id": "rotate",
+      "category": "tools",
+      "action": {
+        "en": "Rotate",
+        "fr": "Tourner"
+      },
+      "keys": {
+        "win": [["R"]],
+        "mac": [["R"]]
+      }
+    },
+    {
+      "id": "scale",
+      "category": "tools",
+      "action": {
+        "en": "Scale",
+        "fr": "Redimensionner"
+      },
+      "keys": {
+        "win": [["E"]],
+        "mac": [["E"]]
+      }
+    },
+    {
+      "id": "node-handles",
+      "category": "tools",
+      "action": {
+        "en": "Show the handles of the node",
+        "fr": "Afficher les poignées du nœud"
+      },
+      "keys": {
+        "win": [["Return"]],
+        "mac": [["Return"]]
+      }
+    },
+    {
+      "id": "toggle-component-mode",
+      "category": "selection",
+      "action": {
+        "en": "Switch between object and component selection",
+        "fr": "Basculer entre sélection d'objets et de composants"
+      },
+      "keys": {
+        "win": [["F8"]],
+        "mac": [["F8"]]
+      }
+    },
+    {
+      "id": "select-objects",
+      "category": "selection",
+      "action": {
+        "en": "Select objects",
+        "fr": "Sélectionner des objets"
+      },
+      "keys": {
+        "win": [["1"]],
+        "mac": [["1"]]
+      }
+    },
+    {
+      "id": "select-points",
+      "category": "selection",
+      "action": {
+        "en": "Select points",
+        "fr": "Sélectionner des points"
+      },
+      "keys": {
+        "win": [["2"]],
+        "mac": [["2"]]
+      }
+    },
+    {
+      "id": "select-edges",
+      "category": "selection",
+      "action": {
+        "en": "Select edges",
+        "fr": "Sélectionner des arêtes"
+      },
+      "keys": {
+        "win": [["3"]],
+        "mac": [["3"]]
+      }
+    },
+    {
+      "id": "select-primitives",
+      "category": "selection",
+      "action": {
+        "en": "Select primitives",
+        "fr": "Sélectionner des primitives"
+      },
+      "keys": {
+        "win": [["4"]],
+        "mac": [["4"]]
+      }
+    },
+    {
+      "id": "select-vertices",
+      "category": "selection",
+      "action": {
+        "en": "Select vertices",
+        "fr": "Sélectionner des sommets"
+      },
+      "keys": {
+        "win": [["5"]],
+        "mac": [["5"]]
+      }
+    },
+    {
+      "id": "select-all",
+      "category": "selection",
+      "action": {
+        "en": "Select everything",
+        "fr": "Tout sélectionner"
+      },
+      "keys": {
+        "win": [["N"]],
+        "mac": [["N"]]
+      }
+    },
+    {
+      "id": "deselect-all",
+      "category": "selection",
+      "action": {
+        "en": "Select nothing",
+        "fr": "Tout désélectionner"
+      },
+      "keys": {
+        "win": [["Shift", "N"]],
+        "mac": [["Shift", "N"]]
+      }
+    },
+    {
+      "id": "set-keyframe",
+      "category": "edit",
+      "action": {
+        "en": "Set a keyframe",
+        "fr": "Poser une image clé"
+      },
+      "keys": {
+        "win": [["K"]],
+        "mac": [["K"]]
+      }
+    },
+    {
+      "id": "toggle-auto-key",
+      "category": "edit",
+      "action": {
+        "en": "Turn auto-keying on or off",
+        "fr": "Activer ou désactiver la pose automatique de clés"
+      },
+      "keys": {
+        "win": [["Alt", "K"]],
+        "mac": [["Option", "K"]]
+      }
+    },
+    {
+      "id": "key-translation",
+      "category": "edit",
+      "action": {
+        "en": "Key the position",
+        "fr": "Poser une clé de position"
+      },
+      "keys": {
+        "win": [["Shift", "T"]],
+        "mac": [["Shift", "T"]]
+      }
+    },
+    {
+      "id": "key-rotation",
+      "category": "edit",
+      "action": {
+        "en": "Key the rotation",
+        "fr": "Poser une clé de rotation"
+      },
+      "keys": {
+        "win": [["Shift", "R"]],
+        "mac": [["Shift", "R"]]
+      }
+    },
+    {
+      "id": "key-scale",
+      "category": "edit",
+      "action": {
+        "en": "Key the scale",
+        "fr": "Poser une clé d'échelle"
+      },
+      "keys": {
+        "win": [["Shift", "E"]],
+        "mac": [["Shift", "E"]]
+      }
+    }
+  ]
+}

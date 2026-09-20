@@ -1,0 +1,387 @@
+{
+  "id": "substance-designer",
+  "name": "Substance Designer",
+  "initials": "SD",
+  "family": "texture",
+  "version": "16.0",
+  "docUrl": "https://substance3d.adobe.com/documentation/sddoc/shortcuts-102400015.html",
+  "verifiedAt": "2026-09-20",
+  "shortcuts": [
+    {
+      "id": "new-project",
+      "category": "file",
+      "action": {
+        "en": "New Substance graph",
+        "fr": "Nouveau graphe Substance"
+      },
+      "keys": {
+        "win": [["Ctrl", "N"]],
+        "mac": [["Cmd", "N"]]
+      }
+    },
+    {
+      "id": "open-file",
+      "category": "file",
+      "action": {
+        "en": "Load a package",
+        "fr": "Charger un paquet"
+      },
+      "keys": {
+        "win": [["Ctrl", "O"]],
+        "mac": [["Cmd", "O"]]
+      }
+    },
+    {
+      "id": "close-project",
+      "category": "file",
+      "action": {
+        "en": "Close the selected packages",
+        "fr": "Fermer les paquets sélectionnés"
+      },
+      "keys": {
+        "win": [["Ctrl", "F4"]],
+        "mac": [["Cmd", "W"]]
+      }
+    },
+    {
+      "id": "save-file",
+      "category": "file",
+      "action": {
+        "en": "Save the package",
+        "fr": "Enregistrer le paquet"
+      },
+      "keys": {
+        "win": [["Ctrl", "S"]],
+        "mac": [["Cmd", "S"]]
+      }
+    },
+    {
+      "id": "undo",
+      "category": "general",
+      "action": {
+        "en": "Undo",
+        "fr": "Annuler"
+      },
+      "keys": {
+        "win": [["Ctrl", "Z"]],
+        "mac": [["Cmd", "Z"]]
+      }
+    },
+    {
+      "id": "redo",
+      "category": "general",
+      "action": {
+        "en": "Redo",
+        "fr": "Rétablir"
+      },
+      "keys": {
+        "win": [["Ctrl", "Y"]],
+        "mac": [["Cmd", "Y"]]
+      }
+    },
+    {
+      "id": "node-menu",
+      "category": "tools",
+      "action": {
+        "en": "Open the node menu",
+        "fr": "Ouvrir le menu des nœuds"
+      },
+      "context": {
+        "en": "Graph view",
+        "fr": "Vue graphe"
+      },
+      "keys": {
+        "win": [["Space"]],
+        "mac": [["Space"]]
+      }
+    },
+    {
+      "id": "context-menu",
+      "category": "tools",
+      "action": {
+        "en": "Open the contextual menu",
+        "fr": "Ouvrir le menu contextuel"
+      },
+      "context": {
+        "en": "Graph view",
+        "fr": "Vue graphe"
+      },
+      "keys": {
+        "win": [["MouseRight"]],
+        "mac": [["MouseRight"]]
+      }
+    },
+    {
+      "id": "zoom-view",
+      "category": "navigation",
+      "action": {
+        "en": "Zoom the graph",
+        "fr": "Zoomer dans le graphe"
+      },
+      "context": {
+        "en": "Graph view",
+        "fr": "Vue graphe"
+      },
+      "keys": {
+        "win": [["MouseWheel"], ["Alt", "MouseRight"]],
+        "mac": [["MouseWheel"], ["Option", "MouseRight"]]
+      }
+    },
+    {
+      "id": "fast-zoom",
+      "category": "navigation",
+      "action": {
+        "en": "Zoom faster",
+        "fr": "Zoomer plus vite"
+      },
+      "context": {
+        "en": "Graph view",
+        "fr": "Vue graphe"
+      },
+      "keys": {
+        "win": [["Shift", "MouseWheel"]],
+        "mac": [["Shift", "MouseWheel"]]
+      }
+    },
+    {
+      "id": "pan-view",
+      "category": "navigation",
+      "action": {
+        "en": "Pan the graph",
+        "fr": "Déplacer le graphe"
+      },
+      "context": {
+        "en": "Graph view",
+        "fr": "Vue graphe"
+      },
+      "keys": {
+        "win": [["MouseMiddle"], ["Ctrl", "MouseRight"]],
+        "mac": [["MouseMiddle"], ["Cmd", "MouseRight"]]
+      }
+    },
+    {
+      "id": "copy",
+      "category": "edit",
+      "action": {
+        "en": "Copy the selection",
+        "fr": "Copier la sélection"
+      },
+      "context": {
+        "en": "Graph view",
+        "fr": "Vue graphe"
+      },
+      "keys": {
+        "win": [["Ctrl", "C"]],
+        "mac": [["Cmd", "C"]]
+      }
+    },
+    {
+      "id": "paste",
+      "category": "edit",
+      "action": {
+        "en": "Paste",
+        "fr": "Coller"
+      },
+      "context": {
+        "en": "Graph view",
+        "fr": "Vue graphe"
+      },
+      "keys": {
+        "win": [["Ctrl", "V"]],
+        "mac": [["Cmd", "V"]]
+      }
+    },
+    {
+      "id": "duplicate",
+      "category": "edit",
+      "action": {
+        "en": "Duplicate the selection",
+        "fr": "Dupliquer la sélection"
+      },
+      "context": {
+        "en": "Graph view",
+        "fr": "Vue graphe"
+      },
+      "keys": {
+        "win": [["Ctrl", "D"]],
+        "mac": [["Cmd", "D"]]
+      }
+    },
+    {
+      "id": "duplicate-without-links",
+      "category": "edit",
+      "action": {
+        "en": "Duplicate without the links",
+        "fr": "Dupliquer sans les liens"
+      },
+      "context": {
+        "en": "Graph view",
+        "fr": "Vue graphe"
+      },
+      "keys": {
+        "win": [["Ctrl", "Shift", "D"]],
+        "mac": [["Cmd", "Shift", "D"]]
+      }
+    },
+    {
+      "id": "delete",
+      "category": "edit",
+      "action": {
+        "en": "Delete the selection",
+        "fr": "Supprimer la sélection"
+      },
+      "context": {
+        "en": "Graph view",
+        "fr": "Vue graphe"
+      },
+      "keys": {
+        "win": [["Delete"]],
+        "mac": [["Delete"]]
+      }
+    },
+    {
+      "id": "disable-node",
+      "category": "edit",
+      "action": {
+        "en": "Turn the nodes off or on",
+        "fr": "Désactiver ou réactiver les nœuds"
+      },
+      "context": {
+        "en": "Graph view",
+        "fr": "Vue graphe"
+      },
+      "keys": {
+        "win": [["Shift", "D"]],
+        "mac": [["Shift", "D"]]
+      }
+    },
+    {
+      "id": "toggle-tiled-display",
+      "category": "view",
+      "action": {
+        "en": "Turn the tiled display on or off",
+        "fr": "Activer ou désactiver l'affichage en mosaïque"
+      },
+      "context": {
+        "en": "2D view",
+        "fr": "Vue 2D"
+      },
+      "keys": {
+        "win": [["Space"]],
+        "mac": [["Space"]]
+      }
+    },
+    {
+      "id": "zoom-view-2d",
+      "category": "navigation",
+      "action": {
+        "en": "Zoom the 2D view",
+        "fr": "Zoomer dans la vue 2D"
+      },
+      "context": {
+        "en": "2D view",
+        "fr": "Vue 2D"
+      },
+      "keys": {
+        "win": [["MouseWheel"], ["Alt", "MouseRight"]],
+        "mac": [["MouseWheel"], ["Option", "MouseRight"]]
+      }
+    },
+    {
+      "id": "pan-view-2d",
+      "category": "navigation",
+      "action": {
+        "en": "Pan the 2D view",
+        "fr": "Déplacer la vue 2D"
+      },
+      "context": {
+        "en": "2D view",
+        "fr": "Vue 2D"
+      },
+      "keys": {
+        "win": [["MouseMiddle"], ["Ctrl", "MouseRight"]],
+        "mac": [["MouseMiddle"], ["Cmd", "MouseRight"]]
+      }
+    },
+    {
+      "id": "orbit-view",
+      "category": "navigation",
+      "action": {
+        "en": "Orbit the camera",
+        "fr": "Orbiter la caméra"
+      },
+      "context": {
+        "en": "3D view",
+        "fr": "Vue 3D"
+      },
+      "keys": {
+        "win": [["MouseLeft"]],
+        "mac": [["MouseLeft"]]
+      }
+    },
+    {
+      "id": "dolly-view",
+      "category": "navigation",
+      "action": {
+        "en": "Move the camera forward or back",
+        "fr": "Avancer ou reculer la caméra"
+      },
+      "context": {
+        "en": "3D view",
+        "fr": "Vue 3D"
+      },
+      "keys": {
+        "win": [["MouseWheel"], ["Alt", "MouseRight"]],
+        "mac": [["MouseWheel"], ["Option", "MouseRight"]]
+      }
+    },
+    {
+      "id": "pan-view-3d",
+      "category": "navigation",
+      "action": {
+        "en": "Pan the camera",
+        "fr": "Déplacer la caméra"
+      },
+      "context": {
+        "en": "3D view",
+        "fr": "Vue 3D"
+      },
+      "keys": {
+        "win": [["MouseMiddle"], ["Ctrl", "MouseRight"]],
+        "mac": [["MouseMiddle"], ["Cmd", "MouseRight"]]
+      }
+    },
+    {
+      "id": "rotate-environment",
+      "category": "view",
+      "action": {
+        "en": "Rotate the environment",
+        "fr": "Tourner l'environnement"
+      },
+      "context": {
+        "en": "3D view",
+        "fr": "Vue 3D"
+      },
+      "keys": {
+        "win": [["Ctrl", "Shift", "MouseRight"]],
+        "mac": [["Ctrl", "Shift", "MouseRight"]]
+      }
+    },
+    {
+      "id": "light-controls",
+      "category": "view",
+      "action": {
+        "en": "Switch to the point light controls",
+        "fr": "Passer aux commandes de la lumière"
+      },
+      "context": {
+        "en": "3D view",
+        "fr": "Vue 3D"
+      },
+      "keys": {
+        "win": [["Shift"]],
+        "mac": [["Shift"]]
+      }
+    }
+  ]
+}

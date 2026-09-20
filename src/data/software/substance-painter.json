@@ -1,0 +1,731 @@
+{
+  "id": "substance-painter",
+  "name": "Substance Painter",
+  "initials": "SP",
+  "family": "texture",
+  "version": "12.1",
+  "docUrl": "https://helpx.adobe.com/substance-3d-painter/interface/settings/shortcuts.html",
+  "verifiedAt": "2026-09-20",
+  "shortcuts": [
+    {
+      "id": "hide-interface",
+      "category": "view",
+      "action": {
+        "en": "Hide the interface",
+        "fr": "Masquer l'interface"
+      },
+      "keys": {
+        "win": [["Tab"]],
+        "mac": [["Tab"]]
+      }
+    },
+    {
+      "id": "undo",
+      "category": "general",
+      "action": {
+        "en": "Undo",
+        "fr": "Annuler"
+      },
+      "keys": {
+        "win": [["Ctrl", "Z"]],
+        "mac": [["Cmd", "Z"]]
+      }
+    },
+    {
+      "id": "redo",
+      "category": "general",
+      "action": {
+        "en": "Redo",
+        "fr": "Rétablir"
+      },
+      "keys": {
+        "win": [["Ctrl", "Y"]],
+        "mac": [["Cmd", "Y"]]
+      }
+    },
+    {
+      "id": "new-project",
+      "category": "file",
+      "action": {
+        "en": "New project",
+        "fr": "Nouveau projet"
+      },
+      "keys": {
+        "win": [["Ctrl", "N"]],
+        "mac": [["Cmd", "N"]]
+      }
+    },
+    {
+      "id": "open-file",
+      "category": "file",
+      "action": {
+        "en": "Open a project",
+        "fr": "Ouvrir un projet"
+      },
+      "keys": {
+        "win": [["Ctrl", "O"]],
+        "mac": [["Cmd", "O"]]
+      }
+    },
+    {
+      "id": "save-file",
+      "category": "file",
+      "action": {
+        "en": "Save the project",
+        "fr": "Enregistrer le projet"
+      },
+      "keys": {
+        "win": [["Ctrl", "S"]],
+        "mac": [["Cmd", "S"]]
+      }
+    },
+    {
+      "id": "close-project",
+      "category": "file",
+      "action": {
+        "en": "Close the project",
+        "fr": "Fermer le projet"
+      },
+      "keys": {
+        "win": [["Ctrl", "F4"]],
+        "mac": [["Cmd", "W"]]
+      }
+    },
+    {
+      "id": "quit",
+      "category": "file",
+      "action": {
+        "en": "Quit the application",
+        "fr": "Quitter l'application"
+      },
+      "keys": {
+        "win": [["Alt", "F4"]],
+        "mac": [["Cmd", "Q"]]
+      }
+    },
+    {
+      "id": "export-textures",
+      "category": "file",
+      "action": {
+        "en": "Export the textures",
+        "fr": "Exporter les textures"
+      },
+      "keys": {
+        "win": [["Ctrl", "Shift", "E"]],
+        "mac": [["Shift", "Cmd", "E"]]
+      }
+    },
+    {
+      "id": "bake-mesh-maps",
+      "category": "tools",
+      "action": {
+        "en": "Open the baking settings",
+        "fr": "Ouvrir les réglages de baking"
+      },
+      "keys": {
+        "win": [["Ctrl", "Shift", "B"]],
+        "mac": [["Cmd", "Shift", "B"]]
+      }
+    },
+    {
+      "id": "mode-baking",
+      "category": "general",
+      "action": {
+        "en": "Switch to baking mode",
+        "fr": "Passer en mode baking"
+      },
+      "keys": {
+        "win": [["F8"]],
+        "mac": [["F8"]]
+      }
+    },
+    {
+      "id": "mode-painting",
+      "category": "general",
+      "action": {
+        "en": "Switch to painting mode",
+        "fr": "Passer en mode peinture"
+      },
+      "keys": {
+        "win": [["F9"]],
+        "mac": [["F9"]]
+      }
+    },
+    {
+      "id": "mode-rendering",
+      "category": "general",
+      "action": {
+        "en": "Switch to rendering mode",
+        "fr": "Passer en mode rendu"
+      },
+      "keys": {
+        "win": [["F10"]],
+        "mac": [["F10"]]
+      }
+    },
+    {
+      "id": "toggle-manipulator",
+      "category": "tools",
+      "action": {
+        "en": "Show or hide the manipulator",
+        "fr": "Afficher ou masquer le manipulateur"
+      },
+      "keys": {
+        "win": [["Q"]],
+        "mac": [["Q"]]
+      }
+    },
+    {
+      "id": "move",
+      "category": "tools",
+      "action": {
+        "en": "Move",
+        "fr": "Déplacer"
+      },
+      "keys": {
+        "win": [["W"]],
+        "mac": [["W"]]
+      }
+    },
+    {
+      "id": "rotate",
+      "category": "tools",
+      "action": {
+        "en": "Rotate",
+        "fr": "Tourner"
+      },
+      "keys": {
+        "win": [["E"]],
+        "mac": [["E"]]
+      }
+    },
+    {
+      "id": "scale",
+      "category": "tools",
+      "action": {
+        "en": "Scale",
+        "fr": "Redimensionner"
+      },
+      "keys": {
+        "win": [["R"]],
+        "mac": [["R"]]
+      }
+    },
+    {
+      "id": "surface-tool",
+      "category": "tools",
+      "action": {
+        "en": "Snap the manipulator on the surface",
+        "fr": "Aimanter le manipulateur sur la surface"
+      },
+      "keys": {
+        "win": [["Shift", "W"]],
+        "mac": [["Shift", "W"]]
+      }
+    },
+    {
+      "id": "toggle-symmetry",
+      "category": "tools",
+      "action": {
+        "en": "Turn symmetry on or off",
+        "fr": "Activer ou désactiver la symétrie"
+      },
+      "keys": {
+        "win": [["L"]],
+        "mac": [["L"]]
+      }
+    },
+    {
+      "id": "select-paint-tool",
+      "category": "tools",
+      "action": {
+        "en": "Paint tool",
+        "fr": "Outil peinture"
+      },
+      "keys": {
+        "win": [["1"]],
+        "mac": [["1"]]
+      }
+    },
+    {
+      "id": "select-eraser-tool",
+      "category": "tools",
+      "action": {
+        "en": "Eraser tool",
+        "fr": "Outil gomme"
+      },
+      "keys": {
+        "win": [["2"]],
+        "mac": [["2"]]
+      }
+    },
+    {
+      "id": "select-projection-tool",
+      "category": "tools",
+      "action": {
+        "en": "Projection tool",
+        "fr": "Outil projection"
+      },
+      "keys": {
+        "win": [["3"]],
+        "mac": [["3"]]
+      }
+    },
+    {
+      "id": "select-polygon-fill",
+      "category": "tools",
+      "action": {
+        "en": "Polygon fill tool",
+        "fr": "Outil remplissage de polygones"
+      },
+      "keys": {
+        "win": [["4"]],
+        "mac": [["4"]]
+      }
+    },
+    {
+      "id": "select-smudge-tool",
+      "category": "tools",
+      "action": {
+        "en": "Smudge tool",
+        "fr": "Outil doigt"
+      },
+      "keys": {
+        "win": [["5"]],
+        "mac": [["5"]]
+      }
+    },
+    {
+      "id": "select-clone-tool",
+      "category": "tools",
+      "action": {
+        "en": "Clone tool",
+        "fr": "Outil tampon"
+      },
+      "keys": {
+        "win": [["6"]],
+        "mac": [["6"]]
+      }
+    },
+    {
+      "id": "increase-brush-size",
+      "category": "tools",
+      "action": {
+        "en": "Increase the brush size",
+        "fr": "Agrandir la brosse"
+      },
+      "keys": {
+        "win": [["]"]],
+        "mac": [["]"]]
+      }
+    },
+    {
+      "id": "decrease-brush-size",
+      "category": "tools",
+      "action": {
+        "en": "Decrease the brush size",
+        "fr": "Réduire la brosse"
+      },
+      "keys": {
+        "win": [["["]],
+        "mac": [["["]]
+      }
+    },
+    {
+      "id": "invert-grayscale",
+      "category": "tools",
+      "action": {
+        "en": "Invert the grayscale value",
+        "fr": "Inverser la valeur de gris"
+      },
+      "keys": {
+        "win": [["X"]],
+        "mac": [["X"]]
+      }
+    },
+    {
+      "id": "pick-material",
+      "category": "tools",
+      "action": {
+        "en": "Pick the material under the pointer",
+        "fr": "Prélever le matériau sous le curseur"
+      },
+      "keys": {
+        "win": [["P"]],
+        "mac": [["P"]]
+      }
+    },
+    {
+      "id": "lazy-mouse",
+      "category": "tools",
+      "action": {
+        "en": "Turn the lazy mouse on or off",
+        "fr": "Activer ou désactiver la souris paresseuse"
+      },
+      "keys": {
+        "win": [["D"]],
+        "mac": [["D"]]
+      }
+    },
+    {
+      "id": "camera-perspective",
+      "category": "view",
+      "action": {
+        "en": "Perspective camera",
+        "fr": "Caméra en perspective"
+      },
+      "keys": {
+        "win": [["F5"]],
+        "mac": [["F5"]]
+      }
+    },
+    {
+      "id": "camera-orthographic",
+      "category": "view",
+      "action": {
+        "en": "Orthographic camera",
+        "fr": "Caméra orthographique"
+      },
+      "keys": {
+        "win": [["F6"]],
+        "mac": [["F6"]]
+      }
+    },
+    {
+      "id": "viewport-3d-2d",
+      "category": "view",
+      "action": {
+        "en": "Show the 3D and 2D views",
+        "fr": "Afficher les vues 3D et 2D"
+      },
+      "keys": {
+        "win": [["F1"]],
+        "mac": [["F1"]]
+      }
+    },
+    {
+      "id": "viewport-3d",
+      "category": "view",
+      "action": {
+        "en": "Show the 3D view only",
+        "fr": "Afficher seulement la vue 3D"
+      },
+      "keys": {
+        "win": [["F2"]],
+        "mac": [["F2"]]
+      }
+    },
+    {
+      "id": "viewport-2d",
+      "category": "view",
+      "action": {
+        "en": "Show the 2D view only",
+        "fr": "Afficher seulement la vue 2D"
+      },
+      "keys": {
+        "win": [["F3"]],
+        "mac": [["F3"]]
+      }
+    },
+    {
+      "id": "swap-views",
+      "category": "view",
+      "action": {
+        "en": "Swap the 2D and 3D views",
+        "fr": "Échanger les vues 2D et 3D"
+      },
+      "keys": {
+        "win": [["F4"]],
+        "mac": [["F4"]]
+      }
+    },
+    {
+      "id": "display-material",
+      "category": "view",
+      "action": {
+        "en": "Display the material",
+        "fr": "Afficher le matériau"
+      },
+      "keys": {
+        "win": [["M"]],
+        "mac": [["M"]]
+      }
+    },
+    {
+      "id": "display-next-channel",
+      "category": "view",
+      "action": {
+        "en": "Display the next channel",
+        "fr": "Afficher le canal suivant"
+      },
+      "keys": {
+        "win": [["C"]],
+        "mac": [["C"]]
+      }
+    },
+    {
+      "id": "display-previous-channel",
+      "category": "view",
+      "action": {
+        "en": "Display the previous channel",
+        "fr": "Afficher le canal précédent"
+      },
+      "keys": {
+        "win": [["Shift", "C"]],
+        "mac": [["Shift", "C"]]
+      }
+    },
+    {
+      "id": "isolate-texture-set",
+      "category": "view",
+      "action": {
+        "en": "Isolate the current texture set",
+        "fr": "Isoler le jeu de textures courant"
+      },
+      "keys": {
+        "win": [["Alt", "Q"]],
+        "mac": [["Option", "Q"]]
+      }
+    },
+    {
+      "id": "frame-all",
+      "category": "navigation",
+      "action": {
+        "en": "Centre the whole mesh",
+        "fr": "Centrer tout le maillage"
+      },
+      "keys": {
+        "win": [["F"]],
+        "mac": [["F"]]
+      }
+    },
+    {
+      "id": "orbit-view",
+      "category": "navigation",
+      "action": {
+        "en": "Orbit the camera",
+        "fr": "Orbiter la caméra"
+      },
+      "context": {
+        "en": "Viewport",
+        "fr": "Vue 3D"
+      },
+      "keys": {
+        "win": [["Alt", "MouseLeft"]],
+        "mac": [["Option", "MouseLeft"]]
+      }
+    },
+    {
+      "id": "pan-view",
+      "category": "navigation",
+      "action": {
+        "en": "Pan the camera",
+        "fr": "Déplacer la caméra"
+      },
+      "context": {
+        "en": "Viewport",
+        "fr": "Vue 3D"
+      },
+      "keys": {
+        "win": [["Alt", "MouseMiddle"]],
+        "mac": [["Option", "Cmd", "MouseLeft"]]
+      }
+    },
+    {
+      "id": "zoom-view",
+      "category": "navigation",
+      "action": {
+        "en": "Zoom the camera",
+        "fr": "Zoomer la caméra"
+      },
+      "context": {
+        "en": "Viewport",
+        "fr": "Vue 3D"
+      },
+      "keys": {
+        "win": [["Alt", "MouseRight"]],
+        "mac": [["MouseMiddle"]]
+      }
+    },
+    {
+      "id": "rotate-environment",
+      "category": "view",
+      "action": {
+        "en": "Rotate the environment map",
+        "fr": "Tourner l'environnement"
+      },
+      "context": {
+        "en": "Viewport",
+        "fr": "Vue 3D"
+      },
+      "keys": {
+        "win": [["Shift", "MouseRight"]],
+        "mac": [["Shift", "MouseRight"]]
+      }
+    },
+    {
+      "id": "brush-size-hardness",
+      "category": "tools",
+      "action": {
+        "en": "Change the brush size and hardness",
+        "fr": "Changer la taille et la dureté de la brosse"
+      },
+      "context": {
+        "en": "Viewport",
+        "fr": "Vue 3D"
+      },
+      "keys": {
+        "win": [["Ctrl", "MouseRight"]],
+        "mac": [["Cmd", "MouseRight"]]
+      }
+    },
+    {
+      "id": "brush-flow-rotation",
+      "category": "tools",
+      "action": {
+        "en": "Change the brush flow and rotation",
+        "fr": "Changer le flux et la rotation de la brosse"
+      },
+      "context": {
+        "en": "Viewport",
+        "fr": "Vue 3D"
+      },
+      "keys": {
+        "win": [["Ctrl", "MouseLeft"]],
+        "mac": [["Cmd", "MouseLeft"]]
+      }
+    },
+    {
+      "id": "toggle-quick-mask",
+      "category": "tools",
+      "action": {
+        "en": "Enter or leave the quick mask",
+        "fr": "Entrer ou sortir du masque rapide"
+      },
+      "keys": {
+        "win": [["U"]],
+        "mac": [["U"]]
+      }
+    },
+    {
+      "id": "invert-quick-mask",
+      "category": "tools",
+      "action": {
+        "en": "Invert the quick mask",
+        "fr": "Inverser le masque rapide"
+      },
+      "keys": {
+        "win": [["I"]],
+        "mac": [["I"]]
+      }
+    },
+    {
+      "id": "clear-quick-mask",
+      "category": "tools",
+      "action": {
+        "en": "Clear the quick mask",
+        "fr": "Effacer le masque rapide"
+      },
+      "keys": {
+        "win": [["Y"]],
+        "mac": [["Y"]]
+      }
+    },
+    {
+      "id": "copy",
+      "category": "edit",
+      "action": {
+        "en": "Copy the selected layers",
+        "fr": "Copier les calques sélectionnés"
+      },
+      "context": {
+        "en": "Layer stack",
+        "fr": "Pile de calques"
+      },
+      "keys": {
+        "win": [["Ctrl", "C"]],
+        "mac": [["Cmd", "C"]]
+      }
+    },
+    {
+      "id": "cut",
+      "category": "edit",
+      "action": {
+        "en": "Cut the selected layers",
+        "fr": "Couper les calques sélectionnés"
+      },
+      "context": {
+        "en": "Layer stack",
+        "fr": "Pile de calques"
+      },
+      "keys": {
+        "win": [["Ctrl", "X"]],
+        "mac": [["Cmd", "X"]]
+      }
+    },
+    {
+      "id": "paste",
+      "category": "edit",
+      "action": {
+        "en": "Paste the layers",
+        "fr": "Coller les calques"
+      },
+      "context": {
+        "en": "Layer stack",
+        "fr": "Pile de calques"
+      },
+      "keys": {
+        "win": [["Ctrl", "V"]],
+        "mac": [["Cmd", "V"]]
+      }
+    },
+    {
+      "id": "duplicate",
+      "category": "edit",
+      "action": {
+        "en": "Duplicate the selected layers",
+        "fr": "Dupliquer les calques sélectionnés"
+      },
+      "context": {
+        "en": "Layer stack",
+        "fr": "Pile de calques"
+      },
+      "keys": {
+        "win": [["Ctrl", "D"]],
+        "mac": [["Cmd", "D"]]
+      }
+    },
+    {
+      "id": "group",
+      "category": "edit",
+      "action": {
+        "en": "Put the layers into a folder",
+        "fr": "Mettre les calques dans un dossier"
+      },
+      "context": {
+        "en": "Layer stack",
+        "fr": "Pile de calques"
+      },
+      "keys": {
+        "win": [["Ctrl", "G"]],
+        "mac": [["Cmd", "G"]]
+      }
+    },
+    {
+      "id": "delete",
+      "category": "edit",
+      "action": {
+        "en": "Delete the selected layers",
+        "fr": "Supprimer les calques sélectionnés"
+      },
+      "context": {
+        "en": "Layer stack",
+        "fr": "Pile de calques"
+      },
+      "keys": {
+        "win": [["Delete"]],
+        "mac": [["Delete"]]
+      }
+    }
+  ]
+}
