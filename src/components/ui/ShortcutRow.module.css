@@ -40,7 +40,16 @@
   color: var(--ink-soft);
 }
 
-.different {
+.summary {
+  margin: 0;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 500;
+  color: var(--ink-soft);
+}
+
+.different,
+.identical {
   display: inline-block;
   margin-left: var(--space-2);
   padding: 1px var(--space-2);
@@ -53,6 +62,11 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   vertical-align: 2px;
+}
+
+/* Orange warns (the keys change), green reassures (they do not). */
+.identical {
+  background: var(--green);
 }
 
 /* Phone: the keys move under the action instead of squeezing it. */
