@@ -9,8 +9,10 @@ import styles from "./page.module.css";
 // The real home page arrives on day 4 (Thu 24/09).
 export default function Home() {
   const locale = "fr" as const;
-  const blender = getSoftware("blender");
-  const shortcuts = blender ? blender.shortcuts.slice(0, 10) : [];
+  // Premiere Pro changes keys on Mac (Ctrl becomes Cmd), which shows the
+  // "differs on Mac" flag; Blender uses the same keys everywhere.
+  const premiere = getSoftware("premiere-pro");
+  const shortcuts = premiere ? premiere.shortcuts.slice(0, 10) : [];
 
   return (
     <main className={styles.page}>

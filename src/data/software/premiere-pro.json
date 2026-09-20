@@ -1,0 +1,603 @@
+{
+  "id": "premiere-pro",
+  "name": "Premiere Pro",
+  "initials": "PR",
+  "family": "compositing-video",
+  "version": "26.5 (2026)",
+  "docUrl": "https://helpx.adobe.com/premiere-pro/using/default-keyboard-shortcuts.html",
+  "verifiedAt": "2026-09-20",
+  "shortcuts": [
+    {
+      "id": "new-project",
+      "category": "file",
+      "action": {
+        "en": "New project",
+        "fr": "Nouveau projet"
+      },
+      "keys": {
+        "win": [["Ctrl", "Alt", "N"]],
+        "mac": [["Option", "Cmd", "N"]]
+      }
+    },
+    {
+      "id": "new-sequence",
+      "category": "file",
+      "action": {
+        "en": "New sequence",
+        "fr": "Nouvelle séquence"
+      },
+      "keys": {
+        "win": [["Ctrl", "N"]],
+        "mac": [["Cmd", "N"]]
+      }
+    },
+    {
+      "id": "open-file",
+      "category": "file",
+      "action": {
+        "en": "Open a project",
+        "fr": "Ouvrir un projet"
+      },
+      "keys": {
+        "win": [["Ctrl", "O"]],
+        "mac": [["Cmd", "O"]]
+      }
+    },
+    {
+      "id": "close-project",
+      "category": "file",
+      "action": {
+        "en": "Close the project",
+        "fr": "Fermer le projet"
+      },
+      "keys": {
+        "win": [["Ctrl", "Shift", "W"]],
+        "mac": [["Shift", "Cmd", "W"]]
+      }
+    },
+    {
+      "id": "save-file",
+      "category": "file",
+      "action": {
+        "en": "Save",
+        "fr": "Enregistrer"
+      },
+      "keys": {
+        "win": [["Ctrl", "S"]],
+        "mac": [["Cmd", "S"]]
+      }
+    },
+    {
+      "id": "save-as",
+      "category": "file",
+      "action": {
+        "en": "Save as",
+        "fr": "Enregistrer sous"
+      },
+      "keys": {
+        "win": [["Ctrl", "Shift", "S"]],
+        "mac": [["Shift", "Cmd", "S"]]
+      }
+    },
+    {
+      "id": "import",
+      "category": "file",
+      "action": {
+        "en": "Import media",
+        "fr": "Importer des médias"
+      },
+      "keys": {
+        "win": [["Ctrl", "I"]],
+        "mac": [["Cmd", "I"]]
+      }
+    },
+    {
+      "id": "export-media",
+      "category": "file",
+      "action": {
+        "en": "Export media",
+        "fr": "Exporter le média"
+      },
+      "keys": {
+        "win": [["Ctrl", "M"]],
+        "mac": [["Cmd", "M"]]
+      }
+    },
+    {
+      "id": "undo",
+      "category": "general",
+      "action": {
+        "en": "Undo",
+        "fr": "Annuler"
+      },
+      "keys": {
+        "win": [["Ctrl", "Z"]],
+        "mac": [["Cmd", "Z"]]
+      }
+    },
+    {
+      "id": "redo",
+      "category": "general",
+      "action": {
+        "en": "Redo",
+        "fr": "Rétablir"
+      },
+      "keys": {
+        "win": [["Ctrl", "Shift", "Z"]],
+        "mac": [["Shift", "Cmd", "Z"]]
+      }
+    },
+    {
+      "id": "cut",
+      "category": "edit",
+      "action": {
+        "en": "Cut",
+        "fr": "Couper"
+      },
+      "keys": {
+        "win": [["Ctrl", "X"]],
+        "mac": [["Cmd", "X"]]
+      }
+    },
+    {
+      "id": "copy",
+      "category": "edit",
+      "action": {
+        "en": "Copy",
+        "fr": "Copier"
+      },
+      "keys": {
+        "win": [["Ctrl", "C"]],
+        "mac": [["Cmd", "C"]]
+      }
+    },
+    {
+      "id": "paste",
+      "category": "edit",
+      "action": {
+        "en": "Paste",
+        "fr": "Coller"
+      },
+      "keys": {
+        "win": [["Ctrl", "V"]],
+        "mac": [["Cmd", "V"]]
+      }
+    },
+    {
+      "id": "paste-attributes",
+      "category": "edit",
+      "action": {
+        "en": "Paste attributes",
+        "fr": "Coller les attributs"
+      },
+      "keys": {
+        "win": [["Ctrl", "Alt", "V"]],
+        "mac": [["Option", "Cmd", "V"]]
+      }
+    },
+    {
+      "id": "duplicate",
+      "category": "edit",
+      "action": {
+        "en": "Duplicate",
+        "fr": "Dupliquer"
+      },
+      "keys": {
+        "win": [["Ctrl", "Shift", "/"]],
+        "mac": [["Shift", "Cmd", "/"]]
+      }
+    },
+    {
+      "id": "delete",
+      "category": "edit",
+      "action": {
+        "en": "Delete the selection",
+        "fr": "Supprimer la sélection"
+      },
+      "keys": {
+        "win": [["Delete"]],
+        "mac": [["Forward Delete"]]
+      }
+    },
+    {
+      "id": "ripple-delete",
+      "category": "edit",
+      "action": {
+        "en": "Delete and close the gap",
+        "fr": "Supprimer et refermer le trou"
+      },
+      "keys": {
+        "win": [["Shift", "Delete"]],
+        "mac": [["Shift", "Forward Delete"]]
+      }
+    },
+    {
+      "id": "group",
+      "category": "edit",
+      "action": {
+        "en": "Group the clips",
+        "fr": "Grouper les clips"
+      },
+      "keys": {
+        "win": [["Ctrl", "G"]],
+        "mac": [["Cmd", "G"]]
+      }
+    },
+    {
+      "id": "ungroup",
+      "category": "edit",
+      "action": {
+        "en": "Ungroup the clips",
+        "fr": "Dégrouper les clips"
+      },
+      "keys": {
+        "win": [["Ctrl", "Shift", "G"]],
+        "mac": [["Shift", "Cmd", "G"]]
+      }
+    },
+    {
+      "id": "link-clips",
+      "category": "edit",
+      "action": {
+        "en": "Link or unlink video and audio",
+        "fr": "Lier ou délier vidéo et audio"
+      },
+      "keys": {
+        "win": [["Ctrl", "L"]],
+        "mac": [["Cmd", "L"]]
+      }
+    },
+    {
+      "id": "select-all",
+      "category": "selection",
+      "action": {
+        "en": "Select everything",
+        "fr": "Tout sélectionner"
+      },
+      "keys": {
+        "win": [["Ctrl", "A"]],
+        "mac": [["Cmd", "A"]]
+      }
+    },
+    {
+      "id": "deselect-all",
+      "category": "selection",
+      "action": {
+        "en": "Deselect everything",
+        "fr": "Tout désélectionner"
+      },
+      "keys": {
+        "win": [["Ctrl", "Shift", "A"]],
+        "mac": [["Shift", "Cmd", "A"]]
+      }
+    },
+    {
+      "id": "find",
+      "category": "selection",
+      "action": {
+        "en": "Find a clip",
+        "fr": "Rechercher un clip"
+      },
+      "keys": {
+        "win": [["Ctrl", "F"]],
+        "mac": [["Cmd", "F"]]
+      }
+    },
+    {
+      "id": "speed-duration",
+      "category": "tools",
+      "action": {
+        "en": "Change speed and duration",
+        "fr": "Modifier vitesse et durée"
+      },
+      "keys": {
+        "win": [["Ctrl", "R"]],
+        "mac": [["Cmd", "R"]]
+      }
+    },
+    {
+      "id": "insert-clip",
+      "category": "tools",
+      "action": {
+        "en": "Insert the clip and push the rest",
+        "fr": "Insérer le clip et pousser la suite"
+      },
+      "keys": {
+        "win": [[","]],
+        "mac": [[","]]
+      }
+    },
+    {
+      "id": "overwrite-clip",
+      "category": "tools",
+      "action": {
+        "en": "Overwrite with the clip",
+        "fr": "Écraser avec le clip"
+      },
+      "keys": {
+        "win": [["."]],
+        "mac": [["."]]
+      }
+    },
+    {
+      "id": "add-edit",
+      "category": "tools",
+      "action": {
+        "en": "Cut at the playhead",
+        "fr": "Couper à la tête de lecture"
+      },
+      "context": {
+        "en": "Timeline",
+        "fr": "Montage"
+      },
+      "keys": {
+        "win": [["Ctrl", "K"]],
+        "mac": [["Cmd", "K"]]
+      }
+    },
+    {
+      "id": "add-edit-all-tracks",
+      "category": "tools",
+      "action": {
+        "en": "Cut every track at the playhead",
+        "fr": "Couper toutes les pistes à la tête de lecture"
+      },
+      "context": {
+        "en": "Timeline",
+        "fr": "Montage"
+      },
+      "keys": {
+        "win": [["Ctrl", "Shift", "K"]],
+        "mac": [["Shift", "Cmd", "K"]]
+      }
+    },
+    {
+      "id": "apply-video-transition",
+      "category": "tools",
+      "action": {
+        "en": "Apply the default video transition",
+        "fr": "Appliquer la transition vidéo par défaut"
+      },
+      "keys": {
+        "win": [["Ctrl", "D"]],
+        "mac": [["Cmd", "D"]]
+      }
+    },
+    {
+      "id": "apply-audio-transition",
+      "category": "tools",
+      "action": {
+        "en": "Apply the default audio transition",
+        "fr": "Appliquer la transition audio par défaut"
+      },
+      "keys": {
+        "win": [["Ctrl", "Shift", "D"]],
+        "mac": [["Shift", "Cmd", "D"]]
+      }
+    },
+    {
+      "id": "lift",
+      "category": "tools",
+      "action": {
+        "en": "Lift, leaving a gap",
+        "fr": "Extraire en laissant un trou"
+      },
+      "context": {
+        "en": "Timeline",
+        "fr": "Montage"
+      },
+      "keys": {
+        "win": [[";"]],
+        "mac": [[";"]]
+      }
+    },
+    {
+      "id": "extract",
+      "category": "tools",
+      "action": {
+        "en": "Extract and close the gap",
+        "fr": "Extraire et refermer le trou"
+      },
+      "context": {
+        "en": "Timeline",
+        "fr": "Montage"
+      },
+      "keys": {
+        "win": [["'"]],
+        "mac": [["'"]]
+      }
+    },
+    {
+      "id": "match-frame",
+      "category": "navigation",
+      "action": {
+        "en": "Match frame in the source",
+        "fr": "Retrouver l'image dans la source"
+      },
+      "keys": {
+        "win": [["F"]],
+        "mac": [["F"]]
+      }
+    },
+    {
+      "id": "mark-in",
+      "category": "navigation",
+      "action": {
+        "en": "Set the in point",
+        "fr": "Poser le point d'entrée"
+      },
+      "keys": {
+        "win": [["I"]],
+        "mac": [["I"]]
+      }
+    },
+    {
+      "id": "mark-out",
+      "category": "navigation",
+      "action": {
+        "en": "Set the out point",
+        "fr": "Poser le point de sortie"
+      },
+      "keys": {
+        "win": [["O"]],
+        "mac": [["O"]]
+      }
+    },
+    {
+      "id": "add-marker",
+      "category": "navigation",
+      "action": {
+        "en": "Add a marker",
+        "fr": "Ajouter un repère"
+      },
+      "keys": {
+        "win": [["M"]],
+        "mac": [["M"]]
+      }
+    },
+    {
+      "id": "next-marker",
+      "category": "navigation",
+      "action": {
+        "en": "Go to the next marker",
+        "fr": "Aller au repère suivant"
+      },
+      "keys": {
+        "win": [["Shift", "M"]],
+        "mac": [["Shift", "M"]]
+      }
+    },
+    {
+      "id": "zoom-in-step",
+      "category": "navigation",
+      "action": {
+        "en": "Zoom in on the timeline",
+        "fr": "Zoomer sur le montage"
+      },
+      "context": {
+        "en": "Timeline",
+        "fr": "Montage"
+      },
+      "keys": {
+        "win": [["="]],
+        "mac": [["="]]
+      }
+    },
+    {
+      "id": "zoom-out-step",
+      "category": "navigation",
+      "action": {
+        "en": "Zoom out on the timeline",
+        "fr": "Dézoomer sur le montage"
+      },
+      "context": {
+        "en": "Timeline",
+        "fr": "Montage"
+      },
+      "keys": {
+        "win": [["-"]],
+        "mac": [["-"]]
+      }
+    },
+    {
+      "id": "toggle-snapping",
+      "category": "view",
+      "action": {
+        "en": "Turn snapping on or off",
+        "fr": "Activer ou désactiver l'aimantation"
+      },
+      "context": {
+        "en": "Timeline",
+        "fr": "Montage"
+      },
+      "keys": {
+        "win": [["S"]],
+        "mac": [["S"]]
+      }
+    },
+    {
+      "id": "show-rulers",
+      "category": "view",
+      "action": {
+        "en": "Show the rulers",
+        "fr": "Afficher les règles"
+      },
+      "context": {
+        "en": "Program Monitor",
+        "fr": "Moniteur programme"
+      },
+      "keys": {
+        "win": [["Ctrl", "R"]],
+        "mac": [["Cmd", "R"]]
+      }
+    },
+    {
+      "id": "increase-track-height",
+      "category": "view",
+      "action": {
+        "en": "Make video tracks taller",
+        "fr": "Agrandir les pistes vidéo"
+      },
+      "context": {
+        "en": "Timeline",
+        "fr": "Montage"
+      },
+      "keys": {
+        "win": [["Ctrl", "="]],
+        "mac": [["Cmd", "="]]
+      }
+    },
+    {
+      "id": "decrease-track-height",
+      "category": "view",
+      "action": {
+        "en": "Make video tracks shorter",
+        "fr": "Réduire les pistes vidéo"
+      },
+      "context": {
+        "en": "Timeline",
+        "fr": "Montage"
+      },
+      "keys": {
+        "win": [["Ctrl", "-"]],
+        "mac": [["Cmd", "-"]]
+      }
+    },
+    {
+      "id": "new-bin",
+      "category": "general",
+      "action": {
+        "en": "New bin",
+        "fr": "Nouveau chutier"
+      },
+      "keys": {
+        "win": [["Ctrl", "B"]],
+        "mac": [["Cmd", "B"]]
+      }
+    },
+    {
+      "id": "keyboard-shortcuts",
+      "category": "general",
+      "action": {
+        "en": "Open the keyboard shortcuts window",
+        "fr": "Ouvrir la fenêtre des raccourcis"
+      },
+      "keys": {
+        "win": [["Ctrl", "Alt", "K"]],
+        "mac": [["Cmd", "Option", "K"]]
+      }
+    },
+    {
+      "id": "new-text-layer",
+      "category": "tools",
+      "action": {
+        "en": "Add a text layer",
+        "fr": "Ajouter un calque de texte"
+      },
+      "keys": {
+        "win": [["Ctrl", "T"]],
+        "mac": [["Cmd", "T"]]
+      }
+    }
+  ]
+}
