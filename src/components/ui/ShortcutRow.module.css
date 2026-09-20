@@ -40,11 +40,11 @@
   color: var(--ink-soft);
 }
 
-.same {
+.different {
   display: inline-block;
   margin-left: var(--space-2);
   padding: 1px var(--space-2);
-  background: var(--green);
+  background: var(--orange);
   border: var(--stroke-1) solid var(--ink);
   border-radius: var(--radius-pill);
   font-size: 11px;
