@@ -8,10 +8,10 @@ export function isLocale(value: string): value is Locale {
   return (LOCALES as readonly string[]).includes(value);
 }
 
-// Address of a page in a given language. English, the default, has no prefix:
-// "/", "/blender". Every other language is under its own: "/fr", "/fr/blender".
+// Address of a page in a given language: every language carries its own
+// prefix, "/en/blender" and "/fr/blender". The bare "/" redirects to the
+// default language.
 export function localeHref(locale: Locale, path = ""): string {
   const suffix = path.startsWith("/") || path === "" ? path : `/${path}`;
-  if (locale === DEFAULT_LOCALE) return suffix === "" ? "/" : suffix;
   return `/${locale}${suffix}`;
 }
