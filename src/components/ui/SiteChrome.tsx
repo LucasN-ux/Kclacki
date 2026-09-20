@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { PlatformToggle } from "@/components/features/PlatformToggle";
-import { LOCALES, type Locale } from "@/domain/locale";
+import { LOCALES, localeHref, type Locale } from "@/domain/locale";
 import { getDictionary } from "@/i18n";
 import styles from "./SiteChrome.module.css";
 
@@ -18,7 +18,7 @@ export function SiteHeader({
 
   return (
     <header className={styles.header}>
-      <Link href={`/${locale}`} className={styles.brand}>
+      <Link href={localeHref(locale)} className={styles.brand}>
         Cmdx
       </Link>
       <div className={styles.controls}>
@@ -28,7 +28,7 @@ export function SiteHeader({
             <Link
               key={option}
               // Same page, other language: the visitor never loses their place.
-              href={`/${option}${path}`}
+              href={localeHref(option, path)}
               hrefLang={option}
               aria-current={option === locale ? "true" : undefined}
               className={`${styles.locale} ${option === locale ? styles.localeCurrent : ""}`}

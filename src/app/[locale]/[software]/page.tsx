@@ -6,7 +6,7 @@ import { PlatformSummary } from "@/components/ui/ShortcutRow";
 import { Ribbon } from "@/components/ui/Ribbon";
 import { SiteFooter, SiteHeader } from "@/components/ui/SiteChrome";
 import { SOFTWARE_LIST, getSoftware } from "@/data";
-import { LOCALES, isLocale } from "@/domain/locale";
+import { DEFAULT_LOCALE, LOCALES, isLocale, localeHref } from "@/domain/locale";
 import { summarizePlatformDifference } from "@/domain/platformDifference";
 import { CATEGORIES } from "@/domain/schema";
 import { getDictionary } from "@/i18n";
@@ -31,10 +31,13 @@ export async function generateMetadata({
     title: `${software.name} — Cmdx`,
     description: `${software.name} ${software.version} · ${software.shortcuts.length} ${dictionary.site.shortcutCount}`,
     alternates: {
-      canonical: `/${locale}/${software.id}`,
-      languages: Object.fromEntries(
-        LOCALES.map((item) => [item, `/${item}/${software.id}`]),
-      ),
+      canonical: localeHref(locale, `/${software.id}`),
+      languages: {
+        ...Object.fromEntries(
+          LOCALES.map((item) => [item, localeHref(item, `/${software.id}`)]),
+        ),
+        "x-default": localeHref(DEFAULT_LOCALE, `/${software.id}`),
+      },
     },
   };
 }
@@ -66,8 +69,8 @@ export default async function SoftwarePage({
       <SiteHeader locale={locale} path={`/${software.id}`} />
       <main className={styles.page}>
         <p className={styles.crumb}>
-          <Link href={`/${locale}`}>{dictionary.software.backHome}</Link> ›{" "}
-          {software.name}
+          <Link href={localeHref(locale)}>{dictionary.software.backHome}</Link>{" "}
+          › {software.name}
         </p>
 
         <div className={styles.titleRow}>

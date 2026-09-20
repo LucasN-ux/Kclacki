@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { LOCALES, isLocale } from "@/domain/locale";
+import { DEFAULT_LOCALE, LOCALES, isLocale, localeHref } from "@/domain/locale";
 import { getDictionary } from "@/i18n";
 import { PlatformProvider } from "@/hooks/usePlatform";
 import { fontVariables } from "../fonts";
@@ -23,8 +23,12 @@ export async function generateMetadata({
     description: dictionary.site.description,
     // Tells search engines the two pages are translations of each other.
     alternates: {
-      canonical: `/${locale}`,
-      languages: Object.fromEntries(LOCALES.map((item) => [item, `/${item}`])),
+      canonical: localeHref(locale),
+      languages: {
+        ...Object.fromEntries(LOCALES.map((item) => [item, localeHref(item)])),
+        // Shown to visitors whose language we do not have.
+        "x-default": localeHref(DEFAULT_LOCALE),
+      },
     },
   };
 }

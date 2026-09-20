@@ -1,38 +1,32 @@
 import { NextResponse, type NextRequest } from "next/server";
-import { DEFAULT_LOCALE, LOCALES, isLocale } from "@/domain/locale";
+import { DEFAULT_LOCALE, LOCALES } from "@/domain/locale";
 
-// Reads "fr-FR,fr;q=0.9,en;q=0.8" and keeps the first language we support.
-// English wins when the visitor asks for anything else.
-function preferredLocale(header: string | null) {
-  if (!header) return DEFAULT_LOCALE;
-  const asked = header
-    .split(",")
-    .map((part) => {
-      const [tag, quality] = part.trim().split(";q=");
-      return {
-        tag: tag.split("-")[0].toLowerCase(),
-        quality: Number(quality ?? 1),
-      };
-    })
-    .sort((a, b) => b.quality - a.quality);
+// English is the default language and lives at the root: "/", "/blender".
+// The pages are built under "/en" and "/fr", so a root address is served from
+// "/en" without the visitor ever seeing it, and "/en/…" sends back to the root
+// so that one page never answers at two addresses.
+const PREFIXED_LOCALES = LOCALES.filter((locale) => locale !== DEFAULT_LOCALE);
 
-  return (
-    asked.find((language) => isLocale(language.tag))?.tag ?? DEFAULT_LOCALE
-  );
-}
-
-// Every page lives under a language: /fr/blender, /en/blender.
-// A request without a language is sent to the visitor's own one.
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
-  const hasLocale = LOCALES.some(
+
+  const hasPrefix = PREFIXED_LOCALES.some(
     (locale) => pathname === `/${locale}` || pathname.startsWith(`/${locale}/`),
   );
-  if (hasLocale) return;
+  if (hasPrefix) return;
 
-  const locale = preferredLocale(request.headers.get("accept-language"));
-  request.nextUrl.pathname = `/${locale}${pathname === "/" ? "" : pathname}`;
-  return NextResponse.redirect(request.nextUrl);
+  if (
+    pathname === `/${DEFAULT_LOCALE}` ||
+    pathname.startsWith(`/${DEFAULT_LOCALE}/`)
+  ) {
+    const url = request.nextUrl.clone();
+    url.pathname = pathname.slice(`/${DEFAULT_LOCALE}`.length) || "/";
+    return NextResponse.redirect(url, 308);
+  }
+
+  const url = request.nextUrl.clone();
+  url.pathname = `/${DEFAULT_LOCALE}${pathname === "/" ? "" : pathname}`;
+  return NextResponse.rewrite(url);
 }
 
 export const config = {

@@ -4,7 +4,7 @@ import { Ribbon } from "@/components/ui/Ribbon";
 import { SiteFooter, SiteHeader } from "@/components/ui/SiteChrome";
 import { SoftwareCard } from "@/components/ui/SoftwareCard";
 import { SOFTWARE_LIST, softwareByFamily } from "@/data";
-import { isLocale } from "@/domain/locale";
+import { isLocale, localeHref } from "@/domain/locale";
 import { getDictionary } from "@/i18n";
 import styles from "./page.module.css";
 
@@ -40,7 +40,10 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
             </h2>
             <div className={styles.grid}>
               {group.software.map((software) => (
-                <Link key={software.id} href={`/${locale}/${software.id}`}>
+                <Link
+                  key={software.id}
+                  href={localeHref(locale, `/${software.id}`)}
+                >
                   <SoftwareCard software={software} locale={locale} />
                 </Link>
               ))}
