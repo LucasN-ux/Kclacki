@@ -1,0 +1,32 @@
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 6px var(--space-3);
+  background: var(--card);
+  border: var(--stroke-2) solid var(--ink);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-hard-sm);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.link:hover {
+  background: var(--yellow);
+}
+
+.star {
+  width: 18px;
+  height: 18px;
+  stroke: var(--ink);
+  stroke-width: 6;
+  stroke-linejoin: round;
+  fill: var(--orange);
+}
+
+.count {
+  font-family: var(--font-mono);
+  font-size: 12px;
+}

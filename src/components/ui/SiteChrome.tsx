@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FavoritesLink } from "@/components/features/FavoritesLink";
 import { HeaderSearch } from "@/components/features/HeaderSearch";
 import { PlatformToggle } from "@/components/features/PlatformToggle";
 import { LOCALES, localeHref, type Locale } from "@/domain/locale";
@@ -32,6 +33,7 @@ export function SiteHeader({
       )}
       <div className={styles.controls}>
         <PlatformToggle locale={locale} />
+        <FavoritesLink locale={locale} />
         <nav className={styles.locales} aria-label={dictionary.nav.language}>
           {LOCALES.map((option) => (
             <Link

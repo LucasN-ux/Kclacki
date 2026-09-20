@@ -122,6 +122,7 @@ export default async function SoftwarePage({
                 </h2>
                 <ShortcutListForPlatform
                   shortcuts={group.shortcuts}
+                  softwareId={software.id}
                   locale={locale}
                   flag={flag}
                 />

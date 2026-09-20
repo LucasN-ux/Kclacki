@@ -55,5 +55,13 @@
     "allSame": "Same keys on Windows and Mac.",
     "allDifferent": "Every shortcut uses different keys on Mac.",
     "mixed": "shortcuts change on Mac"
+  },
+  "favorites": {
+    "title": "Favorites",
+    "add": "Add to favorites",
+    "remove": "Remove from favorites",
+    "empty": "No favorite yet.",
+    "hint": "Tap the star next to a shortcut to keep it here.",
+    "kept": "kept in this browser only"
   }
 }

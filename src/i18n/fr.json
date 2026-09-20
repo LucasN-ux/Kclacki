@@ -55,5 +55,13 @@
     "allSame": "Les mêmes touches sur Windows et Mac.",
     "allDifferent": "Tous les raccourcis changent de touches sur Mac.",
     "mixed": "raccourcis changent sur Mac"
+  },
+  "favorites": {
+    "title": "Favoris",
+    "add": "Ajouter aux favoris",
+    "remove": "Retirer des favoris",
+    "empty": "Aucun favori pour l'instant.",
+    "hint": "Touche l'étoile à côté d'un raccourci pour le garder ici.",
+    "kept": "gardés dans ce navigateur uniquement"
   }
 }

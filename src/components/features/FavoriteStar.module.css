@@ -1,0 +1,31 @@
+.star {
+  display: inline-grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  color: var(--ink);
+}
+
+.star svg {
+  width: 24px;
+  height: 24px;
+  display: block;
+  stroke: var(--ink);
+  stroke-width: 6;
+  stroke-linejoin: round;
+  /* Empty star: kept, not kept is also told by the outline alone. */
+  fill: none;
+}
+
+.star:hover svg {
+  fill: var(--yellow);
+}
+
+.star[aria-pressed="true"] svg,
+.star[aria-pressed="true"]:hover svg {
+  fill: var(--orange);
+}

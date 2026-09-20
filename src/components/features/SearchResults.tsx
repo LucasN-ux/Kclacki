@@ -79,6 +79,7 @@ export function SearchResults({ locale }: { locale: Locale }) {
           </Link>
           <ShortcutList
             shortcuts={hit.shortcuts}
+            softwareId={hit.software.id}
             platform={platform}
             locale={locale}
             // Decided from the whole software, not from the few results shown.

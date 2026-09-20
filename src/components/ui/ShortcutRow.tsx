@@ -1,3 +1,4 @@
+import { FavoriteStar } from "@/components/features/FavoriteStar";
 import { isSameOnBothPlatforms } from "@/domain/keys";
 import type { Locale } from "@/domain/locale";
 import type { FlaggedRows } from "@/domain/platformDifference";
@@ -31,11 +32,13 @@ export function PlatformSummary({
 
 export function ShortcutRow({
   shortcut,
+  softwareId,
   platform,
   locale,
   flag,
 }: {
   shortcut: Shortcut;
+  softwareId: string;
   platform: Platform;
   locale: Locale;
   flag: FlaggedRows;
@@ -69,17 +72,25 @@ export function ShortcutRow({
         )}
       </span>
       <KeyCombos keys={shortcut.keys} platform={platform} locale={locale} />
+      <FavoriteStar
+        softwareId={softwareId}
+        shortcutId={shortcut.id}
+        action={shortcut.action[locale]}
+        locale={locale}
+      />
     </li>
   );
 }
 
 export function ShortcutList({
   shortcuts,
+  softwareId,
   platform,
   locale,
   flag,
 }: {
   shortcuts: Shortcut[];
+  softwareId: string;
   platform: Platform;
   locale: Locale;
   /** Which rows carry a flag, decided once for the whole software. */
@@ -91,6 +102,7 @@ export function ShortcutList({
         <ShortcutRow
           key={shortcut.id}
           shortcut={shortcut}
+          softwareId={softwareId}
           platform={platform}
           locale={locale}
           flag={flag}
