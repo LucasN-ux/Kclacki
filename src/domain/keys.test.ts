@@ -21,6 +21,11 @@ describe("keyLabel", () => {
   it("leaves regular keys untouched", () => {
     expect(keyLabel("F9", "mac", "fr")).toBe("F9");
   });
+
+  it("translates numpad keys in French", () => {
+    expect(keyLabel("Numpad .", "win", "fr")).toBe("Pavé num .");
+    expect(keyLabel("Numpad .", "win", "en")).toBe("Numpad .");
+  });
 });
 
 describe("isModifier", () => {
@@ -35,6 +40,12 @@ describe("isSameOnBothPlatforms", () => {
   it("is true when both platforms use the same keys", () => {
     expect(
       isSameOnBothPlatforms({ win: [["Ctrl", "R"]], mac: [["Ctrl", "R"]] }),
+    ).toBe(true);
+  });
+
+  it("is true when Mac only renames Alt into Option", () => {
+    expect(
+      isSameOnBothPlatforms({ win: [["Alt", "A"]], mac: [["Option", "A"]] }),
     ).toBe(true);
   });
 

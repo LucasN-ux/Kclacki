@@ -37,11 +37,23 @@ export function keyLabel(
 ): string {
   if (isMouse(key)) return MOUSE_LABELS[key][locale];
   if (platform === "mac" && key in MAC_SYMBOLS) return MAC_SYMBOLS[key];
+  // "Numpad ." is stored once and reads naturally in both languages.
+  if (locale === "fr" && key.startsWith("Numpad")) {
+    return key.replace("Numpad", "Pavé num");
+  }
   return key;
 }
 
-// True when Windows and Mac use exactly the same keys: the page then shows the
+// Alt and Option are the same physical key, named differently on each keyboard:
+// a shortcut using it is still "the same" on both platforms.
+function sameKeyAcrossPlatforms(key: string): string {
+  return key === "Option" ? "Alt" : key;
+}
+
+// True when Windows and Mac use the same keys: the page then shows the
 // "Same on Windows & Mac" badge instead of a difference the visitor would look for.
 export function isSameOnBothPlatforms(keys: Keys): boolean {
-  return JSON.stringify(keys.win) === JSON.stringify(keys.mac);
+  const normalize = (combos: string[][]) =>
+    JSON.stringify(combos.map((combo) => combo.map(sameKeyAcrossPlatforms)));
+  return normalize(keys.win) === normalize(keys.mac);
 }

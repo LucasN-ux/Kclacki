@@ -1,0 +1,629 @@
+{
+  "id": "blender",
+  "name": "Blender",
+  "initials": "BL",
+  "family": "3d-sculpt",
+  "version": "5.2 LTS",
+  "docUrl": "https://docs.blender.org/manual/en/latest/",
+  "verifiedAt": "2026-09-20",
+  "shortcuts": [
+    {
+      "id": "undo",
+      "category": "general",
+      "action": {
+        "en": "Undo",
+        "fr": "Annuler"
+      },
+      "keys": {
+        "win": [["Ctrl", "Z"]],
+        "mac": [["Ctrl", "Z"]]
+      }
+    },
+    {
+      "id": "redo",
+      "category": "general",
+      "action": {
+        "en": "Redo",
+        "fr": "Rétablir"
+      },
+      "keys": {
+        "win": [["Shift", "Ctrl", "Z"]],
+        "mac": [["Shift", "Ctrl", "Z"]]
+      }
+    },
+    {
+      "id": "adjust-last-operation",
+      "category": "general",
+      "action": {
+        "en": "Adjust last operation",
+        "fr": "Ajuster la dernière opération"
+      },
+      "keys": {
+        "win": [["F9"]],
+        "mac": [["F9"]]
+      }
+    },
+    {
+      "id": "repeat-last-action",
+      "category": "general",
+      "action": {
+        "en": "Repeat last action",
+        "fr": "Répéter la dernière action"
+      },
+      "keys": {
+        "win": [["Shift", "R"]],
+        "mac": [["Shift", "R"]]
+      }
+    },
+    {
+      "id": "toggle-edit-mode",
+      "category": "general",
+      "action": {
+        "en": "Switch between Object Mode and Edit Mode",
+        "fr": "Basculer entre Mode Objet et Mode Édition"
+      },
+      "keys": {
+        "win": [["Tab"]],
+        "mac": [["Tab"]]
+      }
+    },
+    {
+      "id": "mode-menu",
+      "category": "general",
+      "action": {
+        "en": "Open the mode menu",
+        "fr": "Ouvrir le menu des modes"
+      },
+      "keys": {
+        "win": [["Alt", "Q"]],
+        "mac": [["Option", "Q"]]
+      }
+    },
+    {
+      "id": "toggle-snapping",
+      "category": "general",
+      "action": {
+        "en": "Turn snapping on or off",
+        "fr": "Activer ou désactiver l'aimantation"
+      },
+      "keys": {
+        "win": [["Shift", "Tab"]],
+        "mac": [["Shift", "Tab"]]
+      }
+    },
+    {
+      "id": "snapping-menu",
+      "category": "general",
+      "action": {
+        "en": "Open the snapping menu",
+        "fr": "Ouvrir le menu d'aimantation"
+      },
+      "keys": {
+        "win": [["Shift", "Ctrl", "Tab"]],
+        "mac": [["Shift", "Ctrl", "Tab"]]
+      }
+    },
+    {
+      "id": "open-file",
+      "category": "file",
+      "action": {
+        "en": "Open a file",
+        "fr": "Ouvrir un fichier"
+      },
+      "keys": {
+        "win": [["Ctrl", "O"]],
+        "mac": [["Ctrl", "O"]]
+      }
+    },
+    {
+      "id": "open-recent",
+      "category": "file",
+      "action": {
+        "en": "Open a recent file",
+        "fr": "Ouvrir un fichier récent"
+      },
+      "keys": {
+        "win": [["Shift", "Ctrl", "O"]],
+        "mac": [["Shift", "Ctrl", "O"]]
+      }
+    },
+    {
+      "id": "save-file",
+      "category": "file",
+      "action": {
+        "en": "Save",
+        "fr": "Enregistrer"
+      },
+      "keys": {
+        "win": [["Ctrl", "S"]],
+        "mac": [["Ctrl", "S"]]
+      }
+    },
+    {
+      "id": "save-as",
+      "category": "file",
+      "action": {
+        "en": "Save as",
+        "fr": "Enregistrer sous"
+      },
+      "keys": {
+        "win": [["Shift", "Ctrl", "S"]],
+        "mac": [["Shift", "Ctrl", "S"]]
+      }
+    },
+    {
+      "id": "save-incremental",
+      "category": "file",
+      "action": {
+        "en": "Save a numbered copy",
+        "fr": "Enregistrer une copie numérotée"
+      },
+      "keys": {
+        "win": [["Ctrl", "Alt", "S"]],
+        "mac": [["Ctrl", "Option", "S"]]
+      }
+    },
+    {
+      "id": "render-image",
+      "category": "file",
+      "action": {
+        "en": "Render the current frame",
+        "fr": "Rendre l'image courante"
+      },
+      "keys": {
+        "win": [["F12"]],
+        "mac": [["F12"]]
+      }
+    },
+    {
+      "id": "render-animation",
+      "category": "file",
+      "action": {
+        "en": "Render the animation",
+        "fr": "Rendre l'animation"
+      },
+      "keys": {
+        "win": [["Ctrl", "F12"]],
+        "mac": [["Ctrl", "F12"]]
+      }
+    },
+    {
+      "id": "orbit-view",
+      "category": "navigation",
+      "action": {
+        "en": "Orbit around the scene",
+        "fr": "Orbiter autour de la scène"
+      },
+      "keys": {
+        "win": [["MouseMiddle"]],
+        "mac": [["MouseMiddle"]]
+      }
+    },
+    {
+      "id": "pan-view",
+      "category": "navigation",
+      "action": {
+        "en": "Pan the view",
+        "fr": "Déplacer la vue"
+      },
+      "keys": {
+        "win": [["Shift", "MouseMiddle"]],
+        "mac": [["Shift", "MouseMiddle"]]
+      }
+    },
+    {
+      "id": "zoom-view",
+      "category": "navigation",
+      "action": {
+        "en": "Zoom in and out",
+        "fr": "Zoomer et dézoomer"
+      },
+      "keys": {
+        "win": [["MouseWheel"], ["Ctrl", "MouseMiddle"]],
+        "mac": [["MouseWheel"], ["Ctrl", "MouseMiddle"]]
+      }
+    },
+    {
+      "id": "zoom-in-step",
+      "category": "navigation",
+      "action": {
+        "en": "Zoom in one step",
+        "fr": "Zoomer d'un cran"
+      },
+      "keys": {
+        "win": [["Numpad +"]],
+        "mac": [["Numpad +"]]
+      }
+    },
+    {
+      "id": "zoom-out-step",
+      "category": "navigation",
+      "action": {
+        "en": "Zoom out one step",
+        "fr": "Dézoomer d'un cran"
+      },
+      "keys": {
+        "win": [["Numpad -"]],
+        "mac": [["Numpad -"]]
+      }
+    },
+    {
+      "id": "zoom-region",
+      "category": "navigation",
+      "action": {
+        "en": "Zoom into a drawn region",
+        "fr": "Zoomer sur une zone dessinée"
+      },
+      "keys": {
+        "win": [["Shift", "B"]],
+        "mac": [["Shift", "B"]]
+      }
+    },
+    {
+      "id": "dolly-view",
+      "category": "navigation",
+      "action": {
+        "en": "Move the view forward or back",
+        "fr": "Avancer ou reculer la vue"
+      },
+      "keys": {
+        "win": [["Shift", "Ctrl", "MouseMiddle"]],
+        "mac": [["Shift", "Ctrl", "MouseMiddle"]]
+      }
+    },
+    {
+      "id": "frame-all",
+      "category": "navigation",
+      "action": {
+        "en": "Frame the whole scene",
+        "fr": "Cadrer toute la scène"
+      },
+      "keys": {
+        "win": [["Home"]],
+        "mac": [["Home"]]
+      }
+    },
+    {
+      "id": "frame-selection",
+      "category": "navigation",
+      "action": {
+        "en": "Frame the selection",
+        "fr": "Cadrer la sélection"
+      },
+      "keys": {
+        "win": [["Numpad ."]],
+        "mac": [["Numpad ."]]
+      }
+    },
+    {
+      "id": "select-all",
+      "category": "selection",
+      "action": {
+        "en": "Select everything",
+        "fr": "Tout sélectionner"
+      },
+      "keys": {
+        "win": [["A"]],
+        "mac": [["A"]]
+      }
+    },
+    {
+      "id": "deselect-all",
+      "category": "selection",
+      "action": {
+        "en": "Deselect everything",
+        "fr": "Tout désélectionner"
+      },
+      "keys": {
+        "win": [["Alt", "A"]],
+        "mac": [["Option", "A"]]
+      }
+    },
+    {
+      "id": "invert-selection",
+      "category": "selection",
+      "action": {
+        "en": "Invert the selection",
+        "fr": "Inverser la sélection"
+      },
+      "keys": {
+        "win": [["Ctrl", "I"]],
+        "mac": [["Ctrl", "I"]]
+      }
+    },
+    {
+      "id": "box-select",
+      "category": "selection",
+      "action": {
+        "en": "Select with a box",
+        "fr": "Sélectionner avec un rectangle"
+      },
+      "keys": {
+        "win": [["B"]],
+        "mac": [["B"]]
+      }
+    },
+    {
+      "id": "circle-select",
+      "category": "selection",
+      "action": {
+        "en": "Select with a brush",
+        "fr": "Sélectionner au pinceau"
+      },
+      "keys": {
+        "win": [["C"]],
+        "mac": [["C"]]
+      }
+    },
+    {
+      "id": "vertex-select-mode",
+      "category": "selection",
+      "action": {
+        "en": "Switch to vertex selection",
+        "fr": "Passer en sélection de sommets"
+      },
+      "context": {
+        "en": "Edit Mode",
+        "fr": "Mode Édition"
+      },
+      "keys": {
+        "win": [["1"]],
+        "mac": [["1"]]
+      }
+    },
+    {
+      "id": "edge-select-mode",
+      "category": "selection",
+      "action": {
+        "en": "Switch to edge selection",
+        "fr": "Passer en sélection d'arêtes"
+      },
+      "context": {
+        "en": "Edit Mode",
+        "fr": "Mode Édition"
+      },
+      "keys": {
+        "win": [["2"]],
+        "mac": [["2"]]
+      }
+    },
+    {
+      "id": "face-select-mode",
+      "category": "selection",
+      "action": {
+        "en": "Switch to face selection",
+        "fr": "Passer en sélection de faces"
+      },
+      "context": {
+        "en": "Edit Mode",
+        "fr": "Mode Édition"
+      },
+      "keys": {
+        "win": [["3"]],
+        "mac": [["3"]]
+      }
+    },
+    {
+      "id": "move",
+      "category": "tools",
+      "action": {
+        "en": "Move",
+        "fr": "Déplacer"
+      },
+      "keys": {
+        "win": [["G"]],
+        "mac": [["G"]]
+      }
+    },
+    {
+      "id": "rotate",
+      "category": "tools",
+      "action": {
+        "en": "Rotate",
+        "fr": "Tourner"
+      },
+      "keys": {
+        "win": [["R"]],
+        "mac": [["R"]]
+      }
+    },
+    {
+      "id": "scale",
+      "category": "tools",
+      "action": {
+        "en": "Scale",
+        "fr": "Redimensionner"
+      },
+      "keys": {
+        "win": [["S"]],
+        "mac": [["S"]]
+      }
+    },
+    {
+      "id": "extrude-menu",
+      "category": "tools",
+      "action": {
+        "en": "Open the extrude menu",
+        "fr": "Ouvrir le menu d'extrusion"
+      },
+      "context": {
+        "en": "Edit Mode",
+        "fr": "Mode Édition"
+      },
+      "keys": {
+        "win": [["Alt", "E"]],
+        "mac": [["Option", "E"]]
+      }
+    },
+    {
+      "id": "inset-faces",
+      "category": "tools",
+      "action": {
+        "en": "Inset faces",
+        "fr": "Insérer des faces"
+      },
+      "context": {
+        "en": "Edit Mode",
+        "fr": "Mode Édition"
+      },
+      "keys": {
+        "win": [["I"]],
+        "mac": [["I"]]
+      }
+    },
+    {
+      "id": "bevel",
+      "category": "tools",
+      "action": {
+        "en": "Bevel edges",
+        "fr": "Biseauter des arêtes"
+      },
+      "context": {
+        "en": "Edit Mode",
+        "fr": "Mode Édition"
+      },
+      "keys": {
+        "win": [["Ctrl", "B"]],
+        "mac": [["Ctrl", "B"]]
+      }
+    },
+    {
+      "id": "bevel-vertices",
+      "category": "tools",
+      "action": {
+        "en": "Bevel vertices",
+        "fr": "Biseauter des sommets"
+      },
+      "context": {
+        "en": "Edit Mode",
+        "fr": "Mode Édition"
+      },
+      "keys": {
+        "win": [["Shift", "Ctrl", "B"]],
+        "mac": [["Shift", "Ctrl", "B"]]
+      }
+    },
+    {
+      "id": "merge",
+      "category": "edit",
+      "action": {
+        "en": "Merge the selection",
+        "fr": "Fusionner la sélection"
+      },
+      "context": {
+        "en": "Edit Mode",
+        "fr": "Mode Édition"
+      },
+      "keys": {
+        "win": [["M"]],
+        "mac": [["M"]]
+      }
+    },
+    {
+      "id": "duplicate",
+      "category": "edit",
+      "action": {
+        "en": "Duplicate",
+        "fr": "Dupliquer"
+      },
+      "keys": {
+        "win": [["Shift", "D"]],
+        "mac": [["Shift", "D"]]
+      }
+    },
+    {
+      "id": "delete",
+      "category": "edit",
+      "action": {
+        "en": "Delete",
+        "fr": "Supprimer"
+      },
+      "keys": {
+        "win": [["X"], ["Delete"]],
+        "mac": [["X"], ["Delete"]]
+      }
+    },
+    {
+      "id": "delete-without-confirmation",
+      "category": "edit",
+      "action": {
+        "en": "Delete without confirmation",
+        "fr": "Supprimer sans confirmation"
+      },
+      "keys": {
+        "win": [
+          ["Shift", "X"],
+          ["Shift", "Delete"]
+        ],
+        "mac": [
+          ["Shift", "X"],
+          ["Shift", "Delete"]
+        ]
+      }
+    },
+    {
+      "id": "join-objects",
+      "category": "edit",
+      "action": {
+        "en": "Join the selected objects",
+        "fr": "Joindre les objets sélectionnés"
+      },
+      "context": {
+        "en": "Object Mode",
+        "fr": "Mode Objet"
+      },
+      "keys": {
+        "win": [["Ctrl", "J"]],
+        "mac": [["Ctrl", "J"]]
+      }
+    },
+    {
+      "id": "insert-keyframe",
+      "category": "edit",
+      "action": {
+        "en": "Insert a keyframe",
+        "fr": "Insérer une image clé"
+      },
+      "context": {
+        "en": "Object Mode",
+        "fr": "Mode Objet"
+      },
+      "keys": {
+        "win": [["I"]],
+        "mac": [["I"]]
+      }
+    },
+    {
+      "id": "delete-keyframe",
+      "category": "edit",
+      "action": {
+        "en": "Delete a keyframe",
+        "fr": "Supprimer une image clé"
+      },
+      "context": {
+        "en": "Object Mode",
+        "fr": "Mode Objet"
+      },
+      "keys": {
+        "win": [["Alt", "I"]],
+        "mac": [["Option", "I"]]
+      }
+    },
+    {
+      "id": "clear-keyframes",
+      "category": "edit",
+      "action": {
+        "en": "Clear all keyframes of the property",
+        "fr": "Effacer toutes les images clés de la propriété"
+      },
+      "context": {
+        "en": "Object Mode",
+        "fr": "Mode Objet"
+      },
+      "keys": {
+        "win": [["Shift", "Alt", "I"]],
+        "mac": [["Shift", "Option", "I"]]
+      }
+    }
+  ]
+}
