@@ -50,10 +50,25 @@ function sameKeyAcrossPlatforms(key: string): string {
   return key === "Option" ? "Alt" : key;
 }
 
-// True when Windows and Mac use the same keys: the page then shows the
-// "Same on Windows & Mac" badge instead of a difference the visitor would look for.
+// True when Windows and Mac use the same keys. A software that runs on one
+// platform only has nothing to compare, so it counts as "same".
 export function isSameOnBothPlatforms(keys: Keys): boolean {
+  if (!keys.win || !keys.mac) return true;
   const normalize = (combos: string[][]) =>
     JSON.stringify(combos.map((combo) => combo.map(sameKeyAcrossPlatforms)));
   return normalize(keys.win) === normalize(keys.mac);
+}
+
+// The platform actually shown: the one the visitor chose, unless the software
+// does not run on it.
+export function shownPlatform(
+  platforms: readonly Platform[],
+  chosen: Platform,
+): Platform {
+  return platforms.includes(chosen) ? chosen : platforms[0];
+}
+
+// Keys for that platform, or nothing when the software skips it.
+export function keysFor(keys: Keys, platform: Platform): string[][] {
+  return keys[platform] ?? [];
 }

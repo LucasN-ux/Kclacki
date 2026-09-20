@@ -88,7 +88,11 @@ export default async function SoftwarePage({
                 {dictionary.software.officialDoc}
               </a>
             </p>
-            <PlatformSummary shortcuts={software.shortcuts} locale={locale} />
+            <PlatformSummary
+              shortcuts={software.shortcuts}
+              platforms={software.platforms}
+              locale={locale}
+            />
           </div>
         </div>
 
@@ -123,6 +127,7 @@ export default async function SoftwarePage({
                 <ShortcutListForPlatform
                   shortcuts={group.shortcuts}
                   softwareId={software.id}
+                  platforms={software.platforms}
                   locale={locale}
                   flag={flag}
                 />

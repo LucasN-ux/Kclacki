@@ -1,0 +1,512 @@
+{
+  "id": "gaea",
+  "name": "Gaea",
+  "initials": "GA",
+  "family": "render-sim-terrain",
+  "platforms": ["win"],
+  "version": "1.3",
+  "docUrl": "https://docs.quadspinner.com/Guide/Interface/Keyboard.html",
+  "verifiedAt": "2026-09-20",
+  "shortcuts": [
+    {
+      "id": "new-project",
+      "category": "file",
+      "action": {
+        "en": "New file",
+        "fr": "Nouveau fichier"
+      },
+      "keys": {
+        "win": [["Ctrl", "N"]]
+      }
+    },
+    {
+      "id": "open-file",
+      "category": "file",
+      "action": {
+        "en": "Open a file",
+        "fr": "Ouvrir un fichier"
+      },
+      "keys": {
+        "win": [["Ctrl", "O"]]
+      }
+    },
+    {
+      "id": "save-file",
+      "category": "file",
+      "action": {
+        "en": "Save",
+        "fr": "Enregistrer"
+      },
+      "keys": {
+        "win": [["Ctrl", "S"]]
+      }
+    },
+    {
+      "id": "save-incremental",
+      "category": "file",
+      "action": {
+        "en": "Save a numbered copy",
+        "fr": "Enregistrer une copie numérotée"
+      },
+      "keys": {
+        "win": [["Ctrl", "Shift", "S"]]
+      }
+    },
+    {
+      "id": "undo",
+      "category": "general",
+      "action": {
+        "en": "Undo",
+        "fr": "Annuler"
+      },
+      "keys": {
+        "win": [["Ctrl", "Z"]]
+      }
+    },
+    {
+      "id": "redo",
+      "category": "general",
+      "action": {
+        "en": "Redo",
+        "fr": "Rétablir"
+      },
+      "keys": {
+        "win": [["Ctrl", "Y"]]
+      }
+    },
+    {
+      "id": "toggle-2d-viewport",
+      "category": "view",
+      "action": {
+        "en": "Show or hide the 2D viewport",
+        "fr": "Afficher ou masquer la vue 2D"
+      },
+      "keys": {
+        "win": [["F6"]]
+      }
+    },
+    {
+      "id": "suspend-engine",
+      "category": "general",
+      "action": {
+        "en": "Suspend or resume the engine",
+        "fr": "Suspendre ou relancer le moteur"
+      },
+      "keys": {
+        "win": [["`"]]
+      }
+    },
+    {
+      "id": "cancel-build",
+      "category": "general",
+      "action": {
+        "en": "Cancel the preview build",
+        "fr": "Annuler le calcul de l'aperçu"
+      },
+      "keys": {
+        "win": [["Esc"]]
+      }
+    },
+    {
+      "id": "fly-navigation",
+      "category": "navigation",
+      "action": {
+        "en": "Move through the terrain",
+        "fr": "Se déplacer dans le terrain"
+      },
+      "context": {
+        "en": "Viewport",
+        "fr": "Vue 3D"
+      },
+      "keys": {
+        "win": [["W"], ["A"], ["S"], ["D"]]
+      }
+    },
+    {
+      "id": "fly-up-down",
+      "category": "navigation",
+      "action": {
+        "en": "Move up or down",
+        "fr": "Monter ou descendre"
+      },
+      "context": {
+        "en": "Viewport",
+        "fr": "Vue 3D"
+      },
+      "keys": {
+        "win": [["Q"], ["E"]]
+      }
+    },
+    {
+      "id": "center-terrain",
+      "category": "navigation",
+      "action": {
+        "en": "Centre the terrain in the viewport",
+        "fr": "Centrer le terrain dans la vue"
+      },
+      "context": {
+        "en": "Viewport",
+        "fr": "Vue 3D"
+      },
+      "keys": {
+        "win": [["Space"]]
+      }
+    },
+    {
+      "id": "search-node",
+      "category": "navigation",
+      "action": {
+        "en": "Quick search for a node",
+        "fr": "Recherche rapide d'un nœud"
+      },
+      "context": {
+        "en": "Graph",
+        "fr": "Graphe"
+      },
+      "keys": {
+        "win": [["Tab"]]
+      }
+    },
+    {
+      "id": "frame-all",
+      "category": "navigation",
+      "action": {
+        "en": "Zoom the graph to fit everything",
+        "fr": "Cadrer tout le graphe"
+      },
+      "context": {
+        "en": "Graph",
+        "fr": "Graphe"
+      },
+      "keys": {
+        "win": [["Ctrl", "0"]]
+      }
+    },
+    {
+      "id": "multimix-nodes",
+      "category": "tools",
+      "action": {
+        "en": "MultiMix the selected nodes",
+        "fr": "MultiMix des nœuds sélectionnés"
+      },
+      "context": {
+        "en": "Graph",
+        "fr": "Graphe"
+      },
+      "keys": {
+        "win": [["F8"]]
+      }
+    },
+    {
+      "id": "connection-to-portal",
+      "category": "tools",
+      "action": {
+        "en": "Turn a connection into a portal",
+        "fr": "Transformer une connexion en portail"
+      },
+      "context": {
+        "en": "Graph",
+        "fr": "Graphe"
+      },
+      "keys": {
+        "win": [["Ctrl", "P"]]
+      }
+    },
+    {
+      "id": "highlight-chain",
+      "category": "view",
+      "action": {
+        "en": "Highlight the whole chain",
+        "fr": "Surligner toute la chaîne"
+      },
+      "context": {
+        "en": "Graph",
+        "fr": "Graphe"
+      },
+      "keys": {
+        "win": [["H"]]
+      }
+    },
+    {
+      "id": "select-descendants",
+      "category": "selection",
+      "action": {
+        "en": "Select the descendants",
+        "fr": "Sélectionner les descendants"
+      },
+      "context": {
+        "en": "Graph",
+        "fr": "Graphe"
+      },
+      "keys": {
+        "win": [["E"]]
+      }
+    },
+    {
+      "id": "select-ancestors",
+      "category": "selection",
+      "action": {
+        "en": "Select the ancestors",
+        "fr": "Sélectionner les ancêtres"
+      },
+      "context": {
+        "en": "Graph",
+        "fr": "Graphe"
+      },
+      "keys": {
+        "win": [["Shift", "E"]]
+      }
+    },
+    {
+      "id": "auto-layout",
+      "category": "tools",
+      "action": {
+        "en": "Lay out the selected nodes",
+        "fr": "Ranger les nœuds sélectionnés"
+      },
+      "context": {
+        "en": "Graph",
+        "fr": "Graphe"
+      },
+      "keys": {
+        "win": [["F4"]]
+      }
+    },
+    {
+      "id": "exposed-properties",
+      "category": "view",
+      "action": {
+        "en": "Show the exposed properties editor",
+        "fr": "Afficher l'éditeur de propriétés exposées"
+      },
+      "keys": {
+        "win": [["F12"]]
+      }
+    },
+    {
+      "id": "delete",
+      "category": "edit",
+      "action": {
+        "en": "Delete the node or the connection",
+        "fr": "Supprimer le nœud ou la connexion"
+      },
+      "context": {
+        "en": "Graph",
+        "fr": "Graphe"
+      },
+      "keys": {
+        "win": [["Delete"]]
+      }
+    },
+    {
+      "id": "duplicate",
+      "category": "edit",
+      "action": {
+        "en": "Duplicate the node",
+        "fr": "Dupliquer le nœud"
+      },
+      "context": {
+        "en": "Graph",
+        "fr": "Graphe"
+      },
+      "keys": {
+        "win": [["Ctrl", "D"]]
+      }
+    },
+    {
+      "id": "rename-node",
+      "category": "edit",
+      "action": {
+        "en": "Rename the node",
+        "fr": "Renommer le nœud"
+      },
+      "context": {
+        "en": "Graph",
+        "fr": "Graphe"
+      },
+      "keys": {
+        "win": [["F2"]]
+      }
+    },
+    {
+      "id": "refresh-node",
+      "category": "general",
+      "action": {
+        "en": "Refresh the node",
+        "fr": "Rafraîchir le nœud"
+      },
+      "context": {
+        "en": "Graph",
+        "fr": "Graphe"
+      },
+      "keys": {
+        "win": [["F5"]]
+      }
+    },
+    {
+      "id": "bypass-node",
+      "category": "edit",
+      "action": {
+        "en": "Bypass the node",
+        "fr": "Contourner le nœud"
+      },
+      "context": {
+        "en": "Graph",
+        "fr": "Graphe"
+      },
+      "keys": {
+        "win": [["B"]]
+      }
+    },
+    {
+      "id": "pin-preview",
+      "category": "view",
+      "action": {
+        "en": "Pin the node preview",
+        "fr": "Épingler l'aperçu du nœud"
+      },
+      "context": {
+        "en": "Graph",
+        "fr": "Graphe"
+      },
+      "keys": {
+        "win": [["F"]]
+      }
+    },
+    {
+      "id": "pin-color-preview",
+      "category": "view",
+      "action": {
+        "en": "Pin the node for the colour preview",
+        "fr": "Épingler le nœud pour l'aperçu couleur"
+      },
+      "context": {
+        "en": "Graph",
+        "fr": "Graphe"
+      },
+      "keys": {
+        "win": [["G"]]
+      }
+    },
+    {
+      "id": "mark-for-save",
+      "category": "file",
+      "action": {
+        "en": "Mark the node for saving",
+        "fr": "Marquer le nœud pour l'enregistrement"
+      },
+      "context": {
+        "en": "Graph",
+        "fr": "Graphe"
+      },
+      "keys": {
+        "win": [["F3"]]
+      }
+    },
+    {
+      "id": "bake-node",
+      "category": "tools",
+      "action": {
+        "en": "Bake the node and its ancestors",
+        "fr": "Calculer le nœud et ses ancêtres"
+      },
+      "context": {
+        "en": "Graph",
+        "fr": "Graphe"
+      },
+      "keys": {
+        "win": [["F9"]]
+      }
+    },
+    {
+      "id": "reset-node",
+      "category": "edit",
+      "action": {
+        "en": "Reset the node to its default settings",
+        "fr": "Réinitialiser le nœud"
+      },
+      "context": {
+        "en": "Graph",
+        "fr": "Graphe"
+      },
+      "keys": {
+        "win": [["Ctrl", "R"]]
+      }
+    },
+    {
+      "id": "cycle-display-mode",
+      "category": "view",
+      "action": {
+        "en": "Cycle the display mode",
+        "fr": "Changer de mode d'affichage"
+      },
+      "context": {
+        "en": "Graph",
+        "fr": "Graphe"
+      },
+      "keys": {
+        "win": [["Ctrl", "T"]]
+      }
+    },
+    {
+      "id": "connect-menu",
+      "category": "tools",
+      "action": {
+        "en": "Open the connect menu",
+        "fr": "Ouvrir le menu de connexion"
+      },
+      "context": {
+        "en": "Graph",
+        "fr": "Graphe"
+      },
+      "keys": {
+        "win": [["C"]]
+      }
+    },
+    {
+      "id": "disconnect-menu",
+      "category": "tools",
+      "action": {
+        "en": "Open the disconnect menu",
+        "fr": "Ouvrir le menu de déconnexion"
+      },
+      "context": {
+        "en": "Graph",
+        "fr": "Graphe"
+      },
+      "keys": {
+        "win": [["X"]]
+      }
+    },
+    {
+      "id": "quick-navigate",
+      "category": "navigation",
+      "action": {
+        "en": "Open the quick navigate menu",
+        "fr": "Ouvrir le menu de navigation rapide"
+      },
+      "context": {
+        "en": "Graph",
+        "fr": "Graphe"
+      },
+      "keys": {
+        "win": [[","]]
+      }
+    },
+    {
+      "id": "collapse-node",
+      "category": "view",
+      "action": {
+        "en": "Collapse or expand the node",
+        "fr": "Replier ou déplier le nœud"
+      },
+      "context": {
+        "en": "Graph",
+        "fr": "Graphe"
+      },
+      "keys": {
+        "win": [["F11"]]
+      }
+    }
+  ]
+}

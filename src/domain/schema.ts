@@ -35,11 +35,13 @@ const Combo = z.array(z.string().trim().min(1)).min(1);
 // [["X"], ["Delete"]] reads "X or Delete".
 const Combos = z.array(Combo).min(1);
 
+// A software that does not run on a platform has no keys for it: Gaea is
+// Windows only, so its shortcuts carry no Mac column at all.
 export const Keys = z
-  .object({ win: Combos, mac: Combos })
+  .object({ win: Combos.optional(), mac: Combos.optional() })
   .superRefine((keys, ctx) => {
     const check = (platform: "win" | "mac", forbidden: Set<string>) => {
-      for (const combo of keys[platform]) {
+      for (const combo of keys[platform] ?? []) {
         for (const key of combo) {
           if (forbidden.has(key)) {
             ctx.addIssue({
@@ -93,6 +95,12 @@ export const Software = z
       .string()
       .regex(/^[A-Z0-9]{2}$/, "must be 2 capital letters (e.g. BL)"),
     family: z.enum(FAMILIES),
+    // Platforms the software itself runs on. Most run on both; Gaea is
+    // Windows only, so the site never shows Mac keys for it.
+    platforms: z
+      .array(z.enum(["win", "mac"]))
+      .min(1)
+      .default(["win", "mac"]),
     // Version the shortcuts were checked against, and where.
     version: z.string().trim().min(1),
     docUrl: z.url({ protocol: /^https$/ }),
@@ -112,6 +120,27 @@ export const Software = z
         });
       }
       seen.add(shortcut.id);
+
+      // Every platform the software runs on needs its keys, and a platform it
+      // does not run on must not carry any.
+      for (const platform of ["win", "mac"] as const) {
+        const runsThere = software.platforms.includes(platform);
+        const hasKeys = shortcut.keys[platform] !== undefined;
+        if (runsThere && !hasKeys) {
+          ctx.addIssue({
+            code: "custom",
+            path: ["shortcuts", index, "keys", platform],
+            message: `missing ${platform} keys`,
+          });
+        }
+        if (!runsThere && hasKeys) {
+          ctx.addIssue({
+            code: "custom",
+            path: ["shortcuts", index, "keys", platform],
+            message: `${software.name} does not run on ${platform}`,
+          });
+        }
+      }
     });
   });
 

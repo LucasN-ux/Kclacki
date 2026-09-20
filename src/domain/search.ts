@@ -1,3 +1,4 @@
+import { keysFor } from "./keys";
 import type { Locale } from "./locale";
 import type { Shortcut, Software } from "./schema";
 
@@ -36,8 +37,10 @@ function matchesKeys(shortcut: Shortcut, query: string): boolean {
   const asked = query.split(/[\s+]+/).filter(Boolean);
   if (asked.length === 0) return false;
 
+  // Both platforms are searched, and a software that skips one simply has
+  // nothing to match there.
   return (["win", "mac"] as const).some((platform) =>
-    shortcut.keys[platform].some((combo) => {
+    keysFor(shortcut.keys, platform).some((combo) => {
       const keys = combo.map((key) => normalize(key));
       return asked.every((key) => keys.includes(key));
     }),

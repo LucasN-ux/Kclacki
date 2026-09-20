@@ -1,0 +1,97 @@
+{
+  "id": "embergen",
+  "name": "EmberGen",
+  "initials": "EG",
+  "family": "render-sim-terrain",
+  "platforms": ["win"],
+  "version": "1.2",
+  "docUrl": "https://docs.jangafx.com/embergen/pages/references/ui_reference.html",
+  "verifiedAt": "2026-09-20",
+  "shortcuts": [
+    {
+      "id": "move",
+      "category": "tools",
+      "action": {
+        "en": "Translate manipulator",
+        "fr": "Manipulateur de déplacement"
+      },
+      "keys": {
+        "win": [["Q"]]
+      }
+    },
+    {
+      "id": "rotate",
+      "category": "tools",
+      "action": {
+        "en": "Rotate manipulator",
+        "fr": "Manipulateur de rotation"
+      },
+      "keys": {
+        "win": [["W"]]
+      }
+    },
+    {
+      "id": "scale",
+      "category": "tools",
+      "action": {
+        "en": "Scale manipulator",
+        "fr": "Manipulateur d'échelle"
+      },
+      "keys": {
+        "win": [["E"]]
+      }
+    },
+    {
+      "id": "unlit-mode",
+      "category": "view",
+      "action": {
+        "en": "Unlit mode, for a faster render",
+        "fr": "Mode non éclairé, pour un rendu plus rapide"
+      },
+      "context": {
+        "en": "Viewport",
+        "fr": "Vue 3D"
+      },
+      "keys": {
+        "win": [["U"]]
+      }
+    },
+    {
+      "id": "toggle-backplates",
+      "category": "view",
+      "action": {
+        "en": "Show or hide the backplates",
+        "fr": "Afficher ou masquer les fonds"
+      },
+      "context": {
+        "en": "Viewport",
+        "fr": "Vue 3D"
+      },
+      "keys": {
+        "win": [["Shift", "B"]]
+      }
+    },
+    {
+      "id": "jump-to-parameter",
+      "category": "navigation",
+      "action": {
+        "en": "Jump to a parameter",
+        "fr": "Aller à un paramètre"
+      },
+      "keys": {
+        "win": [["Ctrl", "P"]]
+      }
+    },
+    {
+      "id": "save-file",
+      "category": "file",
+      "action": {
+        "en": "Save the presets",
+        "fr": "Enregistrer les préréglages"
+      },
+      "keys": {
+        "win": [["Ctrl", "S"]]
+      }
+    }
+  ]
+}

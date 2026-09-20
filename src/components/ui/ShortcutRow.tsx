@@ -13,13 +13,27 @@ const OTHER_PLATFORM: Record<Platform, string> = { win: "Mac", mac: "Windows" };
 
 export function PlatformSummary({
   shortcuts,
+  platforms,
   locale,
 }: {
   shortcuts: Shortcut[];
+  /** Platforms the software runs on. */
+  platforms: Platform[];
   locale: Locale;
 }) {
   const { total, differing } = summarizePlatformDifference(shortcuts);
-  const { shortcut } = getDictionary(locale);
+  const dictionary = getDictionary(locale);
+
+  // A software that runs on one platform only has no comparison to make.
+  if (platforms.length === 1) {
+    const only =
+      platforms[0] === "win"
+        ? dictionary.software.windowsOnly
+        : dictionary.software.macOnly;
+    return <p className={styles.summary}>{only}</p>;
+  }
+
+  const { shortcut } = dictionary;
   const text =
     differing === 0
       ? shortcut.allSame

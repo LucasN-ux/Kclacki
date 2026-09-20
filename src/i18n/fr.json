@@ -31,7 +31,9 @@
     "version": "Version",
     "checkedOn": "Vérifié le",
     "officialDoc": "Documentation officielle",
-    "backHome": "Tous les logiciels"
+    "backHome": "Tous les logiciels",
+    "windowsOnly": "Windows uniquement",
+    "macOnly": "Mac uniquement"
   },
   "footer": {
     "trademarks": "Les noms des logiciels appartiennent à leurs éditeurs.",

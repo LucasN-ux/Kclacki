@@ -9,6 +9,7 @@ import { SOFTWARE_LIST } from "@/data";
 import { localeHref, type Locale } from "@/domain/locale";
 import { summarizePlatformDifference } from "@/domain/platformDifference";
 import { countHits, searchShortcuts } from "@/domain/search";
+import { shownPlatform } from "@/domain/keys";
 import { usePlatform } from "@/hooks/usePlatform";
 import { getDictionary } from "@/i18n";
 import styles from "./SearchResults.module.css";
@@ -19,7 +20,7 @@ export function SearchResults({ locale }: { locale: Locale }) {
   const searchParams = useSearchParams();
   const [query, setQuery] = useState(searchParams.get("q") ?? "");
   const input = useRef<HTMLInputElement>(null);
-  const { platform } = usePlatform();
+  const { platform: chosenPlatform } = usePlatform();
   const { search } = getDictionary(locale);
   const trimmed = query.trim();
 
@@ -80,7 +81,7 @@ export function SearchResults({ locale }: { locale: Locale }) {
           <ShortcutList
             shortcuts={hit.shortcuts}
             softwareId={hit.software.id}
-            platform={platform}
+            platform={shownPlatform(hit.software.platforms, chosenPlatform)}
             locale={locale}
             // Decided from the whole software, not from the few results shown.
             flag={summarizePlatformDifference(hit.software.shortcuts).flag}

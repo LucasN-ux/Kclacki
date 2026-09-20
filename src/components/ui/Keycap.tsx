@@ -1,4 +1,4 @@
-import { isModifier, isMouse, keyLabel } from "@/domain/keys";
+import { isModifier, isMouse, keyLabel, keysFor } from "@/domain/keys";
 import type { Locale } from "@/domain/locale";
 import type { Keys, Platform } from "@/domain/schema";
 import { getDictionary } from "@/i18n";
@@ -33,7 +33,7 @@ export function KeyCombos({
 
   return (
     <span className={styles.combo}>
-      {keys[platform].map((combo, comboIndex) => (
+      {keysFor(keys, platform).map((combo, comboIndex) => (
         <span key={comboIndex} className={styles.combo}>
           {comboIndex > 0 && <span className={styles.or}>{shortcut.or}</span>}
           {combo.map((keyName, keyIndex) => (

@@ -6,13 +6,14 @@ import { SOFTWARE_LIST } from "@/data";
 import { localeHref, type Locale } from "@/domain/locale";
 import { summarizePlatformDifference } from "@/domain/platformDifference";
 import { favoriteKey, useFavorites } from "@/hooks/useFavorites";
+import { shownPlatform } from "@/domain/keys";
 import { usePlatform } from "@/hooks/usePlatform";
 import { getDictionary } from "@/i18n";
 import styles from "./SearchResults.module.css";
 
 export function FavoritesList({ locale }: { locale: Locale }) {
   const { keys, count } = useFavorites();
-  const { platform } = usePlatform();
+  const { platform: chosenPlatform } = usePlatform();
   const { favorites, site } = getDictionary(locale);
 
   // The kept shortcuts, grouped by software and in the order of the data files.
@@ -53,7 +54,7 @@ export function FavoritesList({ locale }: { locale: Locale }) {
           <ShortcutList
             shortcuts={group.shortcuts}
             softwareId={group.software.id}
-            platform={platform}
+            platform={shownPlatform(group.software.platforms, chosenPlatform)}
             locale={locale}
             flag={summarizePlatformDifference(group.software.shortcuts).flag}
           />

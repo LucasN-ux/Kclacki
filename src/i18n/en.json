@@ -31,7 +31,9 @@
     "version": "Version",
     "checkedOn": "Checked on",
     "officialDoc": "Official documentation",
-    "backHome": "All software"
+    "backHome": "All software",
+    "windowsOnly": "Windows only",
+    "macOnly": "Mac only"
   },
   "footer": {
     "trademarks": "Software names belong to their publishers.",

@@ -1,5 +1,7 @@
 import { Software, type Family } from "@/domain/schema";
 import blender from "./software/blender.json";
+import embergen from "./software/embergen.json";
+import gaea from "./software/gaea.json";
 import houdini from "./software/houdini.json";
 import mari from "./software/mari.json";
 import marmosetToolbag from "./software/marmoset-toolbag.json";
@@ -15,6 +17,8 @@ import zbrush from "./software/zbrush.json";
 // and one line here; no other code changes.
 const RAW_SOFTWARE: unknown[] = [
   blender,
+  embergen,
+  gaea,
   houdini,
   mari,
   marmosetToolbag,
