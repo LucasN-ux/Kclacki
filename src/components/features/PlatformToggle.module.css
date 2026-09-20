@@ -1,0 +1,34 @@
+.toggle {
+  display: inline-flex;
+  padding: 3px;
+  gap: 3px;
+  background: var(--paper-deep);
+  border: var(--stroke-2) solid var(--ink);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-hard-sm);
+}
+
+.option {
+  border: 2px solid transparent;
+  background: none;
+  cursor: pointer;
+  padding: 3px 14px;
+  border-radius: var(--radius-pill);
+  font: inherit;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 700;
+  color: var(--ink-soft);
+}
+
+.option:hover {
+  color: var(--ink);
+}
+
+/* The selected side is orange AND pressed for assistive technology:
+   the state is never carried by the color alone. */
+.option[aria-pressed="true"] {
+  background: var(--orange);
+  border-color: var(--ink);
+  color: var(--ink);
+}

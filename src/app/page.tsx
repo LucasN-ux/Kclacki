@@ -1,5 +1,6 @@
+import { PlatformToggle } from "@/components/features/PlatformToggle";
+import { ShortcutListForPlatform } from "@/components/features/ShortcutListForPlatform";
 import { Ribbon } from "@/components/ui/Ribbon";
-import { ShortcutList } from "@/components/ui/ShortcutRow";
 import { SoftwareCard } from "@/components/ui/SoftwareCard";
 import { SOFTWARE_LIST, getSoftware } from "@/data";
 import styles from "./page.module.css";
@@ -9,11 +10,14 @@ import styles from "./page.module.css";
 export default function Home() {
   const locale = "fr" as const;
   const blender = getSoftware("blender");
-  const shortcuts = blender ? blender.shortcuts.slice(0, 8) : [];
+  const shortcuts = blender ? blender.shortcuts.slice(0, 10) : [];
 
   return (
     <main className={styles.page}>
-      <h1 className={styles.title}>Cmdx</h1>
+      <header className={styles.header}>
+        <h1 className={styles.title}>Cmdx</h1>
+        <PlatformToggle locale={locale} />
+      </header>
 
       <Ribbon>3D &amp; sculpture</Ribbon>
 
@@ -23,16 +27,7 @@ export default function Home() {
         ))}
       </div>
 
-      <div className={styles.columns}>
-        <section className={styles.column}>
-          <Ribbon color="yellow">Windows</Ribbon>
-          <ShortcutList shortcuts={shortcuts} platform="win" locale={locale} />
-        </section>
-        <section className={styles.column}>
-          <Ribbon color="orange">Mac</Ribbon>
-          <ShortcutList shortcuts={shortcuts} platform="mac" locale={locale} />
-        </section>
-      </div>
+      <ShortcutListForPlatform shortcuts={shortcuts} locale={locale} />
     </main>
   );
 }

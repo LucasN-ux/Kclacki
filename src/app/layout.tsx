@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { PlatformProvider } from "@/hooks/usePlatform";
 import { fontVariables } from "./fonts";
 import "./globals.css";
 
@@ -12,7 +13,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     // lang is set per language segment on day 4; French while the pages are built.
     <html lang="fr" className={fontVariables}>
-      <body>{children}</body>
+      <body>
+        <PlatformProvider>{children}</PlatformProvider>
+      </body>
     </html>
   );
 }

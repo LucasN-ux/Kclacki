@@ -7,6 +7,14 @@
   gap: var(--space-6);
 }
 
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
 .title {
   font-size: 56px;
   line-height: 54px;
