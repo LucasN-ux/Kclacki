@@ -1,0 +1,553 @@
+{
+  "id": "zbrush",
+  "name": "ZBrush",
+  "initials": "ZB",
+  "family": "3d-sculpt",
+  "version": "2026.2",
+  "docUrl": "https://help.maxon.net/zbr/en-us/Content/html/user-guide/keyboard-shortcuts/shortcuts-by-category/shortcuts-by-category.html",
+  "verifiedAt": "2026-09-20",
+  "shortcuts": [
+    {
+      "id": "toggle-edit-mode",
+      "category": "general",
+      "action": {
+        "en": "Turn edit mode on or off",
+        "fr": "Activer ou désactiver le mode Édition"
+      },
+      "keys": {
+        "win": [["T"]],
+        "mac": [["T"]]
+      }
+    },
+    {
+      "id": "draw-tool",
+      "category": "tools",
+      "action": {
+        "en": "Draw",
+        "fr": "Dessiner"
+      },
+      "keys": {
+        "win": [["Q"]],
+        "mac": [["Q"]]
+      }
+    },
+    {
+      "id": "move",
+      "category": "tools",
+      "action": {
+        "en": "Move",
+        "fr": "Déplacer"
+      },
+      "keys": {
+        "win": [["W"]],
+        "mac": [["W"]]
+      }
+    },
+    {
+      "id": "scale",
+      "category": "tools",
+      "action": {
+        "en": "Scale",
+        "fr": "Redimensionner"
+      },
+      "keys": {
+        "win": [["E"]],
+        "mac": [["E"]]
+      }
+    },
+    {
+      "id": "rotate",
+      "category": "tools",
+      "action": {
+        "en": "Rotate",
+        "fr": "Tourner"
+      },
+      "keys": {
+        "win": [["R"]],
+        "mac": [["R"]]
+      }
+    },
+    {
+      "id": "brush-popup",
+      "category": "tools",
+      "action": {
+        "en": "Show the brush pop-up",
+        "fr": "Afficher la fenêtre des brosses"
+      },
+      "keys": {
+        "win": [["B"]],
+        "mac": [["B"]]
+      }
+    },
+    {
+      "id": "draw-size",
+      "category": "tools",
+      "action": {
+        "en": "Change the draw size",
+        "fr": "Changer la taille du tracé"
+      },
+      "keys": {
+        "win": [["S"]],
+        "mac": [["S"]]
+      }
+    },
+    {
+      "id": "focal-shift",
+      "category": "tools",
+      "action": {
+        "en": "Change the focal shift",
+        "fr": "Changer le décalage focal"
+      },
+      "keys": {
+        "win": [["O"]],
+        "mac": [["O"]]
+      }
+    },
+    {
+      "id": "rgb-intensity",
+      "category": "tools",
+      "action": {
+        "en": "Change the RGB intensity",
+        "fr": "Changer l'intensité RVB"
+      },
+      "keys": {
+        "win": [["I"]],
+        "mac": [["I"]]
+      }
+    },
+    {
+      "id": "z-intensity",
+      "category": "tools",
+      "action": {
+        "en": "Change the Z intensity",
+        "fr": "Changer l'intensité Z"
+      },
+      "keys": {
+        "win": [["U"]],
+        "mac": [["U"]]
+      }
+    },
+    {
+      "id": "increase-brush-size",
+      "category": "tools",
+      "action": {
+        "en": "Increase the draw size",
+        "fr": "Agrandir la taille du tracé"
+      },
+      "keys": {
+        "win": [["]"]],
+        "mac": [["]"]]
+      }
+    },
+    {
+      "id": "decrease-brush-size",
+      "category": "tools",
+      "action": {
+        "en": "Decrease the draw size",
+        "fr": "Réduire la taille du tracé"
+      },
+      "keys": {
+        "win": [["["]],
+        "mac": [["["]]
+      }
+    },
+    {
+      "id": "lazy-mouse",
+      "category": "tools",
+      "action": {
+        "en": "Turn the lazy mouse on or off",
+        "fr": "Activer ou désactiver la souris paresseuse"
+      },
+      "keys": {
+        "win": [["L"]],
+        "mac": [["L"]]
+      }
+    },
+    {
+      "id": "pick-color",
+      "category": "tools",
+      "action": {
+        "en": "Pick the colour under the cursor",
+        "fr": "Prélever la couleur sous le curseur"
+      },
+      "keys": {
+        "win": [["C"]],
+        "mac": [["C"]]
+      }
+    },
+    {
+      "id": "switch-color",
+      "category": "tools",
+      "action": {
+        "en": "Switch the colours",
+        "fr": "Échanger les couleurs"
+      },
+      "keys": {
+        "win": [["V"]],
+        "mac": [["V"]]
+      }
+    },
+    {
+      "id": "orbit-view",
+      "category": "navigation",
+      "action": {
+        "en": "Free rotate the model",
+        "fr": "Faire tourner librement le modèle"
+      },
+      "context": {
+        "en": "Edit mode",
+        "fr": "Mode Édition"
+      },
+      "keys": {
+        "win": [["MouseLeft"]],
+        "mac": [["MouseLeft"]]
+      }
+    },
+    {
+      "id": "pan-view",
+      "category": "navigation",
+      "action": {
+        "en": "Move the model",
+        "fr": "Déplacer le modèle"
+      },
+      "context": {
+        "en": "Edit mode",
+        "fr": "Mode Édition"
+      },
+      "keys": {
+        "win": [["Alt", "MouseLeft"]],
+        "mac": [["Option", "MouseLeft"]]
+      }
+    },
+    {
+      "id": "frame-selection",
+      "category": "navigation",
+      "action": {
+        "en": "Fit the mesh to the view",
+        "fr": "Cadrer le maillage dans la vue"
+      },
+      "keys": {
+        "win": [["F"]],
+        "mac": [["F"]]
+      }
+    },
+    {
+      "id": "toggle-perspective",
+      "category": "view",
+      "action": {
+        "en": "Turn the perspective on or off",
+        "fr": "Activer ou désactiver la perspective"
+      },
+      "keys": {
+        "win": [["P"]],
+        "mac": [["P"]]
+      }
+    },
+    {
+      "id": "toggle-floor-grid",
+      "category": "view",
+      "action": {
+        "en": "Show or hide the floor grid",
+        "fr": "Afficher ou masquer la grille de sol"
+      },
+      "keys": {
+        "win": [["Shift", "P"]],
+        "mac": [["Shift", "P"]]
+      }
+    },
+    {
+      "id": "toggle-polyframe",
+      "category": "view",
+      "action": {
+        "en": "Show or hide the polyframe and polygroups",
+        "fr": "Afficher ou masquer le polyframe et les polygroupes"
+      },
+      "keys": {
+        "win": [["Shift", "F"]],
+        "mac": [["Shift", "F"]]
+      }
+    },
+    {
+      "id": "toggle-symmetry",
+      "category": "tools",
+      "action": {
+        "en": "Turn symmetry on or off",
+        "fr": "Activer ou désactiver la symétrie"
+      },
+      "keys": {
+        "win": [["X"]],
+        "mac": [["X"]]
+      }
+    },
+    {
+      "id": "list-subtools",
+      "category": "general",
+      "action": {
+        "en": "List every subtool",
+        "fr": "Lister tous les sous-outils"
+      },
+      "keys": {
+        "win": [["N"]],
+        "mac": [["N"]]
+      }
+    },
+    {
+      "id": "lightbox",
+      "category": "general",
+      "action": {
+        "en": "Show or hide Lightbox",
+        "fr": "Afficher ou masquer Lightbox"
+      },
+      "keys": {
+        "win": [[","]],
+        "mac": [[","]]
+      }
+    },
+    {
+      "id": "spotlight",
+      "category": "general",
+      "action": {
+        "en": "Turn Spotlight on or off",
+        "fr": "Activer ou désactiver Spotlight"
+      },
+      "keys": {
+        "win": [["Shift", "Z"]],
+        "mac": [["Shift", "Z"]]
+      }
+    },
+    {
+      "id": "spotlight-dial",
+      "category": "general",
+      "action": {
+        "en": "Show or hide the Spotlight dial",
+        "fr": "Afficher ou masquer le cadran Spotlight"
+      },
+      "keys": {
+        "win": [["Z"]],
+        "mac": [["Z"]]
+      }
+    },
+    {
+      "id": "projection-master",
+      "category": "tools",
+      "action": {
+        "en": "Open Projection Master",
+        "fr": "Ouvrir Projection Master"
+      },
+      "keys": {
+        "win": [["G"]],
+        "mac": [["G"]]
+      }
+    },
+    {
+      "id": "save-file",
+      "category": "file",
+      "action": {
+        "en": "Save the tool",
+        "fr": "Enregistrer l'outil"
+      },
+      "keys": {
+        "win": [["Shift", "Ctrl", "T"]],
+        "mac": [
+          ["Shift", "Cmd", "T"],
+          ["Shift", "Ctrl", "T"]
+        ]
+      }
+    },
+    {
+      "id": "subdivide",
+      "category": "edit",
+      "action": {
+        "en": "Divide the mesh",
+        "fr": "Diviser le maillage"
+      },
+      "keys": {
+        "win": [["Ctrl", "D"]],
+        "mac": [
+          ["Cmd", "D"],
+          ["Ctrl", "D"]
+        ]
+      }
+    },
+    {
+      "id": "lower-subdivision",
+      "category": "edit",
+      "action": {
+        "en": "Go to the lower subdivision level",
+        "fr": "Descendre d'un niveau de subdivision"
+      },
+      "keys": {
+        "win": [["Shift", "D"]],
+        "mac": [["Shift", "D"]]
+      }
+    },
+    {
+      "id": "higher-subdivision",
+      "category": "edit",
+      "action": {
+        "en": "Go to the higher subdivision level",
+        "fr": "Monter d'un niveau de subdivision"
+      },
+      "keys": {
+        "win": [["D"]],
+        "mac": [["D"]]
+      }
+    },
+    {
+      "id": "edge-loop",
+      "category": "edit",
+      "action": {
+        "en": "Create an edge loop",
+        "fr": "Créer une boucle d'arêtes"
+      },
+      "keys": {
+        "win": [["Ctrl", "E"]],
+        "mac": [
+          ["Cmd", "E"],
+          ["Ctrl", "E"]
+        ]
+      }
+    },
+    {
+      "id": "view-mask",
+      "category": "selection",
+      "action": {
+        "en": "Show the mask",
+        "fr": "Afficher le masque"
+      },
+      "keys": {
+        "win": [["Ctrl", "H"]],
+        "mac": [
+          ["Cmd", "H"],
+          ["Ctrl", "H"]
+        ]
+      }
+    },
+    {
+      "id": "invert-mask",
+      "category": "selection",
+      "action": {
+        "en": "Invert the mask",
+        "fr": "Inverser le masque"
+      },
+      "keys": {
+        "win": [["Ctrl", "I"]],
+        "mac": [
+          ["Cmd", "I"],
+          ["Ctrl", "I"]
+        ]
+      }
+    },
+    {
+      "id": "mask-all",
+      "category": "selection",
+      "action": {
+        "en": "Mask everything",
+        "fr": "Masquer tout"
+      },
+      "keys": {
+        "win": [["Ctrl", "A"]],
+        "mac": [
+          ["Cmd", "A"],
+          ["Ctrl", "A"]
+        ]
+      }
+    },
+    {
+      "id": "group-masked",
+      "category": "selection",
+      "action": {
+        "en": "Group the masked part and clear the mask",
+        "fr": "Grouper la partie masquée et effacer le masque"
+      },
+      "keys": {
+        "win": [["Ctrl", "W"]],
+        "mac": [
+          ["Cmd", "W"],
+          ["Ctrl", "W"]
+        ]
+      }
+    },
+    {
+      "id": "grow-visible",
+      "category": "selection",
+      "action": {
+        "en": "Grow the visible part of the mesh",
+        "fr": "Agrandir la partie visible du maillage"
+      },
+      "keys": {
+        "win": [["Ctrl", "Shift", "X"]],
+        "mac": [
+          ["Cmd", "Shift", "X"],
+          ["Ctrl", "Shift", "X"]
+        ]
+      }
+    },
+    {
+      "id": "shrink-visible",
+      "category": "selection",
+      "action": {
+        "en": "Shrink the visible part of the mesh",
+        "fr": "Réduire la partie visible du maillage"
+      },
+      "keys": {
+        "win": [["Ctrl", "Shift", "S"]],
+        "mac": [
+          ["Cmd", "Shift", "S"],
+          ["Ctrl", "Shift", "S"]
+        ]
+      }
+    },
+    {
+      "id": "show-all-visible",
+      "category": "selection",
+      "action": {
+        "en": "Show the whole mesh again",
+        "fr": "Réafficher tout le maillage"
+      },
+      "keys": {
+        "win": [["Ctrl", "Shift", "A"]],
+        "mac": [
+          ["Cmd", "Shift", "A"],
+          ["Ctrl", "Shift", "A"]
+        ]
+      }
+    },
+    {
+      "id": "replay-last-stroke",
+      "category": "tools",
+      "action": {
+        "en": "Replay the last stroke",
+        "fr": "Rejouer le dernier tracé"
+      },
+      "keys": {
+        "win": [["1"]],
+        "mac": [["1"]]
+      }
+    },
+    {
+      "id": "replay-all-strokes",
+      "category": "tools",
+      "action": {
+        "en": "Replay every recorded stroke",
+        "fr": "Rejouer tous les tracés enregistrés"
+      },
+      "keys": {
+        "win": [["2"]],
+        "mac": [["2"]]
+      }
+    },
+    {
+      "id": "record-stroke",
+      "category": "tools",
+      "action": {
+        "en": "Record a stroke",
+        "fr": "Enregistrer un tracé"
+      },
+      "keys": {
+        "win": [["3"]],
+        "mac": [["3"]]
+      }
+    }
+  ]
+}
