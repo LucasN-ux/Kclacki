@@ -1,11 +1,13 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { HeaderSearch } from "@/components/features/HeaderSearch";
 import { Ribbon } from "@/components/ui/Ribbon";
 import { SiteFooter, SiteHeader } from "@/components/ui/SiteChrome";
 import { SoftwareCard } from "@/components/ui/SoftwareCard";
 import { SOFTWARE_LIST, softwareByFamily } from "@/data";
 import { isLocale, localeHref } from "@/domain/locale";
 import { getDictionary } from "@/i18n";
+import shell from "@/components/ui/PageShell.module.css";
 import styles from "./page.module.css";
 
 export default async function HomePage({ params }: PageProps<"/[locale]">) {
@@ -22,11 +24,14 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
 
   return (
     <>
-      <SiteHeader locale={locale} />
-      <main className={styles.page}>
+      <SiteHeader locale={locale} showSearch={false} />
+      <main className={shell.page}>
         <section className={styles.hero}>
           <h1 className={styles.title}>Cmdx</h1>
           <p className={styles.tagline}>{dictionary.site.tagline}</p>
+          <div className={styles.heroSearch}>
+            <HeaderSearch locale={locale} hero />
+          </div>
           <p className={styles.counts}>
             {SOFTWARE_LIST.length} {dictionary.site.softwareCount} ·{" "}
             {shortcutCount} {dictionary.site.shortcutCount}

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { SOFTWARE_LIST, getSoftware, softwareByFamily } from "./index";
+import { SOFTWARE_LIST, getSoftware, softwareByFamily } from "@/data/index";
 
 describe("data files", () => {
   it("all pass the schema", () => {

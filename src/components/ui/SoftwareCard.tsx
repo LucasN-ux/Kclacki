@@ -1,11 +1,7 @@
 import type { Locale } from "@/domain/locale";
 import type { Software } from "@/domain/schema";
+import { getDictionary } from "@/i18n";
 import styles from "./SoftwareCard.module.css";
-
-const COUNT_LABEL: Record<Locale, (count: number) => string> = {
-  en: (count) => `${count} shortcuts`,
-  fr: (count) => `${count} raccourcis`,
-};
 
 export function SoftwareCard({
   software,
@@ -14,6 +10,8 @@ export function SoftwareCard({
   software: Software;
   locale: Locale;
 }) {
+  const dictionary = getDictionary(locale);
+
   return (
     <article className={styles.card}>
       <span className={styles.badge} aria-hidden="true">
@@ -24,7 +22,7 @@ export function SoftwareCard({
         <br />
         {/* Real count, read from the data file: never a number typed by hand. */}
         <span className={styles.count}>
-          {COUNT_LABEL[locale](software.shortcuts.length)}
+          {software.shortcuts.length} {dictionary.site.shortcutCount}
         </span>
       </span>
     </article>

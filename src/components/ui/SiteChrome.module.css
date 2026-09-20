@@ -19,6 +19,12 @@
   line-height: 30px;
 }
 
+.search {
+  flex: 1;
+  min-width: 220px;
+  max-width: 460px;
+}
+
 .controls {
   display: flex;
   align-items: center;

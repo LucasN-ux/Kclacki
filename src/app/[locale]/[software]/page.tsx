@@ -10,6 +10,7 @@ import { DEFAULT_LOCALE, LOCALES, isLocale, localeHref } from "@/domain/locale";
 import { summarizePlatformDifference } from "@/domain/platformDifference";
 import { CATEGORIES } from "@/domain/schema";
 import { getDictionary } from "@/i18n";
+import shell from "@/components/ui/PageShell.module.css";
 import styles from "./page.module.css";
 
 // One page per software and per language, all built ahead of time.
@@ -67,7 +68,7 @@ export default async function SoftwarePage({
   return (
     <>
       <SiteHeader locale={locale} path={`/${software.id}`} />
-      <main className={styles.page}>
+      <main className={shell.page}>
         <p className={styles.crumb}>
           <Link href={localeHref(locale)}>{dictionary.software.backHome}</Link>{" "}
           › {software.name}

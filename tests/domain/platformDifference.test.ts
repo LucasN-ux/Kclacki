@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { summarizePlatformDifference } from "./platformDifference";
-import type { Shortcut } from "./schema";
+import { summarizePlatformDifference } from "@/domain/platformDifference";
+import type { Shortcut } from "@/domain/schema";
 
 function shortcut(id: string, differs: boolean): Shortcut {
   return {

@@ -3,12 +3,8 @@
 import { usePlatform } from "@/hooks/usePlatform";
 import type { Locale } from "@/domain/locale";
 import type { Platform } from "@/domain/schema";
+import { getDictionary } from "@/i18n";
 import styles from "./PlatformToggle.module.css";
-
-const GROUP_LABEL: Record<Locale, string> = {
-  en: "Shortcut platform",
-  fr: "Plateforme des raccourcis",
-};
 
 const OPTIONS: { value: Platform; label: string }[] = [
   { value: "win", label: "Windows" },
@@ -17,12 +13,13 @@ const OPTIONS: { value: Platform; label: string }[] = [
 
 export function PlatformToggle({ locale }: { locale: Locale }) {
   const { platform, setPlatform } = usePlatform();
+  const dictionary = getDictionary(locale);
 
   return (
     <div
       className={styles.toggle}
       role="group"
-      aria-label={GROUP_LABEL[locale]}
+      aria-label={dictionary.platform.label}
     >
       {OPTIONS.map((option) => (
         <button

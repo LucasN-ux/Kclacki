@@ -36,5 +36,24 @@
   "footer": {
     "trademarks": "Software names belong to their publishers.",
     "suggest": "Suggest a correction"
+  },
+  "search": {
+    "title": "Search",
+    "placeholder": "Search a shortcut or an action…",
+    "label": "Search the whole site",
+    "results": "results",
+    "empty": "No shortcut found.",
+    "hint": "Try an action (“undo”) or a key (“F9”, “ctrl+z”)."
+  },
+  "platform": {
+    "label": "Shortcut platform"
+  },
+  "shortcut": {
+    "or": "or",
+    "differsOn": "Differs on",
+    "sameOn": "Same on",
+    "allSame": "Same keys on Windows and Mac.",
+    "allDifferent": "Every shortcut uses different keys on Mac.",
+    "mixed": "shortcuts change on Mac"
   }
 }

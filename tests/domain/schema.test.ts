@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { Software } from "./schema";
+import { Software } from "@/domain/schema";
 
 // Smallest valid software file; each test breaks one rule on a copy of it.
 function validSoftware() {

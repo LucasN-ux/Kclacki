@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { isLocale, localeHref } from "./locale";
+import { isLocale, localeHref } from "@/domain/locale";
 
 describe("localeHref", () => {
   it("keeps English at the root, without a prefix", () => {

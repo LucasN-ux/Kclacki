@@ -4,33 +4,11 @@ import type { FlaggedRows } from "@/domain/platformDifference";
 import { summarizePlatformDifference } from "@/domain/platformDifference";
 import type { Platform, Shortcut } from "@/domain/schema";
 import { KeyCombos } from "./Keycap";
+import { getDictionary } from "@/i18n";
 import styles from "./ShortcutRow.module.css";
 
-const OTHER_PLATFORM: Record<Platform, Record<Locale, string>> = {
-  win: { en: "Mac", fr: "Mac" },
-  mac: { en: "Windows", fr: "Windows" },
-};
-
-const FLAG_LABEL: Record<"differing" | "same", Record<Locale, string>> = {
-  differing: { en: "Differs on", fr: "Diffère sur" },
-  same: { en: "Same on", fr: "Identique sur" },
-};
-
-// Said once per software, above the lists, so the rare flags stay meaningful.
-const SUMMARY: Record<
-  "all-same" | "all-different" | "mixed",
-  Record<Locale, string>
-> = {
-  "all-same": {
-    en: "Same keys on Windows and Mac.",
-    fr: "Les mêmes touches sur Windows et Mac.",
-  },
-  "all-different": {
-    en: "Every shortcut uses different keys on Mac.",
-    fr: "Tous les raccourcis changent de touches sur Mac.",
-  },
-  mixed: { en: "shortcuts change on Mac", fr: "raccourcis changent sur Mac" },
-};
+// Windows and Mac are product names: they are not translated.
+const OTHER_PLATFORM: Record<Platform, string> = { win: "Mac", mac: "Windows" };
 
 export function PlatformSummary({
   shortcuts,
@@ -40,12 +18,13 @@ export function PlatformSummary({
   locale: Locale;
 }) {
   const { total, differing } = summarizePlatformDifference(shortcuts);
+  const { shortcut } = getDictionary(locale);
   const text =
     differing === 0
-      ? SUMMARY["all-same"][locale]
+      ? shortcut.allSame
       : differing === total
-        ? SUMMARY["all-different"][locale]
-        : `${differing} / ${total} ${SUMMARY.mixed[locale]}.`;
+        ? shortcut.allDifferent
+        : `${differing} / ${total} ${shortcut.mixed}.`;
 
   return <p className={styles.summary}>{text}</p>;
 }
@@ -61,6 +40,7 @@ export function ShortcutRow({
   locale: Locale;
   flag: FlaggedRows;
 }) {
+  const { shortcut: labels } = getDictionary(locale);
   const isSame = isSameOnBothPlatforms(shortcut.keys);
   const showFlag =
     (flag === "differing" && !isSame) || (flag === "same" && isSame)
@@ -77,7 +57,8 @@ export function ShortcutRow({
               showFlag === "differing" ? styles.different : styles.identical
             }
           >
-            {FLAG_LABEL[showFlag][locale]} {OTHER_PLATFORM[platform][locale]}
+            {showFlag === "differing" ? labels.differsOn : labels.sameOn}{" "}
+            {OTHER_PLATFORM[platform]}
           </span>
         )}
         {shortcut.context && (

@@ -36,5 +36,24 @@
   "footer": {
     "trademarks": "Les noms des logiciels appartiennent à leurs éditeurs.",
     "suggest": "Proposer une correction"
+  },
+  "search": {
+    "title": "Recherche",
+    "placeholder": "Rechercher un raccourci ou une action…",
+    "label": "Rechercher sur tout le site",
+    "results": "résultats",
+    "empty": "Aucun raccourci trouvé.",
+    "hint": "Essaie une action (« annuler ») ou une touche (« F9 », « ctrl+z »)."
+  },
+  "platform": {
+    "label": "Plateforme des raccourcis"
+  },
+  "shortcut": {
+    "or": "ou",
+    "differsOn": "Diffère sur",
+    "sameOn": "Identique sur",
+    "allSame": "Les mêmes touches sur Windows et Mac.",
+    "allDifferent": "Tous les raccourcis changent de touches sur Mac.",
+    "mixed": "raccourcis changent sur Mac"
   }
 }

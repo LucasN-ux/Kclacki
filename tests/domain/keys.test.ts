@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { isModifier, isSameOnBothPlatforms, keyLabel } from "./keys";
+import { isModifier, isSameOnBothPlatforms, keyLabel } from "@/domain/keys";
 
 describe("keyLabel", () => {
   it("shows symbols for Mac modifiers", () => {

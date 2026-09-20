@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { HeaderSearch } from "@/components/features/HeaderSearch";
 import { PlatformToggle } from "@/components/features/PlatformToggle";
 import { LOCALES, localeHref, type Locale } from "@/domain/locale";
 import { getDictionary } from "@/i18n";
@@ -10,9 +11,12 @@ const SUGGEST_URL = "https://github.com/LucasN-ux/CMDX/issues/new";
 export function SiteHeader({
   locale,
   path = "",
+  showSearch = true,
 }: {
   locale: Locale;
   path?: string;
+  /** The home page has its own big search field, the header one would be a double. */
+  showSearch?: boolean;
 }) {
   const dictionary = getDictionary(locale);
 
@@ -21,6 +25,11 @@ export function SiteHeader({
       <Link href={localeHref(locale)} className={styles.brand}>
         Cmdx
       </Link>
+      {showSearch && (
+        <div className={styles.search}>
+          <HeaderSearch locale={locale} />
+        </div>
+      )}
       <div className={styles.controls}>
         <PlatformToggle locale={locale} />
         <nav className={styles.locales} aria-label={dictionary.nav.language}>

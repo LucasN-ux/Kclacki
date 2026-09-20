@@ -1,0 +1,61 @@
+.count {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink-soft);
+}
+
+.empty {
+  margin: 0;
+  padding: var(--space-6) var(--space-5);
+  text-align: center;
+  background: var(--card);
+  border: var(--stroke-3) dashed var(--ink);
+  border-radius: var(--radius-lg);
+  font-weight: 500;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+
+.groupHead {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  background: var(--paper-deep);
+  border: var(--stroke-2) solid var(--ink);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-hard-sm);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.groupHead:hover {
+  background: var(--yellow);
+}
+
+.badge {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  flex: none;
+  background: var(--green);
+  border: var(--stroke-2) solid var(--ink);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.groupCount {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 12px;
+}

@@ -38,3 +38,7 @@ next-env.d.ts
 
 # Certificates
 *.pem
+
+# Local tests and editor settings (kept out of the repository on purpose)
+tests/
+.claude/
