@@ -81,7 +81,7 @@
     "hostTitle": "Host",
     "host": "Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, United States.",
     "trademarksTitle": "Trademarks",
-    "trademarks": "The software names quoted on this site (Blender, Maya, Nuke and the others) belong to their publishers. Cmdx is not linked to them, and is not endorsed by them.",
+    "trademarks": "The software names quoted on this site (Blender, Maya, Nuke and the others) belong to their publishers. Klacki is not linked to them, and is not endorsed by them.",
     "contentTitle": "Content",
     "content": "Key combinations are facts and belong to nobody. Every description is written for this site; nothing is copied from a documentation or from another shortcut site. Each software page links to the official documentation it was checked against."
   },
@@ -94,7 +94,7 @@
     "cookiesTitle": "Cookies",
     "cookies": "None. What the site keeps is needed to make it work as you asked, so no consent banner is required.",
     "logsTitle": "Host logs",
-    "logs": "Vercel, the host, writes technical logs of every visit, which include IP addresses. They serve to run and protect the service. Cmdx neither reads nor uses them.",
+    "logs": "Vercel, the host, writes technical logs of every visit, which include IP addresses. They serve to run and protect the service. Klacki neither reads nor uses them.",
     "rightsTitle": "Your rights",
     "rights": "Since nothing about you is stored on a server, there is nothing to access, correct or delete. To erase what your browser keeps, clear the site data."
   },
@@ -107,12 +107,12 @@
   },
   "about": {
     "title": "About",
-    "whatTitle": "What Cmdx is",
+    "whatTitle": "What Klacki is",
     "what": "One place for the keyboard shortcuts of creative software: 3D, texturing, VFX, video and 2D. The promise is simple: find a shortcut in under five seconds.",
     "howTitle": "How it is made",
     "how": "Shortcuts live in one file per software, checked when the site is built: a wrong or incomplete file stops the build instead of reaching you. Pages are generated ahead of time, so the site stays fast.",
     "whoTitle": "Who made it",
-    "who": "Lucas Nevano, a junior full-stack developer in France. Cmdx is a portfolio project.",
+    "who": "Lucas Nevano, a junior full-stack developer in France. Klacki is a portfolio project.",
     "correctionTitle": "Found a mistake?",
     "correction": "Shortcuts change from one version to the next. If one is wrong, tell me and it gets fixed."
   }

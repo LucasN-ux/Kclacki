@@ -3,8 +3,8 @@
 import { useCallback, useSyncExternalStore } from "react";
 import { z } from "zod";
 
-const STORAGE_KEY = "cmdx.favorites";
-const CHANGE_EVENT = "cmdx:favorites-change";
+const STORAGE_KEY = "klacki.favorites";
+const CHANGE_EVENT = "klacki:favorites-change";
 
 // A favourite is a software and a shortcut: "blender:frame-selection".
 const StoredFavorites = z.array(z.string().regex(/^[a-z0-9-]+:[a-z0-9-]+$/));

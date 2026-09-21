@@ -25,7 +25,7 @@ export function SiteHeader({
         {dictionary.nav.skipToContent}
       </a>
       <Link href={localeHref(locale)} className={styles.brand}>
-        Cmdx
+        Klacki
       </Link>
       {showSearch && (
         <div className={styles.search}>

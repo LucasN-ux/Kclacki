@@ -10,8 +10,8 @@ import {
 import { z } from "zod";
 import type { Platform } from "@/domain/schema";
 
-const STORAGE_KEY = "cmdx.platform";
-const CHANGE_EVENT = "cmdx:platform-change";
+const STORAGE_KEY = "klacki.platform";
+const CHANGE_EVENT = "klacki:platform-change";
 
 // Anything can end up in localStorage (hand edited, corrupted, from an older
 // version): it is validated like any other outside data, never trusted.

@@ -21,7 +21,7 @@ export async function generateMetadata({
 
   return {
     metadataBase: new URL(SITE_URL),
-    title: "Cmdx",
+    title: "Klacki",
     description: dictionary.site.description,
     // Tells search engines the two pages are translations of each other.
     alternates: {

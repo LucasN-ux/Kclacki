@@ -81,7 +81,7 @@
     "hostTitle": "Hébergeur",
     "host": "Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis.",
     "trademarksTitle": "Marques",
-    "trademarks": "Les noms des logiciels cités sur ce site (Blender, Maya, Nuke et les autres) appartiennent à leurs éditeurs. Cmdx n'a aucun lien avec eux et n'est pas approuvé par eux.",
+    "trademarks": "Les noms des logiciels cités sur ce site (Blender, Maya, Nuke et les autres) appartiennent à leurs éditeurs. Klacki n'a aucun lien avec eux et n'est pas approuvé par eux.",
     "contentTitle": "Contenu",
     "content": "Les combinaisons de touches sont des faits et n'appartiennent à personne. Chaque description est écrite pour ce site ; rien n'est copié d'une documentation ni d'un autre site de raccourcis. Chaque page de logiciel donne le lien vers la documentation officielle qui a servi de référence."
   },
@@ -94,7 +94,7 @@
     "cookiesTitle": "Cookies",
     "cookies": "Aucun. Ce que le site garde sert uniquement à le faire fonctionner comme vous l'avez demandé : aucun bandeau de consentement n'est donc nécessaire.",
     "logsTitle": "Journaux de l'hébergeur",
-    "logs": "Vercel, l'hébergeur, enregistre des journaux techniques de chaque visite, qui contiennent des adresses IP. Ils servent à faire tourner et à protéger le service. Cmdx ne les lit pas et ne s'en sert pas.",
+    "logs": "Vercel, l'hébergeur, enregistre des journaux techniques de chaque visite, qui contiennent des adresses IP. Ils servent à faire tourner et à protéger le service. Klacki ne les lit pas et ne s'en sert pas.",
     "rightsTitle": "Vos droits",
     "rights": "Comme rien vous concernant n'est conservé sur un serveur, il n'y a rien à consulter, corriger ou supprimer. Pour effacer ce que garde votre navigateur, videz les données du site."
   },
@@ -107,12 +107,12 @@
   },
   "about": {
     "title": "À propos",
-    "whatTitle": "Ce qu'est Cmdx",
+    "whatTitle": "Ce qu'est Klacki",
     "what": "Un seul endroit pour les raccourcis clavier des logiciels de création : 3D, texture, VFX, vidéo et 2D. La promesse est simple : trouver un raccourci en moins de cinq secondes.",
     "howTitle": "Comment c'est fait",
     "how": "Les raccourcis tiennent dans un fichier par logiciel, vérifié à la construction du site : un fichier faux ou incomplet arrête la construction au lieu d'arriver jusqu'à vous. Les pages sont générées à l'avance, donc le site reste rapide.",
     "whoTitle": "Qui l'a fait",
-    "who": "Lucas Nevano, développeur full-stack junior en France. Cmdx est un projet de portfolio.",
+    "who": "Lucas Nevano, développeur full-stack junior en France. Klacki est un projet de portfolio.",
     "correctionTitle": "Une erreur ?",
     "correction": "Les raccourcis changent d'une version à l'autre. Si l'un d'eux est faux, signalez-le et il sera corrigé."
   }

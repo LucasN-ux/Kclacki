@@ -17,7 +17,7 @@ export async function generateMetadata({
   const { locale } = await params;
   if (!isLocale(locale)) return {};
   return {
-    title: `${getDictionary(locale).favorites.title} — Cmdx`,
+    title: `${getDictionary(locale).favorites.title} — Klacki`,
     // This page shows what one visitor kept: nothing to offer a search engine.
     robots: { index: false, follow: true },
   };

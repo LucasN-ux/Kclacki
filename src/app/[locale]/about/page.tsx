@@ -17,7 +17,7 @@ export async function generateMetadata({
   const { locale } = await params;
   if (!isLocale(locale)) return {};
   return {
-    title: `${getDictionary(locale).about.title} — Cmdx`,
+    title: `${getDictionary(locale).about.title} — Klacki`,
     alternates: { canonical: localeHref(locale, "/about") },
   };
 }

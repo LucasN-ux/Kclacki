@@ -16,7 +16,7 @@ export async function generateMetadata({
   const { locale } = await params;
   if (!isLocale(locale)) return {};
   return {
-    title: `${getDictionary(locale).privacy.title} — Cmdx`,
+    title: `${getDictionary(locale).privacy.title} — Klacki`,
     alternates: { canonical: localeHref(locale, "/privacy") },
   };
 }

@@ -29,7 +29,7 @@ export async function generateMetadata({
   const dictionary = getDictionary(locale);
 
   return {
-    title: `${software.name} — Cmdx`,
+    title: `${software.name} — Klacki`,
     description: `${software.name} ${software.version} · ${software.shortcuts.length} ${dictionary.site.shortcutCount}`,
     alternates: {
       canonical: localeHref(locale, `/${software.id}`),

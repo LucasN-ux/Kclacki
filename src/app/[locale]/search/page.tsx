@@ -18,7 +18,7 @@ export async function generateMetadata({
   const { locale } = await params;
   if (!isLocale(locale)) return {};
   return {
-    title: `${getDictionary(locale).search.title} — Cmdx`,
+    title: `${getDictionary(locale).search.title} — Klacki`,
     // A result page has nothing to offer a search engine: it is the visitor's own query.
     robots: { index: false, follow: true },
   };
