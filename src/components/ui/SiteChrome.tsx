@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
+import ghost from "@/../public/ghost.png";
 import { FavoritesLink } from "@/components/features/FavoritesLink";
 import { HeaderSearch } from "@/components/features/HeaderSearch";
 import { PlatformToggle } from "@/components/features/PlatformToggle";
@@ -25,6 +27,8 @@ export function SiteHeader({
         {dictionary.nav.skipToContent}
       </a>
       <Link href={localeHref(locale)} className={styles.brand}>
+        {/* The ghost is decorative: the name next to it carries the meaning. */}
+        <Image src={ghost} alt="" className={styles.brandGhost} priority />
         Klacki
       </Link>
       {showSearch && (

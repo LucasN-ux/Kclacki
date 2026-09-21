@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
+import ghost from "@/../public/ghost.png";
 import { notFound } from "next/navigation";
 import { HeaderSearch } from "@/components/features/HeaderSearch";
 import { Ribbon } from "@/components/ui/Ribbon";
@@ -27,7 +29,10 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
       <SiteHeader locale={locale} showSearch={false} />
       <main id="content" className={shell.page}>
         <section className={styles.hero}>
-          <h1 className={styles.title}>Klacki</h1>
+          <div className={styles.heroBrand}>
+            <Image src={ghost} alt="" className={styles.heroGhost} priority />
+            <h1 className={styles.title}>Klacki</h1>
+          </div>
           <p className={styles.tagline}>{dictionary.site.tagline}</p>
           <div className={styles.heroSearch}>
             <HeaderSearch locale={locale} hero />
