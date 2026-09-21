@@ -10,4 +10,4 @@ export const SITE_URL =
 // Public repository of the site, where visitors report a wrong shortcut.
 // It must be public before the site goes live, otherwise the link 404s.
 export const SUGGEST_URL =
-  process.env.NEXT_PUBLIC_REPO_URL ?? "https://github.com/LucasN-ux/KLACKI";
+  process.env.NEXT_PUBLIC_REPO_URL ?? "https://github.com/LucasN-ux/klacki";
