@@ -8,6 +8,7 @@ export const SITE_URL =
     : "http://localhost:3000");
 
 // Public repository of the site, where visitors report a wrong shortcut.
-// It must be public before the site goes live, otherwise the link 404s.
+// Public since 21/09/2026, with issues enabled: the link works for visitors.
 export const SUGGEST_URL =
-  process.env.NEXT_PUBLIC_REPO_URL ?? "https://github.com/LucasN-ux/klacki";
+  process.env.NEXT_PUBLIC_REPO_URL ??
+  "https://github.com/LucasN-ux/klacki/issues/new";
