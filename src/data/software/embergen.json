@@ -9,6 +9,42 @@
   "verifiedAt": "2026-09-20",
   "shortcuts": [
     {
+      "id": "undo",
+      "category": "general",
+      "action": {
+        "en": "Undo",
+        "fr": "Annuler"
+      },
+      "keys": {
+        "win": [["Ctrl", "Z"]]
+      }
+    },
+    {
+      "id": "redo",
+      "category": "general",
+      "action": {
+        "en": "Redo",
+        "fr": "Rétablir"
+      },
+      "keys": {
+        "win": [
+          ["Ctrl", "Y"],
+          ["Ctrl", "Shift", "Z"]
+        ]
+      }
+    },
+    {
+      "id": "open-file",
+      "category": "file",
+      "action": {
+        "en": "Open a file",
+        "fr": "Ouvrir un fichier"
+      },
+      "keys": {
+        "win": [["Ctrl", "O"]]
+      }
+    },
+    {
       "id": "move",
       "category": "tools",
       "action": {

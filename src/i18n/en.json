@@ -41,7 +41,10 @@
     "officialDoc": "Official documentation",
     "backHome": "All software",
     "windowsOnly": "Windows only",
-    "macOnly": "Mac only"
+    "macOnly": "Mac only",
+    "undocumentedLabel": "Not documented",
+    "undocumentedBefore": "The documentation of",
+    "undocumentedAfter": "does not give these keys. Rather than guess them, the site leaves them out."
   },
   "footer": {
     "trademarks": "Software names belong to their publishers.",
@@ -170,7 +173,35 @@
       }
     ],
     "memo": "Your Windows or Mac choice is kept in your browser: you make it once, the site remembers.",
-    "memoCta": "Open the catalogue"
+    "memoCta": "Open the catalogue",
+    "layoutTitle": "And if your keyboard is not a US QWERTY?",
+    "layoutLede": "Publishers write their documentation for an American keyboard, in QWERTY. That is what the site shows, as it stands. On a French AZERTY, some letters sit elsewhere.",
+    "layoutFrom": "QWERTY",
+    "layoutTo": "AZERTY",
+    "layoutSwaps": [
+      {
+        "from": "A",
+        "to": "Q",
+        "text": "The select-all of a good many applications."
+      },
+      {
+        "from": "Z",
+        "to": "W",
+        "text": "The undo key, the most worn of all."
+      },
+      {
+        "from": "M",
+        "to": "right of L",
+        "text": "M leaves the bottom row."
+      },
+      {
+        "from": "1",
+        "to": "Shift + &",
+        "text": "Digits need Shift, except on the numeric pad."
+      }
+    ],
+    "layoutWarning": "And it depends on the application. Some follow the letter: you press the key marked Z on your AZERTY and it undoes. Others follow the physical position, so you have to press W. Publishers rarely say which. Klacki shows the key as it is documented and stops there — guessing the rest would be lying.",
+    "layoutOther": "On a German QWERTZ, Y and Z trade places."
   },
   "notFound": {
     "title": "This page does not exist",

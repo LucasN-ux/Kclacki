@@ -41,7 +41,10 @@
     "officialDoc": "Documentation officielle",
     "backHome": "Tous les logiciels",
     "windowsOnly": "Windows uniquement",
-    "macOnly": "Mac uniquement"
+    "macOnly": "Mac uniquement",
+    "undocumentedLabel": "Non documenté",
+    "undocumentedBefore": "La documentation de",
+    "undocumentedAfter": "ne donne pas ces touches. Plutôt que de les deviner, le site ne les affiche pas."
   },
   "footer": {
     "trademarks": "Les noms des logiciels appartiennent à leurs éditeurs.",
@@ -170,7 +173,35 @@
       }
     ],
     "memo": "Ton choix Windows ou Mac est gardé dans ton navigateur : tu le fais une fois, le site s'en souvient.",
-    "memoCta": "Ouvrir le catalogue"
+    "memoCta": "Ouvrir le catalogue",
+    "layoutTitle": "Et si ton clavier n'est pas un QWERTY américain ?",
+    "layoutLede": "Les éditeurs écrivent leur documentation pour un clavier américain, en QWERTY. C'est ce que le site affiche, tel quel. Sur un AZERTY, certaines lettres ne sont pas au même endroit.",
+    "layoutFrom": "QWERTY",
+    "layoutTo": "AZERTY",
+    "layoutSwaps": [
+      {
+        "from": "A",
+        "to": "Q",
+        "text": "Le « tout sélectionner » de bien des logiciels."
+      },
+      {
+        "from": "Z",
+        "to": "W",
+        "text": "La touche d'annulation, la plus utilisée."
+      },
+      {
+        "from": "M",
+        "to": "à droite de L",
+        "text": "M quitte la rangée du bas."
+      },
+      {
+        "from": "1",
+        "to": "Maj + &",
+        "text": "Les chiffres demandent Maj, sauf au pavé numérique."
+      }
+    ],
+    "layoutWarning": "Et ça dépend du logiciel. Certains suivent la lettre : tu appuies sur la touche marquée Z de ton AZERTY et ça annule. D'autres suivent la position physique, il faut appuyer sur W. Les éditeurs le disent rarement. Klacki affiche la touche telle qu'elle est documentée et s'arrête là — deviner le reste serait mentir.",
+    "layoutOther": "Sur un QWERTZ allemand, Y et Z sont échangés."
   },
   "notFound": {
     "title": "Cette page n'existe pas",

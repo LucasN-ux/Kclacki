@@ -6,6 +6,7 @@
   "version": "22.0",
   "docUrl": "https://www.sidefx.com/docs/houdini/start/hotkeys.html",
   "verifiedAt": "2026-09-20",
+  "undocumented": ["undo", "redo", "save-file", "open-file"],
   "shortcuts": [
     {
       "id": "node-menu",

@@ -106,8 +106,35 @@ export const Software = z
     docUrl: z.url({ protocol: /^https$/ }),
     verifiedAt: z.iso.date(),
     shortcuts: z.array(Shortcut).min(1),
+    // Actions the publisher does not print anywhere public. Naming them lets a
+    // page say "we looked, the editor does not publish it" instead of leaving
+    // a hole the visitor has to interpret. They carry no keys, so they are
+    // never counted, searched, or switched between Windows and Mac.
+    undocumented: z.array(slug).default([]),
   })
   .superRefine((software, ctx) => {
+    // An action cannot be both documented and undocumented: the page would
+    // contradict itself, keys on one line and "not published" on the next.
+    const documented = new Set(software.shortcuts.map((one) => one.id));
+    const alreadySeen = new Set<string>();
+    software.undocumented.forEach((action, index) => {
+      if (documented.has(action)) {
+        ctx.addIssue({
+          code: "custom",
+          path: ["undocumented", index],
+          message: `"${action}" is listed as undocumented but has keys`,
+        });
+      }
+      if (alreadySeen.has(action)) {
+        ctx.addIssue({
+          code: "custom",
+          path: ["undocumented", index],
+          message: `duplicate undocumented action "${action}"`,
+        });
+      }
+      alreadySeen.add(action);
+    });
+
     // An id must be unique inside one software, otherwise the translator
     // could not tell which shortcut to show.
     const seen = new Set<string>();

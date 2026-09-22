@@ -6,6 +6,7 @@
   "version": "2026",
   "docUrl": "https://www.marvelousdesigner.com/support/news/view/d9fffb13e83a401baa91b639c7795f15",
   "verifiedAt": "2026-09-20",
+  "undocumented": ["save-file", "open-file"],
   "shortcuts": [
     {
       "id": "select-move-tool",

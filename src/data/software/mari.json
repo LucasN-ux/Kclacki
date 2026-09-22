@@ -6,7 +6,44 @@
   "version": "7.5v2",
   "docUrl": "https://learn.foundry.com/mari/content/user_guide/appendix_a/shortcuts.html",
   "verifiedAt": "2026-09-20",
+  "undocumented": ["open-file"],
   "shortcuts": [
+    {
+      "id": "undo",
+      "category": "general",
+      "action": {
+        "en": "Undo",
+        "fr": "Annuler"
+      },
+      "keys": {
+        "win": [["Ctrl", "Z"]],
+        "mac": [["Ctrl", "Z"]]
+      }
+    },
+    {
+      "id": "redo",
+      "category": "general",
+      "action": {
+        "en": "Redo",
+        "fr": "Rétablir"
+      },
+      "keys": {
+        "win": [["Ctrl", "Y"]],
+        "mac": [["Ctrl", "Y"]]
+      }
+    },
+    {
+      "id": "save-file",
+      "category": "file",
+      "action": {
+        "en": "Save",
+        "fr": "Enregistrer"
+      },
+      "keys": {
+        "win": [["Ctrl", "S"]],
+        "mac": [["Ctrl", "S"]]
+      }
+    },
     {
       "id": "bake",
       "category": "tools",

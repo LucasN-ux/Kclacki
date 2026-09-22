@@ -6,6 +6,7 @@ import { PlatformSummary } from "@/components/ui/ShortcutRow";
 import { Ribbon } from "@/components/ui/Ribbon";
 import { SiteFooter, SiteHeader } from "@/components/ui/SiteChrome";
 import { SOFTWARE_LIST, getSoftware } from "@/data";
+import { actionLabel } from "@/domain/actions";
 import { DEFAULT_LOCALE, LOCALES, isLocale, localeHref } from "@/domain/locale";
 import { summarizePlatformDifference } from "@/domain/platformDifference";
 import { CATEGORIES } from "@/domain/schema";
@@ -64,6 +65,11 @@ export default async function SoftwarePage({
       (shortcut) => shortcut.category === category,
     ),
   })).filter((group) => group.shortcuts.length > 0);
+  // Actions this publisher does not print, named in the reader's language by
+  // borrowing the wording from the software that do document them.
+  const undocumented = software.undocumented
+    .map((action) => actionLabel(SOFTWARE_LIST, action, locale))
+    .filter((label): label is string => label !== undefined);
 
   return (
     <>
@@ -97,6 +103,22 @@ export default async function SoftwarePage({
             />
           </div>
         </div>
+
+        {/* What the publisher does not print. Said before the list rather than
+            after it, so nobody hunts through six categories for a key that was
+            never published. */}
+        {undocumented.length > 0 && (
+          <aside className={styles.undocumented}>
+            <span className={styles.undocumentedLabel}>
+              {dictionary.software.undocumentedLabel}
+            </span>
+            <p className={styles.undocumentedText}>
+              <b>{undocumented.join(", ")}.</b>{" "}
+              {dictionary.software.undocumentedBefore} {software.name}{" "}
+              {dictionary.software.undocumentedAfter}
+            </p>
+          </aside>
+        )}
 
         <div className={styles.columns}>
           <nav className={styles.nav} aria-label={dictionary.nav.home}>

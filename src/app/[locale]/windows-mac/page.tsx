@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PlatformShowcase } from "@/components/features/PlatformShowcase";
+import { Ribbon } from "@/components/ui/Ribbon";
 import shell from "@/components/ui/PageShell.module.css";
 import { SiteFooter, SiteHeader } from "@/components/ui/SiteChrome";
 import { SOFTWARE_LIST } from "@/data";
@@ -95,6 +96,39 @@ export default async function PlatformsPage({
             ))}
           </p>
         )}
+
+        {/* The other keyboard difference, the one no toggle can settle: the
+            documentation is written for a US QWERTY, and the site says so
+            rather than guessing what an AZERTY should press. */}
+        <section className={styles.layout}>
+          <h2 className={styles.layoutTitle}>
+            <Ribbon>{platforms.layoutTitle}</Ribbon>
+          </h2>
+          <p className={styles.layoutLede}>{platforms.layoutLede}</p>
+
+          <ul className={styles.swaps}>
+            {platforms.layoutSwaps.map((swap) => (
+              <li key={swap.from} className={styles.swap}>
+                <div className={styles.swapKeys}>
+                  {/* Plain labels, not key tokens: "right of L" is a place on
+                      the keyboard, not something anyone presses. */}
+                  <kbd className={styles.swapKey}>{swap.from}</kbd>
+                  <span className={styles.swapArrow} aria-hidden="true">
+                    →
+                  </span>
+                  <kbd className={styles.swapKey}>{swap.to}</kbd>
+                </div>
+                <p className={styles.swapWhich}>
+                  {platforms.layoutFrom} → {platforms.layoutTo}
+                </p>
+                <p className={styles.swapText}>{swap.text}</p>
+              </li>
+            ))}
+          </ul>
+
+          <p className={styles.layoutOther}>{platforms.layoutOther}</p>
+          <p className={styles.layoutWarning}>{platforms.layoutWarning}</p>
+        </section>
 
         <section className={styles.memo}>
           <p>{platforms.memo}</p>

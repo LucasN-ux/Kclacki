@@ -123,3 +123,47 @@
     flex-wrap: wrap;
   }
 }
+
+/* What the publisher does not print. A thick left edge borrows the vocabulary
+   of the ribbons: it marks the block without shouting at the reader. */
+.undocumented {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+  margin: 0 0 var(--space-5);
+  padding: var(--space-3) var(--space-4);
+  background: var(--card);
+  border: var(--stroke-2) solid var(--ink);
+  border-left-width: 10px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-hard-sm);
+}
+
+.undocumentedLabel {
+  flex: none;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: 21px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--orange-ink);
+}
+
+.undocumentedText {
+  margin: 0;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.undocumentedText b {
+  font-weight: 700;
+}
+
+/* Phone: the label takes its own line rather than squeezing the sentence. */
+@media (max-width: 600px) {
+  .undocumented {
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+}
