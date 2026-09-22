@@ -45,7 +45,7 @@
 .nav {
   display: flex;
   flex: none;
-  gap: var(--space-5);
+  gap: var(--space-2);
   white-space: nowrap;
   font-size: 13px;
   line-height: 18px;
@@ -54,17 +54,23 @@
   text-transform: uppercase;
 }
 
+/* The only destination in the header wears the colour of the site's
+   buttons, so it reads as a way out and not as a label. */
 .navLink {
-  padding-bottom: 2px;
-  border-bottom: var(--stroke-2) solid transparent;
+  padding: 6px var(--space-4);
+  background: var(--yellow);
+  border: var(--stroke-2) solid var(--ink);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-hard-sm);
 }
 
 .navLink:hover {
-  border-color: var(--orange);
+  transform: translate(-1px, -1px);
+  box-shadow: var(--shadow-hard);
 }
 
 .navLink[aria-current] {
-  border-color: var(--orange);
+  background: var(--green);
 }
 
 .controls {
@@ -75,11 +81,16 @@
 }
 
 .search {
-  width: 240px;
+  flex: 1;
+  min-width: 180px;
+  max-width: 380px;
+  margin-left: var(--space-4);
 }
 
 .locales {
   display: inline-flex;
+  /* Two letters wide: it never pays for the room the other chips need. */
+  flex: none;
   border: var(--stroke-2) solid var(--ink);
   border-radius: var(--radius-pill);
   box-shadow: var(--shadow-hard-sm);
@@ -200,21 +211,18 @@
     gap: var(--space-3);
   }
 
-  .nav {
-    order: 3;
-    flex: 1 0 100%;
-    gap: var(--space-4);
-    overflow-x: auto;
-    padding-bottom: 2px;
-  }
-
   .navLink {
-    white-space: nowrap;
+    padding: 5px var(--space-3);
   }
 
+  /* The chips take a line of their own under the wordmark, rather than
+     pushing the language switch off the screen. */
   .controls {
+    flex: 1 0 100%;
+    /* Whatever the screen, a chip wraps rather than being cut in half. */
+    flex-wrap: wrap;
+    margin-left: 0;
     gap: var(--space-2);
-    /* Never wider than the screen: the pills shrink before they overflow. */
     min-width: 0;
   }
 
@@ -225,5 +233,21 @@
   .footerGrid {
     grid-template-columns: 1fr;
     gap: var(--space-5);
+  }
+}
+
+/* Narrow phones: the same four chips, tighter. */
+@media (max-width: 400px) {
+  .nav {
+    font-size: 12px;
+    letter-spacing: 0.02em;
+  }
+
+  .navLink {
+    padding: 5px var(--space-2);
+  }
+
+  .locale {
+    padding: 4px var(--space-2);
   }
 }

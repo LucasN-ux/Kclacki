@@ -35,25 +35,27 @@ export function SiteHeader({
           Klacki
         </Link>
 
-        <nav className={styles.nav} aria-label={dictionary.nav.home}>
-          {NAV.map((item) => (
-            <Link
-              key={item.path}
-              href={localeHref(locale, item.path)}
-              className={styles.navLink}
-              aria-current={path === item.path ? "page" : undefined}
-            >
-              {dictionary.nav[item.label]}
-            </Link>
-          ))}
-        </nav>
+        {showSearch && (
+          <div className={styles.search}>
+            <HeaderSearch locale={locale} />
+          </div>
+        )}
 
         <div className={styles.controls}>
-          {showSearch && (
-            <div className={styles.search}>
-              <HeaderSearch locale={locale} />
-            </div>
-          )}
+          {/* The catalogue sits with the other controls: one row of chips,
+              the destination first. */}
+          <nav className={styles.nav} aria-label={dictionary.nav.home}>
+            {NAV.map((item) => (
+              <Link
+                key={item.path}
+                href={localeHref(locale, item.path)}
+                className={styles.navLink}
+                aria-current={path === item.path ? "page" : undefined}
+              >
+                {dictionary.nav[item.label]}
+              </Link>
+            ))}
+          </nav>
           <PlatformToggle locale={locale} />
           <FavoritesLink locale={locale} />
           <nav className={styles.locales} aria-label={dictionary.nav.language}>

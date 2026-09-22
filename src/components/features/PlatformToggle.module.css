@@ -32,3 +32,11 @@
   border-color: var(--ink);
   color: var(--ink);
 }
+
+/* Phone: the two words stay readable, the padding does the shrinking. */
+@media (max-width: 420px) {
+  .option {
+    padding: 3px var(--space-2);
+    font-size: 12px;
+  }
+}
