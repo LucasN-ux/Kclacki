@@ -171,5 +171,11 @@
     ],
     "memo": "Ton choix Windows ou Mac est gardé dans ton navigateur : tu le fais une fois, le site s'en souvient.",
     "memoCta": "Ouvrir le catalogue"
+  },
+  "notFound": {
+    "title": "Cette page n'existe pas",
+    "text": "L'adresse est fausse, ou la page a bougé. Le catalogue et la recherche sont à deux pas.",
+    "catalogueCta": "Ouvrir le catalogue",
+    "searchCta": "Chercher un raccourci"
   }
 }

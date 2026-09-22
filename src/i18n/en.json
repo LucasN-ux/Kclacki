@@ -171,5 +171,11 @@
     ],
     "memo": "Your Windows or Mac choice is kept in your browser: you make it once, the site remembers.",
     "memoCta": "Open the catalogue"
+  },
+  "notFound": {
+    "title": "This page does not exist",
+    "text": "The address is wrong, or the page moved. The catalogue and the search are two steps away.",
+    "catalogueCta": "Open the catalogue",
+    "searchCta": "Search a shortcut"
   }
 }
