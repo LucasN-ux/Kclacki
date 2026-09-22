@@ -45,6 +45,26 @@ export function SiteHeader({
           {/* The catalogue sits with the other controls: one row of chips,
               the destination first. */}
           <nav className={styles.nav} aria-label={dictionary.nav.home}>
+            {/* Phones only: the field above does not fit their header, so the
+                chip stands for it and hands over to the search page, whose
+                field takes the focus on arrival. */}
+            {showSearch && (
+              <Link
+                href={localeHref(locale, "/search")}
+                className={`${styles.navLink} ${styles.searchChip}`}
+                aria-label={dictionary.search.title}
+                aria-current={path === "/search" ? "page" : undefined}
+              >
+                <svg
+                  className={styles.searchIcon}
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <circle cx="10.5" cy="10.5" r="6.5" />
+                  <path d="M15.5 15.5L21 21" />
+                </svg>
+              </Link>
+            )}
             {NAV.map((item) => (
               <Link
                 key={item.path}
