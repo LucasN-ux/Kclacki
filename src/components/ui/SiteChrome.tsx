@@ -7,14 +7,9 @@ import { SUGGEST_URL } from "@/domain/site";
 import { getDictionary } from "@/i18n";
 import styles from "./SiteChrome.module.css";
 
-// The four places the header sends to. Software pages live under their own
-// path, so the catalogue stays highlighted while reading one of them.
-const NAV = [
-  { path: "/software", label: "catalogue" },
-  { path: "/windows-mac", label: "platforms" },
-  { path: "/sources", label: "sources" },
-  { path: "/about", label: "about" },
-] as const;
+// The header carries the one link people came for. Windows or Mac, the
+// sources and the project are read once, so they live in the footer.
+const NAV = [{ path: "/software", label: "catalogue" }] as const;
 
 export function SiteHeader({
   locale,

@@ -184,8 +184,8 @@
   color: var(--ink-soft);
 }
 
-/* Tablet: the search field goes away, the nav and the controls still fit. */
-@media (max-width: 1220px) {
+/* Small screens: the search field goes away, the controls still fit. */
+@media (max-width: 900px) {
   .search {
     display: none;
   }
