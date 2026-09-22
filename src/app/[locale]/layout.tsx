@@ -23,6 +23,16 @@ export async function generateMetadata({
     metadataBase: new URL(SITE_URL),
     title: "Klacki",
     description: dictionary.site.description,
+    // The share picture itself is drawn by opengraph-image.tsx, next to this file.
+    openGraph: {
+      title: "Klacki",
+      description: dictionary.site.description,
+      url: localeHref(locale),
+      siteName: "Klacki",
+      locale,
+      type: "website",
+    },
+    twitter: { card: "summary_large_image", title: "Klacki" },
     // Tells search engines the two pages are translations of each other.
     alternates: {
       canonical: localeHref(locale),
