@@ -45,3 +45,10 @@ tests/
 
 # Throwaway HTML mockups (never shipped)
 public/mockups/
+
+# Notes for the assistant (local only)
+CLAUDE.md
+
+# Playwright output
+test-results/
+playwright-report/

@@ -130,7 +130,7 @@
     "titleMark": "en cinq secondes",
     "lede": "Tes logiciels, leurs touches Windows et Mac, relevées une par une dans la documentation de l'éditeur. La liste s'agrandit.",
     "tryLabel": "Essaie :",
-    "tries": ["annuler", "extruder", "F9", "ctrl+s"],
+    "tries": ["annuler", "extrusion", "F9", "ctrl+s"],
     "noAccount": "aucun compte à créer",
     "trust": {
       "text": "Chaque raccourci vient de la documentation de l'éditeur, avec sa version et la date du contrôle. Rien n'est recopié d'un autre site.",
