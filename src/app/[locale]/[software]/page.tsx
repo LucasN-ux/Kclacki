@@ -70,7 +70,9 @@ export default async function SoftwarePage({
       <SiteHeader locale={locale} path={`/${software.id}`} />
       <main id="content" className={shell.page}>
         <p className={styles.crumb}>
-          <Link href={localeHref(locale)}>{dictionary.software.backHome}</Link>{" "}
+          <Link href={localeHref(locale, "/software")}>
+            {dictionary.software.backHome}
+          </Link>{" "}
           › {software.name}
         </p>
 

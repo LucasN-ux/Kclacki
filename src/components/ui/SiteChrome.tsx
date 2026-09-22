@@ -1,6 +1,4 @@
-import Image from "next/image";
 import Link from "next/link";
-import ghost from "@/../public/ghost.png";
 import { FavoritesLink } from "@/components/features/FavoritesLink";
 import { HeaderSearch } from "@/components/features/HeaderSearch";
 import { PlatformToggle } from "@/components/features/PlatformToggle";
@@ -9,12 +7,22 @@ import { SUGGEST_URL } from "@/domain/site";
 import { getDictionary } from "@/i18n";
 import styles from "./SiteChrome.module.css";
 
+// The four places the header sends to. Software pages live under their own
+// path, so the catalogue stays highlighted while reading one of them.
+const NAV = [
+  { path: "/software", label: "catalogue" },
+  { path: "/windows-mac", label: "platforms" },
+  { path: "/sources", label: "sources" },
+  { path: "/about", label: "about" },
+] as const;
+
 export function SiteHeader({
   locale,
   path = "",
   showSearch = true,
 }: {
   locale: Locale;
+  /** Path of the current page, without the language. */
   path?: string;
   /** The home page has its own big search field, the header one would be a double. */
   showSearch?: boolean;
@@ -26,33 +34,48 @@ export function SiteHeader({
       <a className={styles.skip} href="#content">
         {dictionary.nav.skipToContent}
       </a>
-      <Link href={localeHref(locale)} className={styles.brand}>
-        {/* The ghost is decorative: the name next to it carries the meaning. */}
-        <Image src={ghost} alt="" className={styles.brandGhost} priority />
-        Klacki
-      </Link>
-      {showSearch && (
-        <div className={styles.search}>
-          <HeaderSearch locale={locale} />
-        </div>
-      )}
-      <div className={styles.controls}>
-        <PlatformToggle locale={locale} />
-        <FavoritesLink locale={locale} />
-        <nav className={styles.locales} aria-label={dictionary.nav.language}>
-          {LOCALES.map((option) => (
+      <div className={styles.bar}>
+        {/* The name alone: the ghost belongs to the home page, not to every header. */}
+        <Link href={localeHref(locale)} className={styles.brand}>
+          Klacki
+        </Link>
+
+        <nav className={styles.nav} aria-label={dictionary.nav.home}>
+          {NAV.map((item) => (
             <Link
-              key={option}
-              // Same page, other language: the visitor never loses their place.
-              href={localeHref(option, path)}
-              hrefLang={option}
-              aria-current={option === locale ? "true" : undefined}
-              className={`${styles.locale} ${option === locale ? styles.localeCurrent : ""}`}
+              key={item.path}
+              href={localeHref(locale, item.path)}
+              className={styles.navLink}
+              aria-current={path === item.path ? "page" : undefined}
             >
-              {option}
+              {dictionary.nav[item.label]}
             </Link>
           ))}
         </nav>
+
+        <div className={styles.controls}>
+          {showSearch && (
+            <div className={styles.search}>
+              <HeaderSearch locale={locale} />
+            </div>
+          )}
+          <PlatformToggle locale={locale} />
+          <FavoritesLink locale={locale} />
+          <nav className={styles.locales} aria-label={dictionary.nav.language}>
+            {LOCALES.map((option) => (
+              <Link
+                key={option}
+                // Same page, other language: the visitor never loses their place.
+                href={localeHref(option, path)}
+                hrefLang={option}
+                aria-current={option === locale ? "true" : undefined}
+                className={`${styles.locale} ${option === locale ? styles.localeCurrent : ""}`}
+              >
+                {option}
+              </Link>
+            ))}
+          </nav>
+        </div>
       </div>
     </header>
   );
@@ -60,27 +83,80 @@ export function SiteHeader({
 
 export function SiteFooter({ locale }: { locale: Locale }) {
   const dictionary = getDictionary(locale);
+  const { footer, nav } = dictionary;
 
   return (
     <footer className={styles.footer}>
-      <p>{dictionary.footer.trademarks}</p>
-      <nav className={styles.footerLinks}>
-        <Link href={localeHref(locale, "/about")}>
-          {dictionary.footer.links.about}
-        </Link>
-        <Link href={localeHref(locale, "/sources")}>
-          {dictionary.footer.links.sources}
-        </Link>
-        <Link href={localeHref(locale, "/legal")}>
-          {dictionary.footer.links.legal}
-        </Link>
-        <Link href={localeHref(locale, "/privacy")}>
-          {dictionary.footer.links.privacy}
-        </Link>
-        <a href={SUGGEST_URL} target="_blank" rel="noreferrer">
-          {dictionary.footer.suggest}
-        </a>
-      </nav>
+      <div className={styles.footerInner}>
+        <div className={styles.footerGrid}>
+          <div>
+            <Link href={localeHref(locale)} className={styles.footerBrand}>
+              Klacki
+            </Link>
+            <p className={styles.footerTagline}>{dictionary.site.tagline}</p>
+          </div>
+
+          <div>
+            <h2 className={styles.footerTitle}>{nav.sections.site}</h2>
+            <ul className={styles.footerLinks}>
+              <li>
+                <Link href={localeHref(locale, "/software")}>
+                  {nav.catalogue}
+                </Link>
+              </li>
+              <li>
+                <Link href={localeHref(locale, "/search")}>
+                  {dictionary.search.title}
+                </Link>
+              </li>
+              <li>
+                <Link href={localeHref(locale, "/favorites")}>
+                  {dictionary.favorites.title}
+                </Link>
+              </li>
+              <li>
+                <Link href={localeHref(locale, "/windows-mac")}>
+                  {nav.platforms}
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 className={styles.footerTitle}>{nav.sections.about}</h2>
+            <ul className={styles.footerLinks}>
+              <li>
+                <Link href={localeHref(locale, "/about")}>{nav.about}</Link>
+              </li>
+              <li>
+                <Link href={localeHref(locale, "/sources")}>
+                  {footer.links.sources}
+                </Link>
+              </li>
+              <li>
+                <Link href={localeHref(locale, "/legal")}>
+                  {footer.links.legal}
+                </Link>
+              </li>
+              <li>
+                <Link href={localeHref(locale, "/privacy")}>
+                  {footer.links.privacy}
+                </Link>
+              </li>
+              <li>
+                <a href={SUGGEST_URL} target="_blank" rel="noreferrer">
+                  {footer.suggest}
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <p className={styles.legal}>
+          <span>{footer.trademarks}</span>
+          <span>{footer.publishedBy}</span>
+        </p>
+      </div>
     </footer>
   );
 }

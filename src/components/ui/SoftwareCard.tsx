@@ -11,6 +11,14 @@ export function SoftwareCard({
   locale: Locale;
 }) {
   const dictionary = getDictionary(locale);
+  // A software that runs on one platform only says so here, before the
+  // visitor opens its page and looks for a Mac column.
+  const onlyOn =
+    software.platforms.length === 1
+      ? software.platforms[0] === "win"
+        ? dictionary.software.windowsOnly
+        : dictionary.software.macOnly
+      : null;
 
   return (
     <article className={styles.card}>
@@ -19,10 +27,13 @@ export function SoftwareCard({
       </span>
       <span>
         <span className={styles.name}>{software.name}</span>
+        {onlyOn && <span className={styles.only}>{onlyOn}</span>}
         <br />
-        {/* Real count, read from the data file: never a number typed by hand. */}
+        {/* Real count and real version, read from the data file: never a
+            number typed by hand. */}
         <span className={styles.count}>
-          {software.shortcuts.length} {dictionary.site.shortcutCount}
+          {software.shortcuts.length} {dictionary.site.shortcutCount} ·{" "}
+          {software.version}
         </span>
       </span>
     </article>

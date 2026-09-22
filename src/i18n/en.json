@@ -8,7 +8,15 @@
   "nav": {
     "home": "Home",
     "language": "Language",
-    "skipToContent": "Skip to content"
+    "skipToContent": "Skip to content",
+    "catalogue": "Software",
+    "platforms": "Windows or Mac",
+    "sources": "Sources",
+    "about": "The project",
+    "sections": {
+      "site": "The site",
+      "about": "About"
+    }
   },
   "families": {
     "3d-sculpt": "3D & sculpting",
@@ -43,7 +51,8 @@
       "privacy": "Privacy",
       "sources": "Sources",
       "about": "About"
-    }
+    },
+    "publishedBy": "Published by Lucas Nevano."
   },
   "search": {
     "title": "Search",
@@ -115,5 +124,52 @@
     "who": "Lucas Nevano, a junior full-stack developer in France. Klacki is a portfolio project.",
     "correctionTitle": "Found a mistake?",
     "correction": "Shortcuts change from one version to the next. If one is wrong, tell me and it gets fixed."
+  },
+  "home": {
+    "titleTop": "The right shortcut",
+    "titleMark": "in five seconds",
+    "lede": "Your software, their Windows and Mac keys, read one by one in the publisher's own documentation. The list keeps growing.",
+    "tryLabel": "Try:",
+    "tries": ["undo", "extrude", "F9", "ctrl+s"],
+    "noAccount": "no account to create",
+    "trust": {
+      "text": "Every shortcut comes from the publisher's documentation, with its version and the date it was checked. Nothing is copied from another site.",
+      "cta": "See the sources"
+    },
+    "bandCta": "All the software",
+    "demoTitle": "Same shortcut, other keyboard",
+    "demoText": "Ctrl does not always become ⌘. Switch Windows / Mac in the header: the keys below are rewritten, straight from the data of the site.",
+    "demoCta": "How Windows and Mac differ"
+  },
+  "catalogue": {
+    "title": "The software covered",
+    "lede": "One software, one page: its shortcuts sorted by category, its version, and the link to the documentation used as the reference.",
+    "jumpLabel": "Jump to a family",
+    "missingTitle": "Is your software missing?",
+    "missingText": "Say so, with a link to its official documentation. That is how the list grows.",
+    "missingCta": "Suggest a software"
+  },
+  "platforms": {
+    "title": "Windows or Mac, without the traps",
+    "lede": "Many lists swap Ctrl for ⌘ automatically. That is wrong half of the time: Blender, Maya and Houdini keep Ctrl on Mac. Here every Mac key is read in the documentation, one by one. Use the toggle above and watch.",
+    "demoTitle": "Real shortcuts, taken from the data of this site",
+    "tagSame": "same",
+    "tagDiff": "changes",
+    "rules": [
+      {
+        "title": "Ctrl does not always become ⌘",
+        "text": "Blender, Maya and Houdini keep Ctrl on Mac. Adobe and Foundry software switch to ⌘."
+      },
+      {
+        "title": "Alt is called Option",
+        "text": "Same physical key, another name. The site shows ⌥ without pretending the shortcut changed."
+      },
+      {
+        "title": "And when the software has no Mac version?",
+        "text": "Some software is Windows only. Its page says so, and the toggle does not invent a Mac key."
+      }
+    ],
+    "memo": "Your Windows or Mac choice is kept in your browser: you make it once, the site remembers.",
+    "memoCta": "Open the catalogue"
   }
 }

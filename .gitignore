@@ -42,3 +42,6 @@ next-env.d.ts
 # Local tests and editor settings (kept out of the repository on purpose)
 tests/
 .claude/
+
+# Throwaway HTML mockups (never shipped)
+public/mockups/

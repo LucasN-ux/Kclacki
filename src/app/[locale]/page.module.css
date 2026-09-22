@@ -1,81 +1,199 @@
+.wrap {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 var(--space-5);
+}
+
 .hero {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: var(--space-7);
   align-items: center;
-  gap: var(--space-3);
-  padding: var(--space-6) 0 var(--space-4);
-  text-align: center;
+  padding: var(--space-7) 0 var(--space-6);
 }
 
-.heroBrand {
-  display: flex;
-  align-items: center;
-  gap: var(--space-4);
-}
-
-.heroGhost {
-  height: 168px;
-  width: auto;
+.ghost {
+  width: 300px;
+  height: auto;
+  justify-self: start;
+  transform: rotate(-3deg);
 }
 
 .title {
-  font-size: 56px;
-  line-height: 54px;
-  letter-spacing: 0.01em;
-  text-shadow:
-    3px 3px 0 var(--green),
-    7px 7px 0 var(--ink);
+  font-size: 52px;
+  line-height: 56px;
+  margin-bottom: var(--space-4);
 }
 
-.tagline {
-  margin: 0;
-  max-width: 34ch;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 500;
+/* The only piece of the page allowed to shout: the promise itself. */
+.mark {
+  display: inline-block;
+  background: var(--yellow);
+  border: var(--stroke-2) solid var(--ink);
+  box-shadow: var(--shadow-hard);
+  padding: 0 var(--space-3);
+  transform: rotate(-1.5deg);
+}
+
+.lede {
+  margin: 0 0 var(--space-5);
+  max-width: 46ch;
+  font-size: 17px;
+  line-height: 27px;
   color: var(--ink-soft);
 }
 
-.heroSearch {
-  width: 100%;
-  max-width: 660px;
-  margin: var(--space-2) 0;
+.search {
+  max-width: 620px;
+}
+
+.tries {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: var(--space-4) 0 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--ink-soft);
+}
+
+.try {
+  padding: 4px var(--space-3);
+  background: var(--card);
+  border: var(--stroke-2) solid var(--ink);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-hard-sm);
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.try:hover {
+  background: var(--yellow);
 }
 
 .counts {
-  margin: 0;
+  margin: var(--space-4) 0 0;
   font-family: var(--font-mono);
   font-size: 13px;
+  line-height: 18px;
   font-weight: 700;
   color: var(--ink-soft);
 }
 
-.family {
+/* Full width: the list of names is the widest thing on the page. */
+.band {
   display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2) var(--space-5);
+  margin: 0;
+  padding: var(--space-3) var(--space-5);
+  background: var(--green-deep);
+  border-top: var(--stroke-3) solid var(--ink);
+  border-bottom: var(--stroke-3) solid var(--ink);
+  color: var(--paper);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
-.grid {
+.band a:hover {
+  color: var(--yellow);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+/* The way out of the band, once the name you wanted is not in it. */
+.bandAll {
+  color: var(--yellow);
+  font-weight: 700;
+}
+
+.demo {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-  gap: var(--space-4);
+  grid-template-columns: 1fr 1.15fr;
+  gap: var(--space-6);
+  align-items: center;
+  padding: var(--space-7) 0 var(--space-5);
 }
 
-@media (max-width: 600px) {
-  .heroBrand {
-    display: flex;
-    align-items: center;
-    gap: var(--space-4);
+.demoTitle {
+  font-size: 30px;
+  line-height: 34px;
+  margin-bottom: var(--space-3);
+}
+
+.demoText p {
+  margin: 0;
+  max-width: 44ch;
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--ink-soft);
+}
+
+.demoLink {
+  display: inline-block;
+  margin-top: var(--space-4);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.demoLink:hover {
+  color: var(--orange-ink);
+}
+
+.trust {
+  margin: 0 0 var(--space-7);
+  max-width: 78ch;
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--ink-soft);
+}
+
+.trust a {
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.trust a:hover {
+  color: var(--orange-ink);
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+    padding: var(--space-6) 0 var(--space-5);
   }
 
-  .heroGhost {
-    height: 168px;
-    width: auto;
+  .ghost {
+    width: 190px;
   }
 
   .title {
-    font-size: 40px;
+    font-size: 36px;
     line-height: 40px;
+  }
+
+  .demo {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+    padding: var(--space-6) 0 var(--space-5);
+  }
+
+  .demoTitle {
+    font-size: 25px;
+    line-height: 29px;
   }
 }

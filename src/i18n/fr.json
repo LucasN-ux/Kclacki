@@ -8,7 +8,15 @@
   "nav": {
     "home": "Accueil",
     "language": "Langue",
-    "skipToContent": "Aller au contenu"
+    "skipToContent": "Aller au contenu",
+    "catalogue": "Logiciels",
+    "platforms": "Windows ou Mac",
+    "sources": "Sources",
+    "about": "Le projet",
+    "sections": {
+      "site": "Le site",
+      "about": "À propos"
+    }
   },
   "families": {
     "3d-sculpt": "3D & sculpture",
@@ -43,7 +51,8 @@
       "privacy": "Confidentialité",
       "sources": "Sources",
       "about": "À propos"
-    }
+    },
+    "publishedBy": "Édité par Lucas Nevano."
   },
   "search": {
     "title": "Recherche",
@@ -115,5 +124,52 @@
     "who": "Lucas Nevano, développeur full-stack junior en France. Klacki est un projet de portfolio.",
     "correctionTitle": "Une erreur ?",
     "correction": "Les raccourcis changent d'une version à l'autre. Si l'un d'eux est faux, signalez-le et il sera corrigé."
+  },
+  "home": {
+    "titleTop": "Le bon raccourci",
+    "titleMark": "en cinq secondes",
+    "lede": "Tes logiciels, leurs touches Windows et Mac, relevées une par une dans la documentation de l'éditeur. La liste s'agrandit.",
+    "tryLabel": "Essaie :",
+    "tries": ["annuler", "extruder", "F9", "ctrl+s"],
+    "noAccount": "aucun compte à créer",
+    "trust": {
+      "text": "Chaque raccourci vient de la documentation de l'éditeur, avec sa version et la date du contrôle. Rien n'est recopié d'un autre site.",
+      "cta": "Voir les sources"
+    },
+    "bandCta": "Tous les logiciels",
+    "demoTitle": "Même raccourci, autre clavier",
+    "demoText": "Ctrl ne devient pas toujours ⌘. Change Windows / Mac dans l'en-tête : les touches ci-dessous sont réécrites, directement depuis les données du site.",
+    "demoCta": "Ce qui change entre Windows et Mac"
+  },
+  "catalogue": {
+    "title": "Les logiciels couverts",
+    "lede": "Un logiciel, une page : ses raccourcis rangés par catégorie, sa version, et le lien vers la documentation qui a servi de référence.",
+    "jumpLabel": "Aller à une famille",
+    "missingTitle": "Il manque ton logiciel ?",
+    "missingText": "Dis-le, avec un lien vers sa documentation officielle. C'est comme ça que la liste grandit.",
+    "missingCta": "Proposer un logiciel"
+  },
+  "platforms": {
+    "title": "Windows ou Mac, sans piège",
+    "lede": "Beaucoup de listes remplacent Ctrl par ⌘ automatiquement. C'est faux une fois sur deux : Blender, Maya et Houdini gardent Ctrl sur Mac. Ici, chaque touche Mac est relevée dans la documentation, une par une. Utilise le bouton en haut et regarde.",
+    "demoTitle": "De vrais raccourcis, pris dans les données du site",
+    "tagSame": "identique",
+    "tagDiff": "change",
+    "rules": [
+      {
+        "title": "Ctrl ne devient pas toujours ⌘",
+        "text": "Blender, Maya et Houdini gardent Ctrl sur Mac. Les logiciels Adobe et Foundry passent à ⌘."
+      },
+      {
+        "title": "Alt s'appelle Option",
+        "text": "C'est la même touche physique, un autre nom. Le site affiche ⌥ sans prétendre que le raccourci a changé."
+      },
+      {
+        "title": "Et si le logiciel n'existe pas sur Mac ?",
+        "text": "Certains logiciels sont Windows uniquement. Leur page le dit, et la bascule n'invente pas de touche Mac."
+      }
+    ],
+    "memo": "Ton choix Windows ou Mac est gardé dans ton navigateur : tu le fais une fois, le site s'en souvient.",
+    "memoCta": "Ouvrir le catalogue"
   }
 }

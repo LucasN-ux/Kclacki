@@ -4,7 +4,7 @@ type RibbonColor = "green" | "yellow" | "orange";
 
 export function Ribbon({
   children,
-  color = "green",
+  color = "yellow",
 }: {
   children: React.ReactNode;
   color?: RibbonColor;
