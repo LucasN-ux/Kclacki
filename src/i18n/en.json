@@ -237,8 +237,7 @@
     "shownOne": "action shown",
     "shownMany": "actions shown",
     "showAll": "Show every software",
-    "moreTrapOne": "Show the other trap",
-    "moreTrapsBefore": "Show the",
-    "moreTrapsAfter": "other traps"
+    "trap": "trap",
+    "traps": "traps"
   }
 }

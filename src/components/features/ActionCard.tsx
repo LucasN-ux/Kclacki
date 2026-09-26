@@ -12,9 +12,6 @@ import styles from "./ActionCard.module.css";
 // Past eight badges a line folds behind "+N": a hundred software agreeing on
 // Ctrl+Z must still read as one line.
 const SHOWN_BADGES = 8;
-// Past two traps a line folds the rest: with many software nearly every key
-// clashes somewhere, and the card must stay short.
-const SHOWN_CLASHES = 2;
 
 export function ActionCard({ card, locale }: { card: Card; locale: Locale }) {
   const { board, categories } = getDictionary(locale);
@@ -48,48 +45,41 @@ export function ActionCard({ card, locale }: { card: Card; locale: Locale }) {
 
 function Line({ line, locale }: { line: KeyLine; locale: Locale }) {
   const { board } = getDictionary(locale);
-  const [unfolded, setUnfolded] = useState(false);
-  const folded = unfolded
-    ? 0
-    : Math.max(line.clashes.length - SHOWN_CLASHES, 0);
-  const clashes =
-    folded > 0 ? line.clashes.slice(0, SHOWN_CLASHES) : line.clashes;
+  // Traps start folded to a count: with many software nearly every key
+  // clashes somewhere, so the card stays one line per combo until asked.
+  const [open, setOpen] = useState(false);
+  const count = line.clashes.length;
   const keys: Keys =
     line.platform === "win" ? { win: [line.combo] } : { mac: [line.combo] };
 
   return (
-    <div
-      className={`${styles.line} ${line.clashes.length > 0 ? styles.trap : ""}`}
-    >
+    <div className={`${styles.line} ${count > 0 ? styles.trap : ""}`}>
       <KeyCombos keys={keys} platform={line.platform} locale={locale} />
       <div className={styles.body}>
         <Badges software={line.software} locale={locale} />
-        {clashes.map((clash) => (
-          <p
-            key={`${clash.action.en}|${clash.context?.en ?? ""}`}
-            className={styles.why}
-          >
-            <span aria-hidden="true">⚠ </span>
-            {comboLabel(line.combo, line.platform, locale)} →{" "}
-            {clash.action[locale]}
-            {clash.context && ` (${clash.context[locale]})`} {board.in}
-            <Badges software={clash.software} locale={locale} />
-          </p>
-        ))}
-        {folded > 0 && (
+        {count > 0 && (
           <button
             type="button"
-            className={styles.moreTraps}
-            aria-label={
-              folded === 1
-                ? board.moreTrapOne
-                : `${board.moreTrapsBefore} ${folded} ${board.moreTrapsAfter}`
-            }
-            onClick={() => setUnfolded(true)}
+            className={styles.trapToggle}
+            aria-expanded={open}
+            aria-label={`${count} ${count === 1 ? board.trap : board.traps}`}
+            onClick={() => setOpen((current) => !current)}
           >
-            +{folded} ⚠
+            ⚠ {count}
           </button>
         )}
+        {open &&
+          line.clashes.map((clash) => (
+            <p
+              key={`${clash.action.en}|${clash.context?.en ?? ""}`}
+              className={styles.why}
+            >
+              {comboLabel(line.combo, line.platform, locale)} →{" "}
+              {clash.action[locale]}
+              {clash.context && ` (${clash.context[locale]})`} {board.in}
+              <Badges software={clash.software} locale={locale} />
+            </p>
+          ))}
       </div>
     </div>
   );

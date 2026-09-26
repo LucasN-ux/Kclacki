@@ -237,8 +237,7 @@
     "shownOne": "action affichée",
     "shownMany": "actions affichées",
     "showAll": "Afficher tous les logiciels",
-    "moreTrapOne": "Afficher l'autre piège",
-    "moreTrapsBefore": "Afficher les",
-    "moreTrapsAfter": "autres pièges"
+    "trap": "piège",
+    "traps": "pièges"
   }
 }

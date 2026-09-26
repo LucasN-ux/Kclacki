@@ -170,7 +170,8 @@
   }
 }
 
-.moreTraps {
+/* The folded traps: a count in the trap colour, a click opens or closes. */
+.trapToggle {
   align-self: flex-start;
   height: 24px;
   padding: 0 var(--space-2);
@@ -184,6 +185,7 @@
   cursor: pointer;
 }
 
-.moreTraps:hover {
+.trapToggle:hover,
+.trapToggle[aria-expanded="true"] {
   background: var(--yellow);
 }
