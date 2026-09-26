@@ -1,0 +1,49 @@
+/* Same footprint as the favourite star beside it: a bare 36px target. */
+.copy {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  background: none;
+  border: 0;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  color: var(--ink);
+}
+
+.copy svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.copy:hover svg rect {
+  fill: var(--yellow);
+}
+
+/* Green already means "same, all good" on this site: it says so here too. */
+.copy[data-copied] {
+  background: var(--green);
+  border: var(--stroke-1) solid var(--ink);
+}
+
+.check {
+  stroke-width: 3.5;
+}
+
+/* Read aloud, never drawn: the check says it to the eye. */
+.status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

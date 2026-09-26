@@ -54,6 +54,7 @@ export function FavoritesList({ locale }: { locale: Locale }) {
           <ShortcutList
             shortcuts={group.shortcuts}
             softwareId={group.software.id}
+            softwareName={group.software.name}
             platform={shownPlatform(group.software.platforms, chosenPlatform)}
             locale={locale}
             flag={summarizePlatformDifference(group.software.shortcuts).flag}

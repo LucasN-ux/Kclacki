@@ -74,7 +74,9 @@
     "sameOn": "Same on",
     "allSame": "Same keys on Windows and Mac.",
     "allDifferent": "Every shortcut uses different keys on Mac.",
-    "mixed": "shortcuts change on Mac"
+    "mixed": "shortcuts change on Mac",
+    "copy": "Copy",
+    "copied": "Copied"
   },
   "favorites": {
     "title": "Favorites",

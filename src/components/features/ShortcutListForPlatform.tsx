@@ -11,12 +11,14 @@ import { usePlatform } from "@/hooks/usePlatform";
 export function ShortcutListForPlatform({
   shortcuts,
   softwareId,
+  softwareName,
   platforms,
   locale,
   flag,
 }: {
   shortcuts: Shortcut[];
   softwareId: string;
+  softwareName: string;
   /** Platforms the software runs on: a Windows-only one ignores the toggle. */
   platforms: Platform[];
   locale: Locale;
@@ -28,6 +30,7 @@ export function ShortcutListForPlatform({
     <ShortcutList
       shortcuts={shortcuts}
       softwareId={softwareId}
+      softwareName={softwareName}
       platform={platform}
       locale={locale}
       flag={flag}

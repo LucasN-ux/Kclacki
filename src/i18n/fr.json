@@ -74,7 +74,9 @@
     "sameOn": "Identique sur",
     "allSame": "Les mêmes touches sur Windows et Mac.",
     "allDifferent": "Tous les raccourcis changent de touches sur Mac.",
-    "mixed": "raccourcis changent sur Mac"
+    "mixed": "raccourcis changent sur Mac",
+    "copy": "Copier",
+    "copied": "Copié"
   },
   "favorites": {
     "title": "Favoris",

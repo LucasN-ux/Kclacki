@@ -151,6 +151,7 @@ export default async function SoftwarePage({
                 <ShortcutListForPlatform
                   shortcuts={group.shortcuts}
                   softwareId={software.id}
+                  softwareName={software.name}
                   platforms={software.platforms}
                   locale={locale}
                   flag={flag}

@@ -1,4 +1,6 @@
+import { CopyButton } from "@/components/features/CopyButton";
 import { FavoriteStar } from "@/components/features/FavoriteStar";
+import { shortcutText } from "@/domain/copy";
 import { isSameOnBothPlatforms } from "@/domain/keys";
 import type { Locale } from "@/domain/locale";
 import type { FlaggedRows } from "@/domain/platformDifference";
@@ -47,12 +49,14 @@ export function PlatformSummary({
 export function ShortcutRow({
   shortcut,
   softwareId,
+  softwareName,
   platform,
   locale,
   flag,
 }: {
   shortcut: Shortcut;
   softwareId: string;
+  softwareName: string;
   platform: Platform;
   locale: Locale;
   flag: FlaggedRows;
@@ -86,12 +90,25 @@ export function ShortcutRow({
         )}
       </span>
       <KeyCombos keys={shortcut.keys} platform={platform} locale={locale} />
-      <FavoriteStar
-        softwareId={softwareId}
-        shortcutId={shortcut.id}
-        action={shortcut.action[locale]}
-        locale={locale}
-      />
+      <span className={styles.tools}>
+        <CopyButton
+          text={shortcutText(
+            softwareName,
+            shortcut,
+            platform,
+            locale,
+            labels.or,
+          )}
+          action={shortcut.action[locale]}
+          locale={locale}
+        />
+        <FavoriteStar
+          softwareId={softwareId}
+          shortcutId={shortcut.id}
+          action={shortcut.action[locale]}
+          locale={locale}
+        />
+      </span>
     </li>
   );
 }
@@ -99,12 +116,14 @@ export function ShortcutRow({
 export function ShortcutList({
   shortcuts,
   softwareId,
+  softwareName,
   platform,
   locale,
   flag,
 }: {
   shortcuts: Shortcut[];
   softwareId: string;
+  softwareName: string;
   platform: Platform;
   locale: Locale;
   /** Which rows carry a flag, decided once for the whole software. */
@@ -117,6 +136,7 @@ export function ShortcutList({
           key={shortcut.id}
           shortcut={shortcut}
           softwareId={softwareId}
+          softwareName={softwareName}
           platform={platform}
           locale={locale}
           flag={flag}
