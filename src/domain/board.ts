@@ -230,21 +230,15 @@ export function boardCards(
   );
 }
 
-// Everyone who documents the action uses the same keys, and nobody else
-// uses them for something else: nothing to relearn.
-export function isAgreement(card: ActionCard): boolean {
-  return card.lines.length === 1 && card.lines[0].clashes.length === 0;
-}
-
+// Every card, or only those of one category. Agreements are shown like any
+// other action: seeing that two software share Ctrl+S is an answer too.
 export function visibleCards(
   cards: readonly ActionCard[],
-  filters: { category: Category | null; onlyDifferences: boolean },
+  category: Category | null,
 ): ActionCard[] {
-  return cards.filter(
-    (card) =>
-      (filters.category === null || card.category === filters.category) &&
-      !(filters.onlyDifferences && isAgreement(card)),
-  );
+  return category === null
+    ? [...cards]
+    : cards.filter((card) => card.category === category);
 }
 
 // "sub" finds both Substance apps, "émber" finds EmberGen.

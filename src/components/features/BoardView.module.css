@@ -57,22 +57,6 @@
   background: var(--yellow);
 }
 
-.switch {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-  margin-left: auto;
-  font-size: 13px;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.switch input {
-  width: 18px;
-  height: 18px;
-  accent-color: var(--green);
-}
-
 .button {
   padding: 6px var(--space-4);
   background: var(--yellow);
@@ -84,6 +68,11 @@
   font-weight: 700;
   color: var(--ink);
   cursor: pointer;
+}
+
+/* The share button closes the filter row on the right. */
+.filters .button {
+  margin-left: auto;
 }
 
 .button:hover {
@@ -106,7 +95,7 @@
 }
 
 @media (max-width: 600px) {
-  .switch {
+  .filters .button {
     margin-left: 0;
   }
 }

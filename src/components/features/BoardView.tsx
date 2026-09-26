@@ -34,7 +34,6 @@ export function BoardView({ locale }: { locale: Locale }) {
   const { platform } = usePlatform();
   const [linkCopied, setLinkCopied] = useState(false);
   const [category, setCategory] = useState<Category | null>(null);
-  const [onlyDifferences, setOnlyDifferences] = useState(true);
 
   const ids = isShared ? shared : own;
   const idsKey = ids.join(",");
@@ -54,14 +53,7 @@ export function BoardView({ locale }: { locale: Locale }) {
   );
   const activeCategory =
     category !== null && present.includes(category) ? category : null;
-  const shown = visibleCards(cards, {
-    category: activeCategory,
-    onlyDifferences,
-  });
-  const hidden =
-    cards.filter(
-      (card) => activeCategory === null || card.category === activeCategory,
-    ).length - shown.length;
+  const shown = visibleCards(cards, activeCategory);
 
   // Any change of software settles the filter on what is on screen now: a
   // category that has vanished stays gone instead of coming back unasked.
@@ -143,15 +135,6 @@ export function BoardView({ locale }: { locale: Locale }) {
                 </button>
               ))}
             </div>
-            <label className={styles.switch}>
-              <input
-                type="checkbox"
-                role="switch"
-                checked={onlyDifferences}
-                onChange={(event) => setOnlyDifferences(event.target.checked)}
-              />
-              {board.onlyDifferences}
-            </label>
             {!isShared && (
               <button type="button" className={styles.button} onClick={share}>
                 {linkCopied ? board.linkCopied : board.share}
@@ -162,19 +145,13 @@ export function BoardView({ locale }: { locale: Locale }) {
           <p className={styles.count}>
             {shown.length}{" "}
             {shown.length === 1 ? board.shownOne : board.shownMany}
-            {hidden > 0 &&
-              ` · ${hidden} ${hidden === 1 ? board.hiddenOne : board.hiddenMany}`}
           </p>
 
-          {shown.length === 0 ? (
-            <p className={styles.invite}>{board.allAgree}</p>
-          ) : (
-            <div className={styles.grid}>
-              {shown.map((card) => (
-                <ActionCard key={card.id} card={card} locale={locale} />
-              ))}
-            </div>
-          )}
+          <div className={styles.grid}>
+            {shown.map((card) => (
+              <ActionCard key={card.id} card={card} locale={locale} />
+            ))}
+          </div>
         </>
       )}
     </>
