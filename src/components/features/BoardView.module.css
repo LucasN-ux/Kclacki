@@ -101,33 +101,40 @@
   box-shadow: var(--shadow-hard);
 }
 
-/* Room for the table's hard shadow, which the scroll frame would clip.
-   Positioned, so the visually hidden labels inside stay clipped by it too
-   instead of stretching the whole page. */
+/* The board scrolls inside a frame no taller than the screen, both ways, so
+   the sideways scrollbar is always in reach. Positioned, so the visually
+   hidden labels inside stay clipped by it instead of stretching the page. */
 .scroll {
   position: relative;
-  overflow-x: auto;
-  padding: 0 4px 4px 0;
-}
-
-.table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
+  overflow: auto;
+  max-height: calc(100vh - 120px);
   background: var(--card);
   border: var(--stroke-2) solid var(--ink);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-hard);
-  overflow: hidden;
 }
 
+.table {
+  min-width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+/* A shortcut is never broken across lines: a narrow screen scrolls instead. */
 .table th,
 .table td {
-  padding: var(--space-3);
+  padding: var(--space-2) var(--space-3);
   border-bottom: var(--stroke-1) solid var(--ink);
   text-align: left;
   vertical-align: top;
   font-size: 14px;
+  white-space: nowrap;
+}
+
+/* Keycap lays combos out as wrapping flex boxes, which white-space cannot
+   hold: inside the board they stay on one line. */
+.table td span {
+  flex-wrap: nowrap;
 }
 
 .table tbody tr:last-child th,
@@ -135,35 +142,73 @@
   border-bottom: 0;
 }
 
+/* The software names stay on top and the actions on the left while the
+   board scrolls, so every cell keeps its row and its column. */
 .table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
   background: var(--paper-deep);
   font-size: 13px;
+}
+
+.table thead th:first-child,
+.table tbody th {
+  position: sticky;
+  left: 0;
+  border-right: var(--stroke-1) solid var(--ink);
+}
+
+.table thead th:first-child {
+  z-index: 3;
+}
+
+.table tbody th {
+  z-index: 1;
+  min-width: 160px;
+  max-width: 220px;
+  background: var(--card);
+  white-space: normal;
 }
 
 .action {
   font-weight: 500;
 }
 
-/* A trap: the keys turn orange, and a line says what they do elsewhere. The
+/* A trap: orange keys and a count; a click opens what they do elsewhere. The
    selector outweighs Keycap's yellow modifier on purpose. */
+.trap summary {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  list-style: none;
+  cursor: pointer;
+}
+
+.trap summary::-webkit-details-marker {
+  display: none;
+}
+
 .trap kbd {
   background: var(--orange);
 }
 
-.why {
-  display: block;
-  margin-top: var(--space-2);
-  font-size: 12px;
+.badge {
+  font-family: var(--font-mono);
+  font-size: 11px;
   font-weight: 700;
   color: var(--orange-ink);
 }
 
-.more summary {
+.why {
+  display: block;
+  min-width: 200px;
+  max-width: 260px;
   margin-top: var(--space-2);
   font-size: 12px;
   font-weight: 700;
   color: var(--orange-ink);
-  cursor: pointer;
+  white-space: normal;
 }
 
 .undocumented {
@@ -213,6 +258,44 @@
 /* Phone: five columns do not fit. Each row becomes a card, each cell a line
    labelled with its software. */
 @media (max-width: 600px) {
+  .scroll {
+    max-height: none;
+    overflow: visible;
+  }
+
+  /* A phone cannot scroll sideways inside a card: the alternatives of a
+     cell ("W or A or S") wrap onto new lines, a single combo still never
+     breaks. */
+  .table td > span,
+  .table summary > span:first-child,
+  .trap summary {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  /* When the keys need the whole line, they drop under the software name. */
+  .table td {
+    flex-wrap: wrap;
+  }
+
+  .table td > span,
+  .table td > details {
+    min-width: 0;
+  }
+
+  /* The desktop width floor of an explanation would push a card sideways. */
+  .why {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .table tbody th {
+    position: static;
+    min-width: 0;
+    max-width: none;
+    border-right: 0;
+  }
+
   .table,
   .table tbody,
   .table tr,

@@ -234,6 +234,7 @@
     "linkCopied": "Lien copié",
     "sharedTitle": "Un tableau qu'on t'a partagé",
     "keep": "Garder ce tableau",
-    "moreTraps": "autres"
+    "trap": "piège",
+    "traps": "pièges"
   }
 }

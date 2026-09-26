@@ -20,8 +20,6 @@ import { getDictionary } from "@/i18n";
 import styles from "./BoardView.module.css";
 
 const CONFIRM_MS = 2000;
-// Traps shown in a cell before the rest folds away behind "+N".
-const SHOWN_TRAPS = 2;
 
 // The picker, the table and the share / keep controls. A shared link shows
 // its own board and never touches the visitor's: only "keep" does.
@@ -178,16 +176,27 @@ function Cell({ cell, locale }: { cell: BoardCell; locale: Locale }) {
     );
   }
 
-  // Folding a single line saves nothing, so up to three stay in view; past
-  // that, two are shown and the rest (always two or more) fold away.
-  const fold = cell.traps.length > SHOWN_TRAPS + 1;
-  const shown = fold ? cell.traps.slice(0, SHOWN_TRAPS) : cell.traps;
-  const hidden = fold ? cell.traps.slice(SHOWN_TRAPS) : [];
-
-  return (
-    <div className={cell.traps.length > 0 ? styles.trap : undefined}>
+  if (cell.traps.length === 0) {
+    return (
       <KeyCombos keys={cell.keys} platform={cell.platform} locale={locale} />
-      {shown.map((trap, index) => (
+    );
+  }
+
+  // Compact by default: the keys and a count. The explanation opens on a click
+  // (native disclosure, no state), so a crowded board stays one line a row.
+  return (
+    <details className={styles.trap}>
+      <summary>
+        <KeyCombos keys={cell.keys} platform={cell.platform} locale={locale} />
+        <span className={styles.badge} aria-hidden="true">
+          ⚠{cell.traps.length}
+        </span>
+        <span className={styles.visuallyHidden}>
+          {cell.traps.length}{" "}
+          {cell.traps.length === 1 ? board.trap : board.traps}
+        </span>
+      </summary>
+      {cell.traps.map((trap, index) => (
         <TrapLine
           key={index}
           trap={trap}
@@ -195,24 +204,7 @@ function Cell({ cell, locale }: { cell: BoardCell; locale: Locale }) {
           locale={locale}
         />
       ))}
-      {/* Past two, the list says less than it costs to read: the rest folds
-          away, one click to open, no state to keep. */}
-      {hidden.length > 0 && (
-        <details className={styles.more}>
-          <summary>
-            +{hidden.length} {board.moreTraps}
-          </summary>
-          {hidden.map((trap, index) => (
-            <TrapLine
-              key={index}
-              trap={trap}
-              platform={cell.platform}
-              locale={locale}
-            />
-          ))}
-        </details>
-      )}
-    </div>
+    </details>
   );
 }
 

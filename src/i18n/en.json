@@ -234,6 +234,7 @@
     "linkCopied": "Link copied",
     "sharedTitle": "A board someone shared with you",
     "keep": "Keep this board",
-    "moreTraps": "more"
+    "trap": "trap",
+    "traps": "traps"
   }
 }
