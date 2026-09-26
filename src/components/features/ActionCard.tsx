@@ -56,7 +56,7 @@ function Line({ line, locale }: { line: KeyLine; locale: Locale }) {
         <Badges software={line.software} locale={locale} />
         {line.clashes.map((clash, index) => (
           <p key={index} className={styles.why}>
-            <span aria-hidden="true">⚠</span>
+            <span aria-hidden="true">⚠ </span>
             {comboLabel(line.combo, line.platform, locale)} →{" "}
             {clash.action[locale]}
             {clash.context && ` (${clash.context[locale]})`} {board.in}

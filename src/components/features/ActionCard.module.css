@@ -117,15 +117,19 @@
   background: var(--yellow);
 }
 
+/* One sentence that reads as a line of text: the badges sit inside it. */
 .why {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 4px;
   margin: 0;
   font-size: 12px;
+  line-height: 22px;
   font-weight: 700;
   color: var(--orange-ink);
+}
+
+.why .badges {
+  display: inline-flex;
+  margin-left: 4px;
+  vertical-align: middle;
 }
 
 .aside {
