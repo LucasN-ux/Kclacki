@@ -4,8 +4,9 @@ import { LOCALES, localeHref } from "@/domain/locale";
 import { SITE_URL } from "@/domain/site";
 
 // The list of pages given to search engines. Search and favorites are left
-// out: they only show what one visitor typed or kept. The board is in: without
-// a selection it explains itself, and that is what a crawler sees.
+// out: they only show what one visitor typed or kept. The board is in: its
+// title and explanation are in the built page; the picker is drawn in the
+// browser, where the selection and a shared link live.
 export default function sitemap(): MetadataRoute.Sitemap {
   const paths = [
     "",

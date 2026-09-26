@@ -25,8 +25,10 @@ export function BoardView({ locale }: { locale: Locale }) {
   const { board } = getDictionary(locale);
   const router = useRouter();
   const searchParams = useSearchParams();
-  const isShared = searchParams.has("s");
   const shared = parseBoardIds(searchParams.get("s"), getSoftwareIds());
+  // A link only counts as a board when it names two real software: anything
+  // less is ignored, so "keep" can never overwrite a board with nothing.
+  const isShared = shared.length >= 2;
   const { ids: own, toggle, replace } = useBoard();
   const { platform } = usePlatform();
   const [linkCopied, setLinkCopied] = useState(false);
@@ -102,37 +104,40 @@ export function BoardView({ locale }: { locale: Locale }) {
             )}
           </div>
 
-          <table className={styles.table}>
-            <thead>
-              <tr>
-                <th scope="col">{board.action}</th>
-                {picked.map((software) => (
-                  <th key={software.id} scope="col">
-                    {software.name}
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {rows.map((row) => (
-                <tr key={row.id}>
-                  <th scope="row" className={styles.action}>
-                    {row.label[locale]}
-                  </th>
-                  {row.cells.map((cell, index) => (
-                    <td
-                      key={picked[index].id}
-                      // Read by the phone layout, where each cell becomes a
-                      // labelled line of a card.
-                      data-software={picked[index].name}
-                    >
-                      <Cell cell={cell} locale={locale} />
-                    </td>
+          {/* Many columns scroll inside this frame, never the whole page. */}
+          <div className={styles.scroll}>
+            <table className={styles.table}>
+              <thead>
+                <tr>
+                  <th scope="col">{board.action}</th>
+                  {picked.map((software) => (
+                    <th key={software.id} scope="col">
+                      {software.name}
+                    </th>
                   ))}
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {rows.map((row) => (
+                  <tr key={row.id}>
+                    <th scope="row" className={styles.action}>
+                      {row.label[locale]}
+                    </th>
+                    {row.cells.map((cell, index) => (
+                      <td
+                        key={picked[index].id}
+                        // Read by the phone layout, where each cell becomes a
+                        // labelled line of a card.
+                        data-software={picked[index].name}
+                      >
+                        <Cell cell={cell} locale={locale} />
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
 
           <ul className={styles.legend}>
             <li>
