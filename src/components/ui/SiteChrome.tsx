@@ -7,9 +7,13 @@ import { SUGGEST_URL } from "@/domain/site";
 import { getDictionary } from "@/i18n";
 import styles from "./SiteChrome.module.css";
 
-// The header carries the one link people came for. Windows or Mac, the
-// sources and the project are read once, so they live in the footer.
-const NAV = [{ path: "/software", label: "catalogue" }] as const;
+// The header carries the two places people come back to: the catalogue and
+// their board. Windows or Mac, the sources and the project are read once, so
+// they live in the footer.
+const NAV = [
+  { path: "/software", label: "catalogue" },
+  { path: "/board", label: "board" },
+] as const;
 
 export function SiteHeader({
   locale,
