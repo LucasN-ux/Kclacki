@@ -132,6 +132,11 @@ export function SiteFooter({ locale }: { locale: Locale }) {
                 </Link>
               </li>
               <li>
+                <Link href={localeHref(locale, "/board")}>
+                  {dictionary.board.title}
+                </Link>
+              </li>
+              <li>
                 <Link href={localeHref(locale, "/windows-mac")}>
                   {nav.platforms}
                 </Link>

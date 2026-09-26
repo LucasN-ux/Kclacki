@@ -85,6 +85,18 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
         </nav>
 
         <div className={styles.wrap}>
+          {/* The flagship feature, right after the catalogue band. */}
+          <section className={styles.boardPromo}>
+            <h2 className={styles.demoTitle}>{home.boardTitle}</h2>
+            <p>{home.boardText}</p>
+            <Link
+              className={styles.boardCta}
+              href={localeHref(locale, "/board")}
+            >
+              {home.boardCta} →
+            </Link>
+          </section>
+
           <section className={styles.demo}>
             <div className={styles.demoText}>
               <h2 className={styles.demoTitle}>{home.demoTitle}</h2>

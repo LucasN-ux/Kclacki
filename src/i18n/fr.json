@@ -144,7 +144,10 @@
     "bandCta": "Tous les logiciels",
     "demoTitle": "Même raccourci, autre clavier",
     "demoText": "Ctrl ne devient pas toujours ⌘. Change Windows / Mac dans l'en-tête : les touches ci-dessous sont réécrites, directement depuis les données du site.",
-    "demoCta": "Ce qui change entre Windows et Mac"
+    "demoCta": "Ce qui change entre Windows et Mac",
+    "boardTitle": "Tous tes logiciels, côte à côte",
+    "boardText": "Tu connais Maya et tu apprends Blender ? Coche les deux : chaque action sur une ligne, et les touches qui changent de sens d'un logiciel à l'autre sont signalées.",
+    "boardCta": "Composer mon tableau"
   },
   "catalogue": {
     "title": "Les logiciels couverts",

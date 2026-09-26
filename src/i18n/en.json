@@ -144,7 +144,10 @@
     "bandCta": "All the software",
     "demoTitle": "Same shortcut, other keyboard",
     "demoText": "Ctrl does not always become ⌘. Switch Windows / Mac in the header: the keys below are rewritten, straight from the data of the site.",
-    "demoCta": "How Windows and Mac differ"
+    "demoCta": "How Windows and Mac differ",
+    "boardTitle": "All your software, side by side",
+    "boardText": "You know Maya and you are learning Blender? Tick them both: each action on one line, and the keys that change meaning from one to the other are marked.",
+    "boardCta": "Build my board"
   },
   "catalogue": {
     "title": "The software covered",
