@@ -1,0 +1,167 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-4);
+  background: var(--card);
+  border: var(--stroke-2) solid var(--ink);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-hard);
+}
+
+/* Category small and quiet, action bold and large: the eye lands on the
+   action, never on a software name. */
+.category {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.action {
+  margin: 2px 0 var(--space-2);
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 22px;
+  font-weight: 800;
+}
+
+/* When a long combo leaves the badges no room, they drop under it rather
+   than being squeezed into a sliver. */
+.line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--space-2) var(--space-3);
+  padding: var(--space-2) 0;
+  border-top: var(--stroke-1) solid var(--paper-deep);
+}
+
+/* Keycap lays combos out as wrapping flex boxes: here a combo stays whole. */
+.line span {
+  flex-wrap: nowrap;
+}
+
+.line > span:first-child {
+  flex: none;
+}
+
+.body {
+  display: flex;
+  flex: 1 1 140px;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+/* A trap: the keys turn orange, and each clash says what they do elsewhere.
+   The selector outweighs Keycap's yellow modifier on purpose. */
+.trap kbd {
+  background: var(--orange);
+}
+
+.line .badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.badges {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.badge {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  min-width: 30px;
+  height: 24px;
+  padding: 0 var(--space-1);
+  background: var(--paper-deep);
+  border: var(--stroke-1) solid var(--ink);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.name {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.more {
+  height: 24px;
+  padding: 0 6px;
+  background: var(--card);
+  border: var(--stroke-1) solid var(--ink);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.more:hover {
+  background: var(--yellow);
+}
+
+.why {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--orange-ink);
+}
+
+.aside {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  margin: var(--space-2) 0 0;
+  padding-top: var(--space-2);
+  border-top: var(--stroke-1) dashed var(--paper-deep);
+  font-size: 12px;
+  color: var(--ink-muted);
+}
+
+.aside .badge {
+  background: transparent;
+  border-style: dashed;
+  color: var(--ink-muted);
+}
+
+/* Phone: no hover to reveal a name, so the name replaces the initials. */
+@media (max-width: 600px) {
+  .badge .initials {
+    display: none;
+  }
+
+  .badge .name {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip-path: none;
+  }
+
+  .badge {
+    font-family: var(--font-sans);
+    font-size: 12px;
+  }
+}

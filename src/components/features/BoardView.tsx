@@ -1,31 +1,29 @@
 "use client";
 
 import { useRouter, useSearchParams } from "next/navigation";
-import { useState } from "react";
-import { KeyCombos } from "@/components/ui/Keycap";
+import { useMemo, useState } from "react";
 import { SOFTWARE_LIST, getSoftwareIds } from "@/data";
 import {
+  boardCards,
   boardQuery,
-  boardRows,
   parseBoardIds,
-  type BoardCell,
-  type Trap,
+  visibleCards,
 } from "@/domain/board";
-import { comboLabel } from "@/domain/keys";
 import { localeHref, type Locale } from "@/domain/locale";
-import type { Platform } from "@/domain/schema";
+import { CATEGORIES, type Category } from "@/domain/schema";
 import { useBoard } from "@/hooks/useBoard";
 import { usePlatform } from "@/hooks/usePlatform";
 import { getDictionary } from "@/i18n";
+import { ActionCard } from "./ActionCard";
 import { SoftwarePicker } from "./SoftwarePicker";
 import styles from "./BoardView.module.css";
 
 const CONFIRM_MS = 2000;
 
-// The picker, the table and the share / keep controls. A shared link shows
-// its own board and never touches the visitor's: only "keep" does.
+// The picker, the filters and the cards. A shared link shows its own board
+// and never touches the visitor's: only "keep" does.
 export function BoardView({ locale }: { locale: Locale }) {
-  const { board } = getDictionary(locale);
+  const { board, categories } = getDictionary(locale);
   const router = useRouter();
   const searchParams = useSearchParams();
   const shared = parseBoardIds(searchParams.get("s"), getSoftwareIds());
@@ -35,11 +33,35 @@ export function BoardView({ locale }: { locale: Locale }) {
   const { ids: own, toggle, replace } = useBoard();
   const { platform } = usePlatform();
   const [linkCopied, setLinkCopied] = useState(false);
+  const [category, setCategory] = useState<Category | null>(null);
+  const [onlyDifferences, setOnlyDifferences] = useState(true);
 
   const ids = isShared ? shared : own;
-  // Catalogue order, whatever order the boxes were ticked in.
-  const picked = SOFTWARE_LIST.filter((software) => ids.includes(software.id));
-  const rows = picked.length >= 2 ? boardRows(picked, platform) : [];
+  const idsKey = ids.join(",");
+  // Catalogue order, whatever order the software were picked in.
+  const picked = useMemo(() => {
+    const wanted = new Set(idsKey.split(","));
+    return SOFTWARE_LIST.filter((software) => wanted.has(software.id));
+  }, [idsKey]);
+  const cards = useMemo(
+    () => (picked.length >= 2 ? boardCards(picked, platform) : []),
+    [picked, platform],
+  );
+
+  // Categories actually present; a chosen one that has gone falls back to all.
+  const present = CATEGORIES.filter((one) =>
+    cards.some((card) => card.category === one),
+  );
+  const activeCategory =
+    category !== null && present.includes(category) ? category : null;
+  const shown = visibleCards(cards, {
+    category: activeCategory,
+    onlyDifferences,
+  });
+  const hidden =
+    cards.filter(
+      (card) => activeCategory === null || card.category === activeCategory,
+    ).length - shown.length;
 
   async function share() {
     const url = `${window.location.origin}${localeHref(locale, "/board")}${boardQuery(ids)}`;
@@ -79,14 +101,45 @@ export function BoardView({ locale }: { locale: Locale }) {
 
       {picked.length < 2 ? (
         <p className={styles.invite}>{board.invite}</p>
-      ) : rows.length === 0 ? (
+      ) : cards.length === 0 ? (
         <p className={styles.invite}>{board.none}</p>
       ) : (
         <>
-          <div className={styles.bar}>
-            <p className={styles.count}>
-              {rows.length} {board.count}
-            </p>
+          <div className={styles.filters}>
+            <div
+              className={styles.categories}
+              role="group"
+              aria-label={board.categoryLabel}
+            >
+              <button
+                type="button"
+                className={styles.chip}
+                aria-pressed={activeCategory === null}
+                onClick={() => setCategory(null)}
+              >
+                {board.all}
+              </button>
+              {present.map((one) => (
+                <button
+                  key={one}
+                  type="button"
+                  className={styles.chip}
+                  aria-pressed={activeCategory === one}
+                  onClick={() => setCategory(one)}
+                >
+                  {categories[one]}
+                </button>
+              ))}
+            </div>
+            <label className={styles.switch}>
+              <input
+                type="checkbox"
+                role="switch"
+                checked={onlyDifferences}
+                onChange={(event) => setOnlyDifferences(event.target.checked)}
+              />
+              {board.onlyDifferences}
+            </label>
             {!isShared && (
               <button type="button" className={styles.button} onClick={share}>
                 {linkCopied ? board.linkCopied : board.share}
@@ -94,126 +147,24 @@ export function BoardView({ locale }: { locale: Locale }) {
             )}
           </div>
 
-          {/* Many columns scroll inside this frame, never the whole page. */}
-          <div className={styles.scroll}>
-            <table className={styles.table}>
-              <thead>
-                <tr>
-                  <th scope="col">{board.action}</th>
-                  {picked.map((software) => (
-                    <th key={software.id} scope="col">
-                      {software.name}
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {rows.map((row) => (
-                  <tr key={row.id}>
-                    <th scope="row" className={styles.action}>
-                      {row.label[locale]}
-                    </th>
-                    {row.cells.map((cell, index) => (
-                      <td
-                        key={picked[index].id}
-                        // Read by the phone layout, where each cell becomes a
-                        // labelled line of a card.
-                        data-software={picked[index].name}
-                      >
-                        <Cell cell={cell} locale={locale} />
-                      </td>
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <p className={styles.count}>
+            {shown.length}{" "}
+            {shown.length === 1 ? board.shownOne : board.shownMany}
+            {hidden > 0 &&
+              ` · ${hidden} ${hidden === 1 ? board.hiddenOne : board.hiddenMany}`}
+          </p>
 
-          <ul className={styles.legend}>
-            <li>
-              <kbd className={styles.legendTrap}>R</kbd> {board.legendTrap}
-            </li>
-            <li>
-              <span className={styles.undocumented}>{board.undocumented}</span>{" "}
-              {board.legendUndocumented}
-            </li>
-            <li>
-              <span className={styles.missing}>—</span> {board.legendMissing}
-            </li>
-          </ul>
+          {shown.length === 0 ? (
+            <p className={styles.invite}>{board.allAgree}</p>
+          ) : (
+            <div className={styles.grid}>
+              {shown.map((card) => (
+                <ActionCard key={card.id} card={card} locale={locale} />
+              ))}
+            </div>
+          )}
         </>
       )}
     </>
-  );
-}
-
-function Cell({ cell, locale }: { cell: BoardCell; locale: Locale }) {
-  const { board } = getDictionary(locale);
-
-  if (cell.kind === "undocumented") {
-    return <span className={styles.undocumented}>{board.undocumented}</span>;
-  }
-  if (cell.kind === "missing") {
-    return (
-      <>
-        <span className={styles.missing} aria-hidden="true">
-          —
-        </span>
-        <span className={styles.visuallyHidden}>{board.missing}</span>
-      </>
-    );
-  }
-
-  if (cell.traps.length === 0) {
-    return (
-      <KeyCombos keys={cell.keys} platform={cell.platform} locale={locale} />
-    );
-  }
-
-  // Compact by default: the keys and a count. The explanation opens on a click
-  // (native disclosure, no state), so a crowded board stays one line a row.
-  return (
-    <details className={styles.trap}>
-      <summary>
-        <KeyCombos keys={cell.keys} platform={cell.platform} locale={locale} />
-        <span className={styles.badge} aria-hidden="true">
-          ⚠{cell.traps.length}
-        </span>
-        <span className={styles.visuallyHidden}>
-          {cell.traps.length}{" "}
-          {cell.traps.length === 1 ? board.trap : board.traps}
-        </span>
-      </summary>
-      {cell.traps.map((trap, index) => (
-        <TrapLine
-          key={index}
-          trap={trap}
-          platform={cell.platform}
-          locale={locale}
-        />
-      ))}
-    </details>
-  );
-}
-
-// "⚠ R in Blender: Rotate (Edit mode)". The mode, when there is one, keeps a
-// binding limited to one context from reading as a rule for the whole app.
-function TrapLine({
-  trap,
-  platform,
-  locale,
-}: {
-  trap: Trap;
-  platform: Platform;
-  locale: Locale;
-}) {
-  const { board } = getDictionary(locale);
-  return (
-    <span className={styles.why}>
-      <span aria-hidden="true">⚠ </span>
-      {comboLabel(trap.combo, platform, locale)} {board.in} {trap.softwareName}
-      {board.colon} {trap.action[locale]}
-      {trap.context && ` (${trap.context[locale]})`}
-    </span>
   );
 }

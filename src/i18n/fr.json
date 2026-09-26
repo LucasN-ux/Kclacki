@@ -217,7 +217,7 @@
   },
   "board": {
     "title": "Mon tableau",
-    "lede": "Coche les logiciels que tu connais et ceux que tu apprends. Ils se rangent côte à côte, action par action, et les touches qui trahiraient tes anciens réflexes sont signalées.",
+    "lede": "Choisis les logiciels que tu connais et ceux que tu apprends. Pour chaque action, les touches sont regroupées, avec les logiciels qui les utilisent, et celles qui trahiraient tes anciens réflexes sont signalées.",
     "pick": "Tes logiciels",
     "invite": "Choisis au moins deux logiciels pour les comparer.",
     "none": "Ces logiciels n'ont encore aucune action en commun.",
@@ -239,6 +239,15 @@
     "pickedLabel": "Logiciels choisis",
     "remove": "Retirer",
     "searchPlaceholder": "Ajouter un logiciel…",
-    "noMatch": "Aucun logiciel ne correspond."
+    "noMatch": "Aucun logiciel ne correspond.",
+    "all": "Toutes",
+    "categoryLabel": "Catégories",
+    "onlyDifferences": "Seulement les différences",
+    "shownOne": "action affichée",
+    "shownMany": "actions affichées",
+    "hiddenOne": "masquée",
+    "hiddenMany": "masquées",
+    "allAgree": "Tes logiciels sont d'accord sur toutes ces actions.",
+    "showAll": "Afficher tous les logiciels"
   }
 }

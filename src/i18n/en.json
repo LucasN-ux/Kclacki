@@ -217,7 +217,7 @@
   },
   "board": {
     "title": "My board",
-    "lede": "Tick the software you know and the ones you are learning. They line up side by side, action by action, and the keys that would betray your old reflexes are marked.",
+    "lede": "Pick the software you know and the ones you are learning. For each action the keys are grouped with the software that use them, and the ones that would betray your old reflexes are marked.",
     "pick": "Your software",
     "invite": "Pick at least two software to compare them.",
     "none": "These software have no action in common yet.",
@@ -239,6 +239,15 @@
     "pickedLabel": "Picked software",
     "remove": "Remove",
     "searchPlaceholder": "Add a software…",
-    "noMatch": "No software matches."
+    "noMatch": "No software matches.",
+    "all": "All",
+    "categoryLabel": "Categories",
+    "onlyDifferences": "Only differences",
+    "shownOne": "action shown",
+    "shownMany": "actions shown",
+    "hiddenOne": "hidden",
+    "hiddenMany": "hidden",
+    "allAgree": "Your software agree on every one of these actions.",
+    "showAll": "Show every software"
   }
 }
