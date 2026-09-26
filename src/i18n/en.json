@@ -210,5 +210,25 @@
     "text": "The address is wrong, or the page moved. The catalogue and the search are two steps away.",
     "catalogueCta": "Open the catalogue",
     "searchCta": "Search a shortcut"
+  },
+  "board": {
+    "title": "My board",
+    "lede": "Tick the software you know and the ones you are learning. They line up side by side, action by action, and the keys that would betray your old reflexes are marked.",
+    "pick": "Your software",
+    "invite": "Tick at least two software to compare them.",
+    "none": "These software have no action in common yet.",
+    "count": "actions in common",
+    "action": "Action",
+    "in": "in",
+    "colon": ":",
+    "undocumented": "not documented",
+    "missing": "not collected",
+    "legendTrap": "this key does something else in another of your software",
+    "legendUndocumented": "the publisher does not publish this shortcut",
+    "legendMissing": "not collected yet",
+    "share": "Copy the link to this board",
+    "linkCopied": "Link copied",
+    "sharedTitle": "A board someone shared with you",
+    "keep": "Keep this board"
   }
 }

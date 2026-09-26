@@ -210,5 +210,25 @@
     "text": "L'adresse est fausse, ou la page a bougé. Le catalogue et la recherche sont à deux pas.",
     "catalogueCta": "Ouvrir le catalogue",
     "searchCta": "Chercher un raccourci"
+  },
+  "board": {
+    "title": "Mon tableau",
+    "lede": "Coche les logiciels que tu connais et ceux que tu apprends. Ils se rangent côte à côte, action par action, et les touches qui trahiraient tes anciens réflexes sont signalées.",
+    "pick": "Tes logiciels",
+    "invite": "Coche au moins deux logiciels pour les comparer.",
+    "none": "Ces logiciels n'ont encore aucune action en commun.",
+    "count": "actions en commun",
+    "action": "Action",
+    "in": "dans",
+    "colon": " :",
+    "undocumented": "non documenté",
+    "missing": "pas relevé",
+    "legendTrap": "cette touche fait autre chose dans un de tes autres logiciels",
+    "legendUndocumented": "l'éditeur ne publie pas ce raccourci",
+    "legendMissing": "pas encore relevé",
+    "share": "Copier le lien de ce tableau",
+    "linkCopied": "Lien copié",
+    "sharedTitle": "Un tableau qu'on t'a partagé",
+    "keep": "Garder ce tableau"
   }
 }
