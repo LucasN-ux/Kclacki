@@ -9,15 +9,19 @@ import {
   boardRows,
   parseBoardIds,
   type BoardCell,
+  type Trap,
 } from "@/domain/board";
 import { comboLabel } from "@/domain/keys";
 import { localeHref, type Locale } from "@/domain/locale";
+import type { Platform } from "@/domain/schema";
 import { useBoard } from "@/hooks/useBoard";
 import { usePlatform } from "@/hooks/usePlatform";
 import { getDictionary } from "@/i18n";
 import styles from "./BoardView.module.css";
 
 const CONFIRM_MS = 2000;
+// Traps shown in a cell before the rest folds away behind "+N".
+const SHOWN_TRAPS = 2;
 
 // The picker, the table and the share / keep controls. A shared link shows
 // its own board and never touches the visitor's: only "keep" does.
@@ -174,17 +178,62 @@ function Cell({ cell, locale }: { cell: BoardCell; locale: Locale }) {
     );
   }
 
+  // Folding a single line saves nothing, so up to three stay in view; past
+  // that, two are shown and the rest (always two or more) fold away.
+  const fold = cell.traps.length > SHOWN_TRAPS + 1;
+  const shown = fold ? cell.traps.slice(0, SHOWN_TRAPS) : cell.traps;
+  const hidden = fold ? cell.traps.slice(SHOWN_TRAPS) : [];
+
   return (
     <div className={cell.traps.length > 0 ? styles.trap : undefined}>
       <KeyCombos keys={cell.keys} platform={cell.platform} locale={locale} />
-      {cell.traps.map((trap, index) => (
-        <span key={index} className={styles.why}>
-          <span aria-hidden="true">⚠ </span>
-          {comboLabel(trap.combo, cell.platform, locale)} {board.in}{" "}
-          {trap.softwareName}
-          {board.colon} {trap.action[locale]}
-        </span>
+      {shown.map((trap, index) => (
+        <TrapLine
+          key={index}
+          trap={trap}
+          platform={cell.platform}
+          locale={locale}
+        />
       ))}
+      {/* Past two, the list says less than it costs to read: the rest folds
+          away, one click to open, no state to keep. */}
+      {hidden.length > 0 && (
+        <details className={styles.more}>
+          <summary>
+            +{hidden.length} {board.moreTraps}
+          </summary>
+          {hidden.map((trap, index) => (
+            <TrapLine
+              key={index}
+              trap={trap}
+              platform={cell.platform}
+              locale={locale}
+            />
+          ))}
+        </details>
+      )}
     </div>
+  );
+}
+
+// "⚠ R in Blender: Rotate (Edit mode)". The mode, when there is one, keeps a
+// binding limited to one context from reading as a rule for the whole app.
+function TrapLine({
+  trap,
+  platform,
+  locale,
+}: {
+  trap: Trap;
+  platform: Platform;
+  locale: Locale;
+}) {
+  const { board } = getDictionary(locale);
+  return (
+    <span className={styles.why}>
+      <span aria-hidden="true">⚠ </span>
+      {comboLabel(trap.combo, platform, locale)} {board.in} {trap.softwareName}
+      {board.colon} {trap.action[locale]}
+      {trap.context && ` (${trap.context[locale]})`}
+    </span>
   );
 }

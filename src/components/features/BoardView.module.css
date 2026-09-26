@@ -158,6 +158,14 @@
   color: var(--orange-ink);
 }
 
+.more summary {
+  margin-top: var(--space-2);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--orange-ink);
+  cursor: pointer;
+}
+
 .undocumented {
   font-family: var(--font-mono);
   font-size: 11px;

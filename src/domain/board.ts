@@ -42,6 +42,8 @@ export type Trap = {
   combo: string[];
   softwareName: string;
   action: LocalizedText;
+  /** Set when the other binding only holds in one mode: "Edit mode". */
+  context?: LocalizedText;
 };
 
 export type BoardCell =
@@ -91,6 +93,7 @@ export function findTraps(
           combo: [...combo],
           softwareName: other.name,
           action: theirs.action,
+          context: theirs.context,
         });
       }
     }
@@ -130,9 +133,13 @@ export function boardRows(
           : { kind: "missing" };
       }
       const platform = shownPlatform(software.platforms, chosen);
-      const traps = keysFor(shortcut.keys, platform).flatMap((combo) =>
-        findTraps(software, id, combo, picked, chosen),
-      );
+      // A clash that holds everywhere bites harder than one limited to a
+      // mode: those come first, and they are the ones shown before "+N".
+      const traps = keysFor(shortcut.keys, platform)
+        .flatMap((combo) => findTraps(software, id, combo, picked, chosen))
+        .sort(
+          (a, b) => Number(Boolean(a.context)) - Number(Boolean(b.context)),
+        );
       return { kind: "keys", keys: shortcut.keys, platform, traps };
     });
     if (cells.filter((cell) => cell.kind === "keys").length >= 2) {
