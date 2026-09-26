@@ -236,7 +236,7 @@
       }
     },
     {
-      "id": "select-paint-tool",
+      "id": "paint-tool",
       "category": "tools",
       "action": {
         "en": "Paint tool",

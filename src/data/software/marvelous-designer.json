@@ -565,7 +565,7 @@
       }
     },
     {
-      "id": "show-wireframe",
+      "id": "toggle-wireframe",
       "category": "view",
       "action": {
         "en": "Show or hide the wireframe",

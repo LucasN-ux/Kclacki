@@ -112,7 +112,7 @@
       }
     },
     {
-      "id": "zoom-view",
+      "id": "zoom-graph",
       "category": "navigation",
       "action": {
         "en": "Zoom the graph",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "pan-view",
+      "id": "pan-graph",
       "category": "navigation",
       "action": {
         "en": "Pan the graph",
@@ -336,7 +336,7 @@
       }
     },
     {
-      "id": "pan-view-3d",
+      "id": "pan-view",
       "category": "navigation",
       "action": {
         "en": "Pan the camera",
