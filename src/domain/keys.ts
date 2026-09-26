@@ -44,6 +44,15 @@ export function keyLabel(
   return key;
 }
 
+// A combo as the keycaps print it: "Shift + Ctrl + Z", "⌘ + Z".
+export function comboLabel(
+  combo: readonly string[],
+  platform: Platform,
+  locale: Locale,
+): string {
+  return combo.map((key) => keyLabel(key, platform, locale)).join(" + ");
+}
+
 // Alt and Option are the same physical key, named differently on each keyboard:
 // a shortcut using it is still "the same" on both platforms.
 function sameKeyAcrossPlatforms(key: string): string {

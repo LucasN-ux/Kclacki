@@ -1,4 +1,4 @@
-import { keyLabel, keysFor } from "./keys";
+import { comboLabel, keysFor } from "./keys";
 import type { Locale } from "./locale";
 import type { Platform, Shortcut } from "./schema";
 
@@ -15,9 +15,7 @@ export function shortcutText(
 ): string {
   const context = shortcut.context ? ` (${shortcut.context[locale]})` : "";
   const combos = keysFor(shortcut.keys, platform)
-    .map((combo) =>
-      combo.map((key) => keyLabel(key, platform, locale)).join(" + "),
-    )
+    .map((combo) => comboLabel(combo, platform, locale))
     .join(` ${orWord} `);
   return `${softwareName} · ${shortcut.action[locale]}${context} — ${combos}`;
 }
