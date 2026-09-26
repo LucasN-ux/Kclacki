@@ -54,14 +54,28 @@ export function SoftwarePicker({
     setOpen(false);
   }
 
+  // Moves the highlight and keeps it in view: with a long catalogue the
+  // panel scrolls, and the option must follow the keyboard.
+  function move(to: number) {
+    const next = Math.max(0, Math.min(to, flat.length - 1));
+    setHighlight(next);
+    const target = flat[next];
+    if (target) {
+      document
+        .getElementById(`${id}-${target.id}`)
+        ?.scrollIntoView({ block: "nearest" });
+    }
+  }
+
   function onKeyDown(event: KeyboardEvent<HTMLInputElement>) {
     if (event.key === "ArrowDown") {
       event.preventDefault();
-      setOpen(true);
-      setHighlight((current) => Math.min(current + 1, flat.length - 1));
+      // A closed list opens on the first suggestion rather than the second.
+      if (!open) setOpen(true);
+      else move(highlight + 1);
     } else if (event.key === "ArrowUp") {
       event.preventDefault();
-      setHighlight((current) => Math.max(current - 1, 0));
+      move(highlight - 1);
     } else if (event.key === "Enter") {
       // With no match there is nothing to add: Enter does nothing.
       if (open && active) {
@@ -70,7 +84,14 @@ export function SoftwarePicker({
       }
     } else if (event.key === "Escape") {
       setOpen(false);
-    } else if (event.key === "Backspace" && query === "" && picked.length > 0) {
+    } else if (
+      event.key === "Backspace" &&
+      // A held key repeats: only the first press removes a software, so
+      // clearing a mistyped search cannot wipe the whole board.
+      !event.repeat &&
+      query === "" &&
+      picked.length > 0
+    ) {
       onRemove(picked[picked.length - 1].id);
     }
   }
@@ -125,6 +146,9 @@ export function SoftwarePicker({
               setOpen(true);
             }}
             onFocus={() => setOpen(true)}
+            // The field keeps the focus after a pick, so a click must reopen
+            // the list on its own.
+            onClick={() => setOpen(true)}
             onBlur={() => setOpen(false)}
             onKeyDown={onKeyDown}
           />
@@ -158,8 +182,7 @@ export function SoftwarePicker({
                     role="option"
                     aria-selected={software.id === active?.id}
                     className={styles.option}
-                    // mousedown, not click: the field keeps the focus, so the
-                    // list stays open for the next pick.
+                    // mousedown, not click: the field keeps the focus.
                     onMouseDown={(event) => {
                       event.preventDefault();
                       add(software);

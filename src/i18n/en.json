@@ -240,6 +240,9 @@
     "hiddenOne": "hidden",
     "hiddenMany": "hidden",
     "allAgree": "Your software agree on every one of these actions.",
-    "showAll": "Show every software"
+    "showAll": "Show every software",
+    "moreTrapOne": "Show the other trap",
+    "moreTrapsBefore": "Show the",
+    "moreTrapsAfter": "other traps"
   }
 }
