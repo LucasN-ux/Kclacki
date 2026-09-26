@@ -132,7 +132,8 @@ export function SoftwarePicker({
             className={styles.field}
             role="combobox"
             aria-expanded={open}
-            aria-controls={`${id}-list`}
+            // Points at the list only while it exists.
+            aria-controls={open && flat.length > 0 ? `${id}-list` : undefined}
             aria-autocomplete="list"
             aria-activedescendant={
               open && active ? `${id}-${active.id}` : undefined
@@ -158,13 +159,19 @@ export function SoftwarePicker({
       {open &&
         !readOnly &&
         (flat.length === 0 ? (
-          <p className={`${styles.panel} ${styles.noMatch}`}>{board.noMatch}</p>
+          // Announced to screen readers, which would otherwise hear nothing.
+          <p role="status" className={`${styles.panel} ${styles.noMatch}`}>
+            {board.noMatch}
+          </p>
         ) : (
           <div
             id={`${id}-list`}
             role="listbox"
             aria-label={board.pick}
             className={styles.panel}
+            // A press anywhere in the list (a family heading, the scrollbar)
+            // must not take the focus from the field and close it.
+            onMouseDown={(event) => event.preventDefault()}
           >
             {groups.map((group) => (
               <div
@@ -187,6 +194,8 @@ export function SoftwarePicker({
                       event.preventDefault();
                       add(software);
                     }}
+                    // One highlight for mouse and keyboard alike.
+                    onMouseEnter={() => setHighlight(flat.indexOf(software))}
                   >
                     <span className={styles.initials} aria-hidden="true">
                       {software.initials}

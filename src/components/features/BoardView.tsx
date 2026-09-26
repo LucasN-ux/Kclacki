@@ -63,6 +63,18 @@ export function BoardView({ locale }: { locale: Locale }) {
       (card) => activeCategory === null || card.category === activeCategory,
     ).length - shown.length;
 
+  // Any change of software settles the filter on what is on screen now: a
+  // category that has vanished stays gone instead of coming back unasked.
+  function add(id: string) {
+    setCategory(activeCategory);
+    if (!own.includes(id)) toggle(id);
+  }
+
+  function remove(id: string) {
+    setCategory(activeCategory);
+    if (own.includes(id)) toggle(id);
+  }
+
   async function share() {
     const url = `${window.location.origin}${localeHref(locale, "/board")}${boardQuery(ids)}`;
     try {
@@ -95,8 +107,8 @@ export function BoardView({ locale }: { locale: Locale }) {
         locale={locale}
         picked={picked}
         readOnly={isShared}
-        onAdd={toggle}
-        onRemove={toggle}
+        onAdd={add}
+        onRemove={remove}
       />
 
       {picked.length < 2 ? (

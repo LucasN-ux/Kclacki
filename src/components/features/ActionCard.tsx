@@ -23,9 +23,10 @@ export function ActionCard({ card, locale }: { card: Card; locale: Locale }) {
   return (
     <article className={styles.card} aria-labelledby={headingId}>
       <p className={styles.category}>{categories[card.category]}</p>
-      <h3 id={headingId} className={styles.action}>
+      {/* h2: the cards sit right under the page's h1. */}
+      <h2 id={headingId} className={styles.action}>
         {card.label[locale]}
-      </h3>
+      </h2>
       {card.lines.map((line) => (
         <Line key={line.combo.join("+")} line={line} locale={locale} />
       ))}
@@ -63,8 +64,11 @@ function Line({ line, locale }: { line: KeyLine; locale: Locale }) {
       <KeyCombos keys={keys} platform={line.platform} locale={locale} />
       <div className={styles.body}>
         <Badges software={line.software} locale={locale} />
-        {clashes.map((clash, index) => (
-          <p key={index} className={styles.why}>
+        {clashes.map((clash) => (
+          <p
+            key={`${clash.action.en}|${clash.context?.en ?? ""}`}
+            className={styles.why}
+          >
             <span aria-hidden="true">⚠ </span>
             {comboLabel(line.combo, line.platform, locale)} →{" "}
             {clash.action[locale]}

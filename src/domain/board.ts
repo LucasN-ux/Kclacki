@@ -204,6 +204,12 @@ export function boardCards(
           });
         } else if (!line.software.some((one) => one.id === software.id)) {
           line.software.push(toRef(software));
+          // A line mixing a Windows-only software with ones that run on the
+          // chosen platform prints the chosen platform's keys: Option, not Alt.
+          if (line.platform !== chosen && platform === chosen) {
+            line.platform = platform;
+            line.combo = [...combo];
+          }
         }
       }
     }
