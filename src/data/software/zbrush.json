@@ -4,7 +4,7 @@
   "initials": "ZB",
   "family": "3d-sculpt",
   "version": "2026.2",
-  "docUrl": "https://help.maxon.net/zbr/en-us/Content/html/user-guide/keyboard-shortcuts/shortcuts-by-category/shortcuts-by-category.html",
+  "docUrl": "https://help.maxon.net/zbr/en-us/Content/html/user-guide/keyboard-shortcuts/keyboard-shortcuts.html",
   "verifiedAt": "2026-09-20",
   "shortcuts": [
     {
@@ -16,7 +16,10 @@
       },
       "keys": {
         "win": [["Ctrl", "Z"]],
-        "mac": [["Ctrl", "Z"]]
+        "mac": [
+          ["Cmd", "Z"],
+          ["Ctrl", "Z"]
+        ]
       }
     },
     {
@@ -28,7 +31,10 @@
       },
       "keys": {
         "win": [["Shift", "Ctrl", "Z"]],
-        "mac": [["Shift", "Ctrl", "Z"]]
+        "mac": [
+          ["Shift", "Cmd", "Z"],
+          ["Shift", "Ctrl", "Z"]
+        ]
       }
     },
     {
@@ -40,7 +46,10 @@
       },
       "keys": {
         "win": [["Ctrl", "O"]],
-        "mac": [["Ctrl", "O"]]
+        "mac": [
+          ["Cmd", "O"],
+          ["Ctrl", "O"]
+        ]
       }
     },
     {
