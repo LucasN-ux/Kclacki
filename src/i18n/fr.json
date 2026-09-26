@@ -219,7 +219,7 @@
     "title": "Mon tableau",
     "lede": "Coche les logiciels que tu connais et ceux que tu apprends. Ils se rangent côte à côte, action par action, et les touches qui trahiraient tes anciens réflexes sont signalées.",
     "pick": "Tes logiciels",
-    "invite": "Coche au moins deux logiciels pour les comparer.",
+    "invite": "Choisis au moins deux logiciels pour les comparer.",
     "none": "Ces logiciels n'ont encore aucune action en commun.",
     "count": "actions en commun",
     "action": "Action",
@@ -235,6 +235,10 @@
     "sharedTitle": "Un tableau qu'on t'a partagé",
     "keep": "Garder ce tableau",
     "trap": "piège",
-    "traps": "pièges"
+    "traps": "pièges",
+    "pickedLabel": "Logiciels choisis",
+    "remove": "Retirer",
+    "searchPlaceholder": "Ajouter un logiciel…",
+    "noMatch": "Aucun logiciel ne correspond."
   }
 }

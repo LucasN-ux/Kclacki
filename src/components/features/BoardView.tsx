@@ -17,6 +17,7 @@ import type { Platform } from "@/domain/schema";
 import { useBoard } from "@/hooks/useBoard";
 import { usePlatform } from "@/hooks/usePlatform";
 import { getDictionary } from "@/i18n";
+import { SoftwarePicker } from "./SoftwarePicker";
 import styles from "./BoardView.module.css";
 
 const CONFIRM_MS = 2000;
@@ -68,26 +69,13 @@ export function BoardView({ locale }: { locale: Locale }) {
         </div>
       )}
 
-      <section aria-labelledby="board-pick">
-        <h2 id="board-pick" className={styles.step}>
-          {board.pick}
-        </h2>
-        <div className={styles.chips}>
-          {SOFTWARE_LIST.map((software) => (
-            <button
-              key={software.id}
-              type="button"
-              className={styles.chip}
-              aria-pressed={ids.includes(software.id)}
-              // A shared board is read as it came; "keep" makes it editable.
-              disabled={isShared}
-              onClick={() => toggle(software.id)}
-            >
-              {software.name}
-            </button>
-          ))}
-        </div>
-      </section>
+      <SoftwarePicker
+        locale={locale}
+        picked={picked}
+        readOnly={isShared}
+        onAdd={toggle}
+        onRemove={toggle}
+      />
 
       {picked.length < 2 ? (
         <p className={styles.invite}>{board.invite}</p>
